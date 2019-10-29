@@ -1,0 +1,115 @@
+REPORT:
+
+OUT:
+all tests
+  Monad Test
+    left identity for List Monad: forall n :: Integer, f :: Integer -> List Integer. (return n >>= f) == (f n):                                                                                         OK (0.03s)
+      +++ OK, passed 1000 tests.
+    right identity for List Monad: forall l :: List Integer. (lst >>= return) == lst:                                                                                                                   OK (0.02s)
+      +++ OK, passed 1000 tests.
+    accociativity for List Monad: forall l: List Integer, f1 :: Fun Integer (List Bool), f2 :: Fun Bool (List Integer). (lst >>= f1 >>= f2 ) == (lst >>= (\x -> f1 x >>= f2)):                          OK (2.73s)
+      +++ OK, passed 1000 tests.
+    left identity law for Maybe Monads: forall m:: Maybe Integer, function f :: Fun Integer (Maybe Integer), (return m >>= f ) == (f m):                                                                OK
+      +++ OK, passed 1000 tests.
+    right identity law for Maybe Monads: forall m::Maybe Integer, (m >>= return) == m:                                                                                                                  OK
+      +++ OK, passed 1000 tests.
+    accociativity for Maybe Monad: forall m::Maybe Integer, f1 :: Integer -> Maybe Integer, f2 :: Integer -> Maybe Bool. (m >>= f1 >>= f2) == (m >>= (\x -> f1 x >>= f2)):                              OK
+      +++ OK, passed 1000 tests.
+    left identity law for Either Monads: forall e:: Integer, f :: Integer -> Either Bool Integer. (return e >>= f) == f e:                                                                              OK
+      +++ OK, passed 1000 tests.
+    right identity law for Either Monads: forall e::Either Bool Integer, (e >>= return) == e:                                                                                                           OK
+      +++ OK, passed 1000 tests.
+    accociativity for Either Monad: forall e::Either Bool Bool, f1 :: Bool -> Either Bool Integer, f2 :: Integer -> Either Bool Bool. (e >>= f1 >>= f2) == (e >>= (\x -> f1 x >>= f2)):                 OK
+      +++ OK, passed 1000 tests.
+    left identity law for Identity Monads: forall i:: Integer, f :: Integer -> Identity Integer. (return i >>= f) == f i:                                                                               OK
+      +++ OK, passed 1000 tests.
+    accociativity for Idenity Monad: forall i::Idenity Bool, f1 :: Integer -> Idenity Bool, f2 :: Bool -> Idenity (List Bool). (i >>= f1 >>= f2) == (i >>= (\x -> f1 x >>= f2)):                        OK (0.01s)
+      +++ OK, passed 1000 tests.
+    left identity law for Trival Monads: forall t:: Integer, f :: Integer -> Trival Integer. (return t >>= f) == f t:                                                                                   OK
+      +++ OK, passed 1000 tests.
+    right identity law for Trival Monads: forall t::Trival Integer, (t >>= return) == t:                                                                                                                OK
+      +++ OK, passed 1000 tests.
+    accociativity for Trival Monad: forall t::Trival Integer, f1 :: Integer -> Trival Integer, f2 :: Integer -> Trival Integer. (t >>= f1 >>= f2) == (t >>= (\x -> f1 x >>= f2)):                       OK
+      +++ OK, passed 1000 tests.
+    left identity law for Printer Monads: forall res:: Integer, f :: Integer -> PrinterMonad Bool Integer. (return res >>= f) == f res:                                                                 OK
+      +++ OK, passed 1000 tests.
+    right identity law for Printer Monads: forall res::Printer Bool Integer, (res >>= return) == res:                                                                                                   OK
+      +++ OK, passed 1000 tests.
+    accociativity for Printer Monad: forall res::Printer Bool Integer, f1 :: Bool -> Printer Bool Integer, f2 :: Integer -> Printer Bool Integer. (res >>= f1 >>= f2) == (res >>= (\x -> f1 x >>= f2)): OK (0.03s)
+      +++ OK, passed 1000 tests.
+  Lang1 Test
+    Base case: for all integer i, evaluation of LiteralInt i should be Just i.:                                                                                                                         OK
+      +++ OK, passed 1000 tests.
+    For all ast1 & ast2, `Plus ast1 ast2` should evaluate to `(eval ast1) + (eval ast2)`:                                                                                                               OK (0.02s)
+      +++ OK, passed 1000 tests.
+    For all ast1 & ast2, `Sub ast1 ast2` should evaluate to `(eval ast1) - (eval ast2)`:                                                                                                                OK
+      +++ OK, passed 1000 tests.
+    For all ast1 & ast2, `Div ast1 ast2` should evaluate to `(eval ast1) / (eval ast2)` where divide by zero returns Nothing:                                                                           OK (0.02s)
+      +++ OK, passed 1000 tests.
+    For all ast1 & ast2, `Mult ast1 ast2` should evaluate to `(eval ast1) * (eval ast2)`:                                                                                                               OK (0.02s)
+      +++ OK, passed 1000 tests.
+    For all ast, if any of the sub expression is Nothing, the ast should evaluate to nothing:                                                                                                           OK (0.02s)
+      +++ OK, passed 1000 tests; 1565 discarded.
+  Lang2 Test
+    For all integer i, eval LiteralInt i should not print anything:                                                                                                                                     OK
+      +++ OK, passed 1000 tests.
+    Prove printing correct
+      For two expression exp1 exp2, the print list for `Plus exp1 exp2` should be the print list of exp1 ++ print list of exp2:                                                                         OK (0.04s)
+        +++ OK, passed 1000 tests.
+      For two expression exp1 exp2, the print list for `Sub exp1 exp2` should be the print list of exp1 ++ print list of exp2:                                                                          OK (0.04s)
+        +++ OK, passed 1000 tests.
+      For two expression exp1 exp2, the print list for `Mult exp1 exp2` should be the print list of exp1 ++ print list of exp2:                                                                         OK (0.03s)
+        +++ OK, passed 1000 tests.
+      For two expression exp1 exp2, the print list for `Separator exp1 exp2` should be the print list of exp1 ++ print list of exp2:                                                                    OK (0.04s)
+        +++ OK, passed 1000 tests.
+      For expression exp, the print list for `Print exp` should be the print list of exp ++ [value of eval exp]:                                                                                        OK (0.02s)
+        +++ OK, passed 1000 tests.
+    Prove result correct
+      For all integer i, evaluate LiteralInt i should be evaluate to i:                                                                                                                                 OK
+        +++ OK, passed 1000 tests.
+      For all ast1 and ast2, `Plus ast1 ast2` should be evaluate to `(eval ast1) + (eval ast2)`:                                                                                                        OK (0.03s)
+        +++ OK, passed 1000 tests.
+      For all ast1 and ast2, `Sub ast1 ast2` should be evaluate to `(eval ast1) - (eval ast2)`:                                                                                                         OK (0.03s)
+        +++ OK, passed 1000 tests.
+      For all ast1 and ast2, `Mult ast1 ast2` should be evaluate to `(eval ast1) * (eval ast2)`:                                                                                                        OK (0.01s)
+        +++ OK, passed 1000 tests.
+      For all ast1 and ast2, `Separator ast1 ast2` should be evaluate to `(eval ast2)`:                                                                                                                 OK (0.01s)
+        +++ OK, passed 1000 tests.
+      For all ast, `Print ast` should be evaluate to `(eval ast)`:                                                                                                                                      OK (0.01s)
+        +++ OK, passed 1000 tests.
+
+All 35 tests passed (3.25s)
+
+ERR:
+week7-0.1.0.0: unregistering (switching from /home/zui/Spring-2019-Instructors/gradescripts/hw6/cs320-hw-hanabatio/assignments/week7/ to /home/zui/Spring-2019-Instructors/gradescripts/hw6/cs320-hw-HarryFengYinxuan/assignments/week7/)
+week7-0.1.0.0: configure (lib + test)
+Configuring week7-0.1.0.0...
+week7-0.1.0.0: build (lib + test)
+Preprocessing library for week7-0.1.0.0..
+Building library for week7-0.1.0.0..
+[1 of 8] Compiling BareBonesLast    ( src/BareBonesLast.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/BareBonesLast.o )
+[2 of 8] Compiling Lang0            ( src/lang/Lang0.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang0.o )
+[3 of 8] Compiling Lang1            ( src/lang/Lang1.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang1.o )
+[4 of 8] Compiling ParserMonad      ( src/parser/ParserMonad.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/ParserMonad.o )
+[5 of 8] Compiling Lang1Parser      ( src/parser/Lang1Parser.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang1Parser.o )
+[6 of 8] Compiling PrinterMonad     ( src/PrinterMonad.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/PrinterMonad.o )
+[7 of 8] Compiling Lang2            ( src/lang/Lang2.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang2.o )
+[8 of 8] Compiling Lang2Parser      ( src/parser/Lang2Parser.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang2Parser.o )
+Preprocessing test suite 'test' for week7-0.1.0.0..
+Building test suite 'test' for week7-0.1.0.0..
+[1 of 7] Compiling Lang1TestTypes   ( tests/Lang1TestTypes.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/Lang1TestTypes.o )
+[2 of 7] Compiling Lang1Test        ( tests/Lang1Test.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/Lang1Test.o )
+[3 of 7] Compiling Lang2TestTypes   ( tests/Lang2TestTypes.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/Lang2TestTypes.o )
+[4 of 7] Compiling Lang2Test        ( tests/Lang2Test.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/Lang2Test.o )
+[5 of 7] Compiling MonadTestType    ( tests/MonadTestType.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/MonadTestType.o )
+[6 of 7] Compiling MonadTest        ( tests/MonadTest.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/MonadTest.o )
+[7 of 7] Compiling Main             ( tests/Main.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/Main.o )
+Linking .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test ...
+week7-0.1.0.0: copy/register
+Installing library in /home/zui/Spring-2019-Instructors/gradescripts/.stack-work/install/x86_64-linux/lts-13.15/8.6.4/lib/x86_64-linux-ghc-8.6.4/week7-0.1.0.0-4zfYyfA52mZEWalx7Cx3Nn
+Registering library for week7-0.1.0.0..
+week7-0.1.0.0: test (suite: test)
+
+
+week7-0.1.0.0: Test suite test passed
+Completed 2 action(s).

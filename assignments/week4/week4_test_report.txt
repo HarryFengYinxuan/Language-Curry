@@ -1,0 +1,708 @@
+REPORT:
+
+OUT:
+all tests
+  Test For Map Problem
+    Test empty function
+      size of empty map should be zero:                                                                                                                    OK
+        +++ OK, passed 1 test.
+      empty map should not have any element:                                                                                                               OK
+    Test fromList function
+      fromList should behave like Data.Map.fromList (int-int pair version):                                                                                OK
+        +++ OK, passed 20 tests.
+      fromList should behave like Data.Map.fromList (int-bool pair version):                                                                               OK
+        +++ OK, passed 20 tests.
+      for all list, converting the list to map, the size of the map should equal of smaller to the size of the list:                                       OK
+        +++ OK, passed 20 tests.
+    Test insert function
+      insert should behave like Data.Map.insert (int-int pair version):                                                                                    OK
+        +++ OK, passed 20 tests.
+      insert should behave like Data.Map.insert (int-bool pair version):                                                                                   OK
+        +++ OK, passed 20 tests.
+      what have been inserted should be in the map:                                                                                                        OK
+        +++ OK, passed 20 tests.
+      given a key exists in the map, insert should change the value if the new value not equals to old value:                                              OK
+        +++ OK, passed 20 tests; 92 discarded.
+    Test toList function
+      toList should behave like Data.Map.toList (int-int pair version):                                                                                    OK
+        +++ OK, passed 20 tests.
+      toList should behave like Data.Map.toList (int-bool pair version):                                                                                   OK
+        +++ OK, passed 20 tests.
+    Test size function
+      size should behave like Data.Map.size (int-int pair version):                                                                                        OK
+        +++ OK, passed 20 tests.
+      size should behave like Data.Map.size (int-bool pair version):                                                                                       OK
+        +++ OK, passed 20 tests.
+    Test member function
+      member should behave like Data.Map.member (int-int pair version):                                                                                    OK
+        +++ OK, passed 20 tests.
+      member should behave like Data.Map.member (int-bool pair version):                                                                                   OK
+        +++ OK, passed 20 tests.
+      a specific test for member function: member should return false when i is not in the map:                                                            OK
+        +++ OK, passed 1 test.
+      another specific test for member function: member should return true when i is not in the map:                                                       OK
+        +++ OK, passed 1 test.
+    Test lookup function
+      lookup should behave like Data.Map.lookup (int-int pair version):                                                                                    OK
+        +++ OK, passed 20 tests.
+      lookup should behave like Data.Map.lookup (int-bool pair version):                                                                                   OK
+        +++ OK, passed 20 tests.
+      a specific test for lookup function: lookup should return Nothing when key is not in the map:                                                        OK
+        +++ OK, passed 1 test.
+      another specific test for lookup function: member should return true when key is in the map:                                                         OK
+        +++ OK, passed 1 test.
+    Test delete function
+      delete should behave like Data.Map.delete (int-int pair version):                                                                                    OK
+        +++ OK, passed 20 tests.
+      delete should behave like Data.Map.delete (int-bool pair version):                                                                                   OK
+        +++ OK, passed 20 tests.
+      a specific test for delete function: key is in the map:                                                                                              OK
+        +++ OK, passed 1 test.
+      another specific test for delete function: key is not in the map:                                                                                    OK
+        +++ OK, passed 1 test.
+    Test update function
+      update should behave like Data.Map.update (int-int pair version):                                                                                    OK
+        +++ OK, passed 20 tests.
+      a specific test for update function: key is in the map:                                                                                              OK
+        +++ OK, passed 1 test.
+      another specific test for update function: key is not in the map:                                                                                    OK
+        +++ OK, passed 1 test.
+    Test union function
+      union should behave like Data.Map.union (int-int pair version):                                                                                      OK
+        +++ OK, passed 20 tests.
+      union should behave like Data.Map.union (int-bool pair version):                                                                                     OK
+        +++ OK, passed 20 tests.
+      a specific test for union: should have some update:                                                                                                  OK
+        +++ OK, passed 1 test.
+    Test filter function
+      filter should behave like Data.Map.filter (int-int pair version):                                                                                    OK
+        +++ OK, passed 20 tests.
+      filter should behave like Data.Map.filter (int-bool pair version):                                                                                   OK
+        +++ OK, passed 20 tests.
+      a specific test for filter: should return empty:                                                                                                     OK
+        +++ OK, passed 1 test.
+      another specific test for filter: should return something:                                                                                           OK
+        +++ OK, passed 1 test.
+    Test equal function
+      same map (int-int pair version) should equal:                                                                                                        OK
+        +++ OK, passed 20 tests.
+      same map (int-bool pair version) should equal:                                                                                                       OK
+        +++ OK, passed 20 tests.
+      map equal should not relevant to the order of the list (HINT: MAP'S EQUIVALENCE IS NOT RELATED TO ITS STRUCTURE):                                    OK
+        +++ OK, passed 1 test.
+  Test For all the language Problem
+    Test For Lang0
+      eval should be the same:                                                                                                                             OK
+      plus should be equal to +:                                                                                                                           OK
+    Test For Lang1
+      eval should be the same:                                                                                                                             OK
+      plus should be equal to +:                                                                                                                           OK
+      div 0 should be equal to Nothing:                                                                                                                    OK
+      div num should be equal to /:                                                                                                                        OK
+      plus 1+(6/2)=4:                                                                                                                                      OK
+    Test For Lang2
+      eval should be the same:                                                                                                                             OK
+      plus should be equal to +:                                                                                                                           OK
+      plus more should be equal to +:                                                                                                                      OK
+      Separator print(1); print(2)   ==> ([1,2], 2):                                                                                                       OK
+      Separator ((1 + print (10)) + 2 ; print(3)) ==> ([10,3], 3):                                                                                         OK
+      Print should be print(print(print(1) + 2) +3 ) +4  ==> ([1,3,6], 10):                                                                                OK
+      Print should be print(print(1) + print(2)) ; 7   ==> ([1,2,3], 7):                                                                                   OK
+    Test For Lang3
+      eval should be the same:                                                                                                                             OK
+      plus should be equal to +:                                                                                                                           OK
+      Separator 1;(2;1+2) should be 3:                                                                                                                     OK
+      Assign x = (1;(2;1+2))+a ,a=2 shoule be 5:                                                                                                           OK
+      1+(Assign x = (1;(2;1+2))+a) ,a=2 shoule be 6:                                                                                                       OK
+      Assign: x=2; y=2; x=3, x should be 3:                                                                                                                OK
+      x = 1 + (x = 2), x should be 3:                                                                                                                      OK
+      Id Empty should be Nothing:                                                                                                                          OK
+      Id should be match the map:                                                                                                                          OK
+      Id not in scope should be nothing:                                                                                                                   OK
+    Test For Lang4
+      eval should be the same:                                                                                                                             OK
+      plus should be equal to +:                                                                                                                           OK
+      Let should be 'let var = 1+2 in var':                                                                                                                OK
+      Let should be 'let var = x+2 in (var+1)':                                                                                                            OK
+      Let should be 'let var = x+2 in (var+1)':                                                                                                            OK
+      Let should be 'let var = (let var = x+2 in var+2) in (var+1)':                                                                                       OK
+      Let should be 'x+(let var = x+2 in var+2)=,x=2':                                                                                                     OK
+      Let out of scope: x + let x=2 in x, should be nothing:                                                                                               OK
+      nested let: let x=2 in (let y=1 in x+y), should be 3:                                                                                                OK
+      let reassign: let x=2 in (let x = 3 in x), should be 3:                                                                                              OK
+      Id should show its value:                                                                                                                            OK
+      Id should show its value:                                                                                                                            OK
+      Id not in scope should be nothing:                                                                                                                   OK
+  Test For Higher Order Problem
+    For all Lists, the sum before and after addoneList should differ by exactly the length of the list:                                                    OK
+      +++ OK, passed 20 tests.
+    For all Lists, sum should act like Prelude's sum:                                                                                                      OK
+      +++ OK, passed 20 tests; 14 discarded.
+    For all Lists, product should act like Prelude's product:                                                                                              OK
+      +++ OK, passed 20 tests; 13 discarded.
+    Tests for maxList func
+      Empty list is 0:                                                                                                                                     OK
+      Negative list is 0:                                                                                                                                  OK
+      Negative list is 0:                                                                                                                                  OK
+      Positive list works:                                                                                                                                 OK
+      Positive list works:                                                                                                                                 OK
+      Positive list works:                                                                                                                                 OK
+      Positive list works:                                                                                                                                 OK
+    Tests for zipWith
+      For all Lists, zipWith should act like Prelude's zipWith:                                                                                            OK
+        +++ OK, passed 20 tests.
+      For all Lists, zipWith should act like Prelude's zipWith:                                                                                            OK
+        +++ OK, passed 20 tests.
+      For all Lists, zipWith should act like Prelude's zipWith:                                                                                            OK
+        +++ OK, passed 20 tests.
+    Tests for dot func
+      dot product should work:                                                                                                                             OK
+      dot product should work:                                                                                                                             OK
+      dot product should work:                                                                                                                             OK
+    Tests for listAdder func
+      listAdder should work:                                                                                                                               OK
+      listAdder should work:                                                                                                                               OK
+      listAdder should work:                                                                                                                               OK
+      listAdder should work:                                                                                                                               OK
+      listAdder should work:                                                                                                                               OK
+    Tests for listAdder func
+      listMaxer should work:                                                                                                                               OK
+      listMaxer should work:                                                                                                                               OK
+      listMaxer should work:                                                                                                                               OK
+      listMaxer should work:                                                                                                                               OK
+      listMaxer should work:                                                                                                                               OK
+    Tests for fullname func
+      fullNames should work:                                                                                                                               OK
+      fullNames should work:                                                                                                                               OK
+      fullNames should work:                                                                                                                               OK
+      fullNames should work:                                                                                                                               OK
+    Tests for addAllLists func
+      addAllLists should work:                                                                                                                             OK
+    Tests for Pet datatype
+      For all okCat, they are happy when temp >0:                                                                                                          OK
+        +++ OK, passed 20 tests; 44 discarded.
+      For all temp, the bad cat will never be happy:                                                                                                       OK
+        +++ OK, passed 20 tests.
+      For all temp, a dog should always be happy:                                                                                                          OK
+        +++ OK, passed 20 tests.
+      For all temp and thresh, we make a cat that is happy if the temp is under thresh, then either the cat is happy or temp is larger or equal to thresh: OK
+        +++ OK, passed 20 tests.
+      For all Cats, you should name them properly:                                                                                                         OK
+        +++ OK, passed 20 tests.
+      For all Dogs, you should name them properly:                                                                                                         OK
+        +++ OK, passed 20 tests.
+      list of empty pets shouldn't be happy:                                                                                                               OK
+      list of dogs should all be happy:                                                                                                                    OK
+      list of dogs and cats could be happy:                                                                                                                OK
+  TypeProblems
+    Make sure answers are defined
+      Q1 is defined:                                                                                                                                       OK
+      Q2 is defined:                                                                                                                                       OK
+      Q3 is defined:                                                                                                                                       OK
+      Q4 is defined:                                                                                                                                       OK
+      Q5 is defined:                                                                                                                                       OK
+      Q6 is defined:                                                                                                                                       OK
+      Q7 is defined:                                                                                                                                       OK
+      Q8 is defined:                                                                                                                                       OK
+      Q9 is defined:                                                                                                                                       OK
+      Q10 is defined:                                                                                                                                      OK
+      Q11 is defined:                                                                                                                                      OK
+      Q12 is defined:                                                                                                                                      OK
+      Q13 is defined:                                                                                                                                      OK
+      Q14 is defined:                                                                                                                                      OK
+      Q15 is defined:                                                                                                                                      OK
+      Q16 is defined:                                                                                                                                      OK
+      Q17 is defined:                                                                                                                                      OK
+    q6 different than q7 (different functions take one same input to differnt outputs):                                                                    OK
+    q8 different than q8 (different functions take one same input to differnt outputs):                                                                    OK
+
+All 134 tests passed (0.02s)
+
+ERR:
+week4-0.1.0.0: unregistering (switching from /home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-hanabatio/assignments/week4/ to /home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/)
+week4-0.1.0.0: configure (lib + test)
+Configuring week4-0.1.0.0...
+week4-0.1.0.0: build (lib + test)
+Preprocessing library for week4-0.1.0.0..
+Building library for week4-0.1.0.0..
+[1 of 8] Compiling Lang0            ( src/Lang0.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang0.o )
+[2 of 8] Compiling Lang1            ( src/Lang1.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang1.o )
+[3 of 8] Compiling Lang2            ( src/Lang2.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang2.o )
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/Lang2.hs:27:13: warning: [-Wname-shadowing]
+    This binding for ‘exp’ shadows the existing binding
+      imported from ‘Prelude’ at src/Lang2.hs:1:8-12
+      (and originally defined in ‘GHC.Float’)
+   |
+27 | eval (Print exp) = case (eval exp) of
+   |             ^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/Lang2.hs:30:43: warning: [-Wunused-matches]
+    Defined but not used: ‘ret’
+   |
+30 |                               (printList, ret) -> case (eval exp2) of
+   |                                           ^^^
+[4 of 8] Compiling Lang3            ( src/Lang3.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang3.o )
+[5 of 8] Compiling Lang4            ( src/Lang4.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang4.o )
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/Lang4.hs:24:22: warning: [-Wunused-matches]
+    Defined but not used: ‘e’
+   |
+24 | eval (LiteralInt i) (e) = Just i
+   |                      ^
+[6 of 8] Compiling Map              ( src/Map.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Map.o )
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/Map.hs:40:14: warning: [-Wunused-matches]
+    Defined but not used: ‘k’
+   |
+40 | size (Node a k v b) = (size a) + 1 + (size b)
+   |              ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/Map.hs:40:16: warning: [-Wunused-matches]
+    Defined but not used: ‘v’
+   |
+40 | size (Node a k v b) = (size a) + 1 + (size b)
+   |                ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/Map.hs:44:8: warning: [-Wunused-matches]
+    Defined but not used: ‘k’
+   |
+44 | member k Null= False
+   |        ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/Map.hs:45:21: warning: [-Wunused-matches]
+    Defined but not used: ‘mv’
+   |
+45 | member k (Node a mk mv b) = case (k == mk) of
+   |                     ^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/Map.hs:52:8: warning: [-Wunused-matches]
+    Defined but not used: ‘k’
+   |
+52 | lookup k Null = Nothing
+   |        ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/Map.hs:63:9: warning: [-Wunused-matches]
+    Defined but not used: ‘k’
+   |
+63 | dhelper k [] = []
+   |         ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/Map.hs:69:8: warning: [-Wunused-matches]
+    Defined but not used: ‘k’
+   |
+69 | delete k Null = Null
+   |        ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/Map.hs:74:8: warning: [-Wunused-matches]
+    Defined but not used: ‘f’
+   |
+74 | update f k Null = Null
+   |        ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/Map.hs:74:10: warning: [-Wunused-matches]
+    Defined but not used: ‘k’
+   |
+74 | update f k Null = Null
+   |          ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/Map.hs:89:8: warning: [-Wunused-matches]
+    Defined but not used: ‘f’
+   |
+89 | filter f Null = Null
+   |        ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/Map.hs:106:8: warning: [-Wunused-matches]
+    Defined but not used: ‘f’
+    |
+106 |   fmap f Null = Null
+    |        ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/Map.hs:126:15: warning: [-Wunused-matches]
+    Defined but not used: ‘mk’
+    |
+126 | elems (Node a mk mv b) = (elems a) ++ [mv] ++ (elems b)
+    |               ^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/Map.hs:131:17: warning: [-Wunused-matches]
+    Defined but not used: ‘mv’
+    |
+131 | keys (Node a mk mv b) = (keys a) ++ [mk] ++ (keys b)
+    |                 ^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/Map.hs:136:17: warning: [-Wunused-matches]
+    Defined but not used: ‘a’
+    |
+136 | difference Null a = Null
+    |                 ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/Map.hs:138:46: warning: [-Wunused-matches]
+    Defined but not used: ‘mv2’
+    |
+138 | difference (Node a1 mk1 mv1 b1) (Node a2 mk2 mv2 b2) = case (mk1==mk2) of
+    |                                              ^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/Map.hs:148:8: warning: [-Wunused-matches]
+    Defined but not used: ‘f’
+    |
+148 | adjust f k Null = Null
+    |        ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/Map.hs:148:10: warning: [-Wunused-matches]
+    Defined but not used: ‘k’
+    |
+148 | adjust f k Null = Null
+    |          ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/Map.hs:153:7: warning: [-Wunused-matches]
+    Defined but not used: ‘f’
+    |
+153 | alter f k Null = Null
+    |       ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/Map.hs:153:9: warning: [-Wunused-matches]
+    Defined but not used: ‘k’
+    |
+153 | alter f k Null = Null
+    |         ^
+[7 of 8] Compiling HigherOrderProblems ( src/HigherOrderProblems.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/HigherOrderProblems.o )
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:6:1: warning: [-Wunused-imports]
+    The import of ‘Data.List’ is redundant
+      except perhaps to import instances from ‘Data.List’
+    To import instances alone, use: import Data.List()
+  |
+6 | import Data.List hiding (zipWith, sum)
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:7:1: warning: [-Wunused-imports]
+    The import of ‘Data.Function’ is redundant
+      except perhaps to import instances from ‘Data.Function’
+    To import instances alone, use: import Data.Function()
+  |
+7 | import Data.Function
+  | ^^^^^^^^^^^^^^^^^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:54:9: warning: [-Wunused-matches]
+    Defined but not used: ‘f’
+   |
+54 | zhelper f [] = []
+   |         ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:73:11: warning: [-Wunused-matches]
+    Defined but not used: ‘a’
+   |
+73 | listMaxer a [] = []
+   |           ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:74:14: warning: [-Wunused-matches]
+    Defined but not used: ‘a’
+   |
+74 | listMaxer [] a = []
+   |              ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:81:1: warning: [-Wmissing-signatures]
+    Top-level binding with no type signature: firstNames :: [[Char]]
+   |
+81 | firstNames = ["Cheng", "Mark", "Wayne"]
+   | ^^^^^^^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:82:1: warning: [-Wmissing-signatures]
+    Top-level binding with no type signature: lastNames :: [[Char]]
+   |
+82 | lastNames = ["Zhang", "Lemay", "Snyder"]
+   | ^^^^^^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:117:26: warning: [-Wunused-matches]
+    Defined but not used: ‘x’
+    |
+117 | badCat = Cat "bad cat" (\x->False)
+    |                          ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:121:7: warning: [-Wname-shadowing]
+    This binding for ‘name’ shadows the existing binding
+      defined at src/HigherOrderProblems.hs:129:1
+    |
+121 | mkCat name func = Cat name func
+    |       ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:125:7: warning: [-Wname-shadowing]
+    This binding for ‘name’ shadows the existing binding
+      defined at src/HigherOrderProblems.hs:129:1
+    |
+125 | mkDog name = Dog name True
+    |       ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:129:11: warning: [-Wname-shadowing]
+    This binding for ‘name’ shadows the existing binding
+      defined at src/HigherOrderProblems.hs:129:1
+    |
+129 | name (Cat name func) = name
+    |           ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:129:16: warning: [-Wunused-matches]
+    Defined but not used: ‘func’
+    |
+129 | name (Cat name func) = name
+    |                ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:130:11: warning: [-Wname-shadowing]
+    This binding for ‘name’ shadows the existing binding
+      defined at src/HigherOrderProblems.hs:129:1
+    |
+130 | name (Dog name happy) = name
+    |           ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:130:16: warning: [-Wunused-matches]
+    Defined but not used: ‘happy’
+    |
+130 | name (Dog name happy) = name
+    |                ^^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:141:14: warning: [-Wname-shadowing]
+    This binding for ‘name’ shadows the existing binding
+      defined at src/HigherOrderProblems.hs:129:1
+    |
+141 | isHappy (Cat name func) temp = func temp
+    |              ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:141:14: warning: [-Wunused-matches]
+    Defined but not used: ‘name’
+    |
+141 | isHappy (Cat name func) temp = func temp
+    |              ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:142:19: warning: [-Wunused-matches]
+    Defined but not used: ‘temp’
+    |
+142 | isHappy (Dog _ _) temp = True
+    |                   ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:156:15: warning: [-Wunused-matches]
+    Defined but not used: ‘temp’
+    |
+156 | countHappy [] temp = 0
+    |               ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:175:70: warning: [-Wunused-local-binds]
+    Defined but not used: ‘won’
+    |
+175 | yearAndTeamWithMoreThan1Tie a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team)) (filter (\x -> let (FootBallStat year team won lost ties) = x in ties > 1) a)
+    |                                                                      ^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:175:74: warning: [-Wunused-local-binds]
+    Defined but not used: ‘lost’
+    |
+175 | yearAndTeamWithMoreThan1Tie a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team)) (filter (\x -> let (FootBallStat year team won lost ties) = x in ties > 1) a)
+    |                                                                          ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:175:79: warning: [-Wunused-local-binds]
+    Defined but not used: ‘ties’
+    |
+175 | yearAndTeamWithMoreThan1Tie a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team)) (filter (\x -> let (FootBallStat year team won lost ties) = x in ties > 1) a)
+    |                                                                               ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:175:139: warning: [-Wunused-local-binds]
+    Defined but not used: ‘year’
+    |
+175 | yearAndTeamWithMoreThan1Tie a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team)) (filter (\x -> let (FootBallStat year team won lost ties) = x in ties > 1) a)
+    |                                                                                                                                           ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:175:144: warning: [-Wunused-local-binds]
+    Defined but not used: ‘team’
+    |
+175 | yearAndTeamWithMoreThan1Tie a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team)) (filter (\x -> let (FootBallStat year team won lost ties) = x in ties > 1) a)
+    |                                                                                                                                                ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:175:149: warning: [-Wunused-local-binds]
+    Defined but not used: ‘won’
+    |
+175 | yearAndTeamWithMoreThan1Tie a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team)) (filter (\x -> let (FootBallStat year team won lost ties) = x in ties > 1) a)
+    |                                                                                                                                                     ^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:175:153: warning: [-Wunused-local-binds]
+    Defined but not used: ‘lost’
+    |
+175 | yearAndTeamWithMoreThan1Tie a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team)) (filter (\x -> let (FootBallStat year team won lost ties) = x in ties > 1) a)
+    |                                                                                                                                                         ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:178:71: warning: [-Wunused-local-binds]
+    Defined but not used: ‘won’
+    |
+178 | yearAndTeamWithlessThan3Wins a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team)) (filter (\x -> let (FootBallStat year team won lost ties) = x in won < 3) a)
+    |                                                                       ^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:178:75: warning: [-Wunused-local-binds]
+    Defined but not used: ‘lost’
+    |
+178 | yearAndTeamWithlessThan3Wins a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team)) (filter (\x -> let (FootBallStat year team won lost ties) = x in won < 3) a)
+    |                                                                           ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:178:80: warning: [-Wunused-local-binds]
+    Defined but not used: ‘ties’
+    |
+178 | yearAndTeamWithlessThan3Wins a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team)) (filter (\x -> let (FootBallStat year team won lost ties) = x in won < 3) a)
+    |                                                                                ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:178:140: warning: [-Wunused-local-binds]
+    Defined but not used: ‘year’
+    |
+178 | yearAndTeamWithlessThan3Wins a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team)) (filter (\x -> let (FootBallStat year team won lost ties) = x in won < 3) a)
+    |                                                                                                                                            ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:178:145: warning: [-Wunused-local-binds]
+    Defined but not used: ‘team’
+    |
+178 | yearAndTeamWithlessThan3Wins a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team)) (filter (\x -> let (FootBallStat year team won lost ties) = x in won < 3) a)
+    |                                                                                                                                                 ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:178:154: warning: [-Wunused-local-binds]
+    Defined but not used: ‘lost’
+    |
+178 | yearAndTeamWithlessThan3Wins a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team)) (filter (\x -> let (FootBallStat year team won lost ties) = x in won < 3) a)
+    |                                                                                                                                                          ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:178:159: warning: [-Wunused-local-binds]
+    Defined but not used: ‘ties’
+    |
+178 | yearAndTeamWithlessThan3Wins a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team)) (filter (\x -> let (FootBallStat year team won lost ties) = x in won < 3) a)
+    |                                                                                                                                                               ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:181:77: warning: [-Wunused-local-binds]
+    Defined but not used: ‘won’
+    |
+181 | yearsAndTeamWithMoreWinsThanLosses a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team)) (filter (\x -> let (FootBallStat year team won lost ties) = x in won > lost) a)
+    |                                                                             ^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:181:81: warning: [-Wunused-local-binds]
+    Defined but not used: ‘lost’
+    |
+181 | yearsAndTeamWithMoreWinsThanLosses a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team)) (filter (\x -> let (FootBallStat year team won lost ties) = x in won > lost) a)
+    |                                                                                 ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:181:86: warning: [-Wunused-local-binds]
+    Defined but not used: ‘ties’
+    |
+181 | yearsAndTeamWithMoreWinsThanLosses a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team)) (filter (\x -> let (FootBallStat year team won lost ties) = x in won > lost) a)
+    |                                                                                      ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:181:146: warning: [-Wunused-local-binds]
+    Defined but not used: ‘year’
+    |
+181 | yearsAndTeamWithMoreWinsThanLosses a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team)) (filter (\x -> let (FootBallStat year team won lost ties) = x in won > lost) a)
+    |                                                                                                                                                  ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:181:151: warning: [-Wunused-local-binds]
+    Defined but not used: ‘team’
+    |
+181 | yearsAndTeamWithMoreWinsThanLosses a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team)) (filter (\x -> let (FootBallStat year team won lost ties) = x in won > lost) a)
+    |                                                                                                                                                       ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:181:165: warning: [-Wunused-local-binds]
+    Defined but not used: ‘ties’
+    |
+181 | yearsAndTeamWithMoreWinsThanLosses a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team)) (filter (\x -> let (FootBallStat year team won lost ties) = x in won > lost) a)
+    |                                                                                                                                                                     ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:187:30: warning: [-Wunused-local-binds]
+    Defined but not used: ‘year’
+    |
+187 | wins = \x->let (FootBallStat year team won lost ties) = x in won
+    |                              ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:187:35: warning: [-Wunused-local-binds]
+    Defined but not used: ‘team’
+    |
+187 | wins = \x->let (FootBallStat year team won lost ties) = x in won
+    |                                   ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:187:44: warning: [-Wunused-local-binds]
+    Defined but not used: ‘lost’
+    |
+187 | wins = \x->let (FootBallStat year team won lost ties) = x in won
+    |                                            ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:187:49: warning: [-Wunused-local-binds]
+    Defined but not used: ‘ties’
+    |
+187 | wins = \x->let (FootBallStat year team won lost ties) = x in won
+    |                                                 ^^^^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/HigherOrderProblems.hs:193:20: warning: [-Wunused-matches]
+    Defined but not used: ‘xs’
+    |
+193 | mostWinsEachDecade xs = undefined
+    |                    ^^
+[8 of 8] Compiling TypeProblems     ( src/TypeProblems.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/TypeProblems.o )
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/TypeProblems.hs:16:16: warning: [-Wunused-matches]
+    Defined but not used: ‘x’
+   |
+16 | q3 = Example (\x y z k->y)
+   |                ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/TypeProblems.hs:16:20: warning: [-Wunused-matches]
+    Defined but not used: ‘z’
+   |
+16 | q3 = Example (\x y z k->y)
+   |                    ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/TypeProblems.hs:16:22: warning: [-Wunused-matches]
+    Defined but not used: ‘k’
+   |
+16 | q3 = Example (\x y z k->y)
+   |                      ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/TypeProblems.hs:33:18: warning: [-Wunused-matches]
+    Defined but not used: ‘y’
+   |
+33 | q8 = Example (\x y-> x)
+   |                  ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/TypeProblems.hs:37:16: warning: [-Wunused-matches]
+    Defined but not used: ‘y’
+   |
+37 | q9 = Example (\y x-> x)
+   |                ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/TypeProblems.hs:41:19: warning: [-Wunused-matches]
+    Defined but not used: ‘y’
+   |
+41 | q10 = Example (\x y-> x)
+   |                   ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/TypeProblems.hs:44:17: warning: [-Wunused-matches]
+    Defined but not used: ‘x’
+   |
+44 | q11 = Example (\x y-> y)
+   |                 ^
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/src/TypeProblems.hs:50:17: warning: [-Wunused-matches]
+    Defined but not used: ‘x’
+   |
+50 | q13 = Example (\x->Nothing)
+   |                 ^
+Preprocessing test suite 'test' for week4-0.1.0.0..
+Building test suite 'test' for week4-0.1.0.0..
+[1 of 6] Compiling TestBase         ( tests/TestBase.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/TestBase.o )
+[2 of 6] Compiling MapTest          ( tests/MapTest.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/MapTest.o )
+[3 of 6] Compiling LangTest         ( tests/LangTest.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/LangTest.o )
+[4 of 6] Compiling HigherOrderTest  ( tests/HigherOrderTest.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/HigherOrderTest.o )
+[5 of 6] Compiling TypeProblemsTest ( tests/TypeProblemsTest.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/TypeProblemsTest.o )
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week4/tests/TypeProblemsTest.hs:30:32: warning: [-Woverlapping-patterns]
+    Pattern match is redundant
+    In a case alternative: _ -> ...
+   |
+30 |                                _ -> False
+   |                                ^^^^^^^^^^
+[6 of 6] Compiling Main             ( tests/Main.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/Main.o )
+Linking .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test ...
+week4-0.1.0.0: copy/register
+Installing library in /home/zui/Spring-2019-Instructors/gradescripts/.stack-work/install/x86_64-linux/lts-13.15/8.6.4/lib/x86_64-linux-ghc-8.6.4/week4-0.1.0.0-G5WfOCu9N95I9ZqzbPiUI
+Registering library for week4-0.1.0.0..
+week4-0.1.0.0: test (suite: test)
+
+
+week4-0.1.0.0: Test suite test passed
+Completed 2 action(s).

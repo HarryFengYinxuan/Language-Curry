@@ -1,0 +1,72 @@
+REPORT:
+
+OUT:
+allTests
+  functor law
+    functor preserve id: for all init:: [Bool], res:: EnvUnsafe [Bool] Integer. runEnvUnsafe (fmap id res) init == runEnvUnsafe res init:                                                                                                                                        OK (0.02s)
+      +++ OK, passed 1000 tests.
+    functor preserve composition: init:: [Bool], res:: EnvUnsafe [Bool] Integer, f1 :: Integer -> Bool, f2 :: Bool -> Integer, runEnvUnsafe (fmap (f2 . f1) res) init == runEnvUnsafe (fmap f2 . fmap f1 $ res) init:                                                            OK (0.02s)
+      +++ OK, passed 1000 tests.
+  EnvUnsafe test
+    left identity law for EnvUnsafe Monads: forall res:: Integer, init:: [Bool], f :: Integer -> EnvUnsafe [Bool] Integer. (runEnvUnsafe (return res >>= f) init) == runEnvUnsafe (f res) init:                                                                                  OK (0.02s)
+      +++ OK, passed 1000 tests.
+    left identity law for EnvUnsafe Monads: forall res:: EnvUnsafe [Bool] Integer, init:: [Bool]. (runEnvUnsafe (res >>= return) init) == (runEnvUnsafe res init) :                                                                                                              OK (0.01s)
+      +++ OK, passed 1000 tests.
+    associativity law for EnvUnsafe Monads: forall res:: EnvUnsafe [Bool] Integer, init:: [Bool], f:: Integer -> EnvUnsafe [Bool] Integer, f1:: Integer -> EnvUnsafe [Bool] Integer. (runEnvUnsafe (res >>= f >>= f1) init) == (runEnvUnsafe (res >>= (\x -> f x >>= f1)) init): OK (0.02s)
+      +++ OK, passed 1000 tests.
+  test for basic error handling
+    type mismatch example:                                                                                                                                                                                                                                                       OK
+  test for evaluation function
+    evaluation should support multityped list:                                                                                                                                                                                                                                   OK
+    division by 0:                                                                                                                                                                                                                                                               OK
+    function in list example: [True, 1, \x -> x]:                                                                                                                                                                                                                                OK
+      +++ OK, passed 1000 tests.
+    nested function: \x -> \y -> x + y:                                                                                                                                                                                                                                          OK
+      +++ OK, passed 1000 tests.
+    function as input: \f -> \x -> f x:                                                                                                                                                                                                                                          OK
+      +++ OK, passed 1000 tests.
+  test for standard library
+    test for head function:                                                                                                                                                                                                                                                      OK
+    test for len function:                                                                                                                                                                                                                                                       FAIL
+      Exception: Prelude.head: empty list
+  parser Test
+    parse should return the same AST when fully parenthisized:                                                                                                                                                                                                                   OK (0.17s)
+      +++ OK, passed 1000 tests.
+    parse should return the same AST when pretty printed:                                                                                                                                                                                                                        FAIL
+      *** Failed! Falsifiable (after 7 tests):
+       ! false * (if (-3) then 0 else []) * ((if (-2) then [] else 1) : true * true)
+      Use --quickcheck-replay=761500 --quickcheck-max-size=50 to reproduce.
+
+2 out of 15 tests failed (0.29s)
+
+ERR:
+week10-0.1.0.0: unregistering (switching from /home/zui/Spring-2019-Instructors/gradescripts/hw9/cs320-hw-hanabatio/assignments/week10/ to /home/zui/Spring-2019-Instructors/gradescripts/hw9/cs320-hw-HarryFengYinxuan/assignments/week10/)
+week10-0.1.0.0: configure (lib + test)
+Configuring week10-0.1.0.0...
+week10-0.1.0.0: build (lib + test)
+Preprocessing library for week10-0.1.0.0..
+Building library for week10-0.1.0.0..
+[1 of 5] Compiling EnvUnsafe        ( src/EnvUnsafe.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/EnvUnsafe.o )
+[2 of 5] Compiling HelpShow         ( src/HelpShow.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/HelpShow.o )
+[3 of 5] Compiling Lang             ( src/Lang.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang.o )
+[4 of 5] Compiling ParserMonad      ( src/ParserMonad.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/ParserMonad.o )
+[5 of 5] Compiling LangParser       ( src/LangParser.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/LangParser.o )
+Preprocessing test suite 'test' for week10-0.1.0.0..
+Building test suite 'test' for week10-0.1.0.0..
+[1 of 4] Compiling EnvUnsafeTest    ( tests/EnvUnsafeTest.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/EnvUnsafeTest.o )
+[2 of 4] Compiling LangEvalTest     ( tests/LangEvalTest.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/LangEvalTest.o )
+[3 of 4] Compiling LangParserTest   ( tests/LangParserTest.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/LangParserTest.o )
+[4 of 4] Compiling Main             ( tests/Main.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/Main.o )
+Linking .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test ...
+week10-0.1.0.0: copy/register
+Installing library in /home/zui/Spring-2019-Instructors/gradescripts/.stack-work/install/x86_64-linux/lts-13.18/8.6.4/lib/x86_64-linux-ghc-8.6.4/week10-0.1.0.0-J2bFtRlbzkD4zTUJkuciwL
+Registering library for week10-0.1.0.0..
+week10-0.1.0.0: test (suite: test)
+
+
+week10-0.1.0.0: Test suite test failed
+Completed 2 action(s).
+Test suite failure for package week10-0.1.0.0
+    test:  exited with: ExitFailure 1
+Logs printed to console
+

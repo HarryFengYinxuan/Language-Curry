@@ -1,0 +1,182 @@
+REPORT:
+
+OUT:
+all tests
+  Test for Eq
+    Test equal List
+      Eq Reflexivity List a == List a = True:                                                                                                                                                                                 OK
+        +++ OK, passed 20 tests.
+      Eq Symmetry List (x==y) == (y==x):                                                                                                                                                                                      OK
+        +++ OK, passed 20 tests.
+      Eq Negation List x /= y = not (x == y):                                                                                                                                                                                 OK
+        +++ OK, passed 20 tests.
+    Test equal Maybe
+      Eq Reflexivity Maybe a == Maybe a = True:                                                                                                                                                                               OK
+        +++ OK, passed 20 tests.
+      Eq Symmetry Maybe (x==y) == (y==x):                                                                                                                                                                                     OK
+        +++ OK, passed 20 tests.
+      Eq Transitivity Maybe if x==y and y==z then x==z:                                                                                                                                                                       OK
+        +++ OK, passed 20 tests; 17 discarded.
+      Eq Substitutivity Maybe if a == b, then f a == f b:                                                                                                                                                                     OK
+        +++ OK, passed 20 tests; 27 discarded.
+      Eq Negation Maybe x /= y = not (x == y):                                                                                                                                                                                OK
+        +++ OK, passed 20 tests.
+    Test equal Pair
+      Eq Reflexivity Pair a == Pair a = True:                                                                                                                                                                                 OK
+        +++ OK, passed 20 tests.
+      Eq Symmetry Pair (x==y) == (y==x):                                                                                                                                                                                      OK
+        +++ OK, passed 20 tests.
+      Eq Transitivity Pair if x==y and y==z then x==z:                                                                                                                                                                        OK
+        +++ OK, passed 20 tests; 65 discarded.
+      Eq Substitutivity Pair if a == b, then f a == f b:                                                                                                                                                                      OK
+        +++ OK, passed 20 tests; 62 discarded.
+      Eq Negation Pair x /= y = not (x == y):                                                                                                                                                                                 OK
+        +++ OK, passed 20 tests.
+    Test equal Either
+      Eq Reflexivity Either a == Either a = True:                                                                                                                                                                             OK
+        +++ OK, passed 20 tests.
+      Eq Symmetry Either (x==y) == (y==x):                                                                                                                                                                                    OK
+        +++ OK, passed 20 tests.
+      Eq Transitivity Either if x==y and y==z then x==z:                                                                                                                                                                      OK
+        +++ OK, passed 20 tests; 51 discarded.
+      Eq Substitutivity Either if a == b, then f a == f b:                                                                                                                                                                    OK
+        +++ OK, passed 20 tests; 71 discarded.
+      Eq Negation Either x /= y = not (x == y):                                                                                                                                                                               OK
+        +++ OK, passed 20 tests.
+    Test equal Id
+      Eq Reflexivity Id a == Id a = True:                                                                                                                                                                                     OK
+        +++ OK, passed 20 tests.
+      Eq Symmetry Id (x==y) == (y==x):                                                                                                                                                                                        OK
+        +++ OK, passed 20 tests.
+      Eq Transitivity Id if x==y and y==z then x==z:                                                                                                                                                                          OK
+        +++ OK, passed 20 tests; 47 discarded.
+      Eq Substitutivity Id if a == b, then f a == f b:                                                                                                                                                                        OK
+        +++ OK, passed 20 tests; 17 discarded.
+      Eq Negation Id x /= y = not (x == y):                                                                                                                                                                                   OK
+        +++ OK, passed 20 tests.
+    Test equal Trival
+      Eq Reflexivity Trival a == Trival a = True:                                                                                                                                                                             OK
+        +++ OK, passed 20 tests.
+      Eq Symmetry Trival (x==y) == (y==x):                                                                                                                                                                                    OK
+        +++ OK, passed 20 tests.
+      Eq Transitivity Trival if x==y and y==z then x==z:                                                                                                                                                                      OK
+        +++ OK, passed 20 tests.
+      Eq Substitutivity Trival if a == b, then f a == f b:                                                                                                                                                                    OK
+        +++ OK, passed 20 tests.
+      Eq Negation Trival x /= y = not (x == y):                                                                                                                                                                               OK
+        +++ OK, passed 20 tests.
+  Test for functor
+    For all Lists l, if id function is applied to the list then the result should be the same list:                                                                                                                           OK
+      +++ OK, passed 20 tests.
+    For all Lists l, fmap (f . g) l == (fmap f . fmap g) l:                                                                                                                                                                   OK
+      +++ OK, passed 20 tests.
+    For all paris p, fmap id p should equal p:                                                                                                                                                                                OK
+      +++ OK, passed 20 tests.
+    For all pairs p, fmap (f . g) p == (fmap f . fmap g) p:                                                                                                                                                                   OK
+      +++ OK, passed 20 tests.
+    For all maybe types m, fmap id m should equal m:                                                                                                                                                                          OK
+      +++ OK, passed 20 tests.
+    For all maybe types m, fmap (f . g) m == (fmap f . fmap g) m:                                                                                                                                                             OK
+      +++ OK, passed 20 tests.
+    For all either types e, fmap id e should equal e:                                                                                                                                                                         OK
+      +++ OK, passed 20 tests.
+    For all either types e, fmap (f . g) e == (fmap f . fmap g) e:                                                                                                                                                            OK
+      +++ OK, passed 20 tests.
+    For all identity types i, fmap id i == i:                                                                                                                                                                                 OK
+      +++ OK, passed 20 tests.
+    For all idenity types i, fmap (f . g) i == (fmap g . fmap f) i:                                                                                                                                                           OK
+      +++ OK, passed 20 tests.
+    First functor law test for trival:                                                                                                                                                                                        OK
+      +++ OK, passed 20 tests.
+    Second functor law test for trival:                                                                                                                                                                                       OK
+      +++ OK, passed 20 tests.
+  Test for Ord
+    Test for list datatype
+      Ord Reflexivity List; x<=x:                                                                                                                                                                                             OK
+        +++ OK, passed 20 tests.
+    Test for pair datatype
+      Ord Transitivity Pair; if x <= y && y <= z = True, then x <= z = True:                                                                                                                                                  OK
+        +++ OK, passed 20 tests; 39 discarded.
+      Ord Reflexivity Pair; x<=x:                                                                                                                                                                                             OK
+        +++ OK, passed 20 tests.
+      Ord Antisymmetry Pair; if x <= y && y <= x = True, then x == y = True:                                                                                                                                                  OK
+        +++ OK, passed 20 tests; 77 discarded.
+    Test for maybe datatype
+      Ord Transitivity Maybe; if x <= y && y <= z = True, then x <= z = True:                                                                                                                                                 OK
+        +++ OK, passed 20 tests; 58 discarded.
+      Ord Reflexivity Maybe; x<=x:                                                                                                                                                                                            OK
+        +++ OK, passed 20 tests.
+      Ord Antisymmetry Maybe; if x <= y && y <= x = True, then x == y = True:                                                                                                                                                 OK
+        +++ OK, passed 20 tests; 39 discarded.
+    Test for either datatype
+      Ord Transitivity Either; if x <= y && y <= z = True, then x <= z = True:                                                                                                                                                OK
+        +++ OK, passed 20 tests; 114 discarded.
+      Ord Reflexivity Either; x<=x:                                                                                                                                                                                           OK
+        +++ OK, passed 20 tests.
+      Ord Antisymmetry Either; if x <= y && y <= x = True, then x == y = True:                                                                                                                                                OK
+        +++ OK, passed 20 tests; 62 discarded.
+    Test for Identity datatype
+      Ord Transitivity Identity; if x <= y && y <= z = True, then x <= z = True:                                                                                                                                              OK
+        +++ OK, passed 20 tests; 88 discarded.
+      Ord Reflexivity Identity; x<=x:                                                                                                                                                                                         OK
+        +++ OK, passed 20 tests.
+      Ord Antisymmetry Identity; if x <= y && y <= x = True, then x == y = True:                                                                                                                                              OK
+        +++ OK, passed 20 tests; 21 discarded.
+    Test for Trival datatype
+      Ord Transitivity Trival; if x <= y && y <= z = True, then x <= z = True:                                                                                                                                                OK
+        +++ OK, passed 20 tests.
+      Ord Reflexivity Trival; x<=x:                                                                                                                                                                                           OK
+        +++ OK, passed 20 tests.
+      Ord Antisymmetry Trival; if x <= y && y <= x = True, then x == y = True:                                                                                                                                                OK
+        +++ OK, passed 20 tests.
+  test all example is defined
+    example of `DayOfTheWeek` should have been defined and teminating:                                                                                                                                                        OK
+    example of `Integer` should have been defined and teminating:                                                                                                                                                             OK
+    example of `Bool` should have been defined and teminating:                                                                                                                                                                OK
+    example of `[a]` should have been defined and teminating:                                                                                                                                                                 OK
+    example of `(Bool, (Integer, [a]))` should have been defined and teminating:                                                                                                                                              OK
+    example of `(Integer, (Integer, [a]))` should have been defined and teminating:                                                                                                                                           OK
+    example of `Integer -> Bool` should have been defined and teminating:                                                                                                                                                     OK
+      +++ OK, passed 20 tests.
+    example of `Silly -> Bool` (Silly is defined in test) should have been defined and teminating:                                                                                                                            OK
+      +++ OK, passed 20 tests.
+  enum and all the thing test
+    Test for Enum 
+      `toEnum` of 0 to 6 should not be equal to each other, there should be 7 distinct days:                                                                                                                                  OK
+      [0..6] == fromEnum (toEnum [0..6] :: [DayOfTheWeek]) :                                                                                                                                                                  OK
+    Test for AllTheThings
+      ListOfAll :: [Bool]` should either be [True, False] or [False, True]:                                                                                                                                                   OK
+      ListOfAll :: [DayOfTheWeek]` should have the same element as `map toEnum [0..6] :                                                                                                                                       OK
+      for all index i j, the pair consist of ith element of listOfAll of `Bool` and the jth element of listOfAll of `DayOfTheWeek` should in listOfAll of `(Bool, DayOfTheWeek)`:                                             OK
+        +++ OK, passed 20 tests.
+      for all index i j, the pair consist of ith element of listOfAll of `Silly` (defined as `data Silly = A | B | C Bool`) and the jth element of listOfAll of `DayOfTheWeek` should in listOfAll of `(Bool, DayOfTheWeek)`: OK
+        +++ OK, passed 20 tests.
+
+All 70 tests passed (0.02s)
+
+ERR:
+week5-0.1.0.0: unregistering (switching from /home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-hanabatio/assignments/week5/ to /home/zui/Spring-2019-Instructors/gradescripts/hw4/cs320-hw-HarryFengYinxuan/assignments/week5/)
+week5-0.1.0.0: configure (lib + test)
+Configuring week5-0.1.0.0...
+week5-0.1.0.0: build (lib + test)
+Preprocessing library for week5-0.1.0.0..
+Building library for week5-0.1.0.0..
+Preprocessing test suite 'test' for week5-0.1.0.0..
+Building test suite 'test' for week5-0.1.0.0..
+[1 of 8] Compiling TestBase         ( tests/TestBase.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/TestBase.o )
+[2 of 8] Compiling OrdTest          ( tests/OrdTest.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/OrdTest.o )
+[3 of 8] Compiling LangTest         ( tests/LangTest.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/LangTest.o )
+[4 of 8] Compiling FunctorTest      ( tests/FunctorTest.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/FunctorTest.o )
+[5 of 8] Compiling ExampleTest      ( tests/ExampleTest.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/ExampleTest.o )
+[6 of 8] Compiling EqTest           ( tests/EqTest.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/EqTest.o )
+[7 of 8] Compiling EnumAndAllTheThingsTest ( tests/EnumAndAllTheThingsTest.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/EnumAndAllTheThingsTest.o )
+[8 of 8] Compiling Main             ( tests/Main.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/Main.o )
+Linking .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test ...
+week5-0.1.0.0: copy/register
+Installing library in /home/zui/Spring-2019-Instructors/gradescripts/.stack-work/install/x86_64-linux/lts-13.9/8.6.3/lib/x86_64-linux-ghc-8.6.3/week5-0.1.0.0-cl5BszjHADAjATWg3Yevq
+Registering library for week5-0.1.0.0..
+week5-0.1.0.0: test (suite: test)
+
+
+week5-0.1.0.0: Test suite test passed
+Completed 2 action(s).

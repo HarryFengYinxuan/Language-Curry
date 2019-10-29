@@ -1,0 +1,116 @@
+Build profile: -w ghc-8.6.3 -O1
+In order, the following will be built (use -v for more details):
+ - week3-0.1.0.0 (test:test) (first run)
+Preprocessing test suite 'test' for week3-0.1.0.0..
+Building test suite 'test' for week3-0.1.0.0..
+Running 1 test suites...
+Test suite test: RUNNING...
+all tests
+  tests for Integer function
+    tests for fib function
+      forall n, fib n + fib (n+1) = fib (n+2):                                                                               OK
+        +++ OK, passed 20 tests; 16 discarded.
+    tests for gcd function
+      forall m n larger than 0, gcd of m n divids both n and m:                                                              OK
+        +++ OK, passed 20 tests; 77 discarded.
+      forall m n larger than 0, gcd of m n is :                                                                              OK
+        +++ OK, passed 20 tests; 77 discarded.
+  tests for Lists and List operations
+    Tests for empty function
+      Empty list is empty:                                                                                                   OK
+      For all Lists, it is not empty if it is not Nil:                                                                       OK
+        +++ OK, passed 20 tests; 12 discarded.
+    For all lists, append should equal Prelude's append:                                                                     OK
+      +++ OK, passed 20 tests.
+    For all lists, addToEnd should be equivilant to (x:xs)++[b]:                                                             OK
+      +++ OK, passed 20 tests.
+    For all lists, concat should equal Prelude's concat:                                                                     OK
+      +++ OK, passed 20 tests.
+    For all lists, reverse should equal Prelude's reverse:                                                                   OK
+      +++ OK, passed 20 tests.
+    For all lists, Take should equal Prelude's Take:                                                                         OK
+      +++ OK, passed 20 tests; 11 discarded.
+    For all lists, Map should equal Prelude's Map:                                                                           OK
+      +++ OK, passed 20 tests.
+  tests for compare data
+    standard int ord:                                                                                                        OK
+      +++ OK, passed 20 tests.
+    standard bool ord:                                                                                                       OK
+      +++ OK, passed 20 tests.
+    insert works, when sorting is considered greatest to least:                                                              OK
+      +++ OK, passed 20 tests.
+    sort works, when sorting is considered greatest to least:                                                                OK
+      +++ OK, passed 20 tests.
+  tests for Set functions
+    Empty set should have size 0:                                                                                            OK
+      +++ OK, passed 1 test.
+    The size of the singleton list should be one:                                                                            OK
+      +++ OK, passed 20 tests.
+    The elem of a singleton list m should be the same as the one being inserted n:                                           FAIL
+      *** Failed! (after 1 test):
+      Exception:
+        Prelude.undefined
+        CallStack (from HasCallStack):
+          error, called at libraries/base/GHC/Err.hs:78:14 in base:GHC.Err
+          undefined, called at src/Set.hs:70:10 in week3-0.1.0.0-inplace:Set
+      0
+      Use --quickcheck-replay=120012 --quickcheck-max-size=50 to reproduce.
+    for all list, converting the list to set, the size of the set should smaller or equal to the size of the list:           FAIL
+      *** Failed! (after 1 test):
+      Exception:
+        Prelude.undefined
+        CallStack (from HasCallStack):
+          error, called at libraries/base/GHC/Err.hs:78:14 in base:GHC.Err
+          undefined, called at src/Set.hs:62:12 in week3-0.1.0.0-inplace:Set
+      Nil
+      Use --quickcheck-replay=477435 --quickcheck-max-size=50 to reproduce.
+    for all list l and integer i, we insert element of index i into the set created by l, the set should not change:         FAIL
+      *** Failed! (after 1 test and 1 shrink):
+      Exception:
+        Prelude.undefined
+        CallStack (from HasCallStack):
+          error, called at libraries/base/GHC/Err.hs:78:14 in base:GHC.Err
+          undefined, called at src/Set.hs:66:9 in week3-0.1.0.0-inplace:Set
+      Cons 0 Nil
+      -1
+      Use --quickcheck-replay=558891 --quickcheck-max-size=50 to reproduce.
+    for all sets s, the size of the set should be the same as the size of the set in the built in Data.Set module:           FAIL
+      *** Failed! (after 1 test):
+      Exception:
+        Prelude.undefined
+        CallStack (from HasCallStack):
+          error, called at libraries/base/GHC/Err.hs:78:14 in base:GHC.Err
+          undefined, called at src/Set.hs:62:12 in week3-0.1.0.0-inplace:Set
+      Nil
+      Use --quickcheck-replay=936497 --quickcheck-max-size=50 to reproduce.
+  tests for Student functions
+    for all id, year, whether takes cs320 or not, if we make a cs student, he/she shoube be a cs student:                    OK
+      +++ OK, passed 20 tests.
+    for all id, if we made a cs student, his/her id must be the same as input:                                               OK
+      +++ OK, passed 20 tests.
+    for all year, if we made a cs student , his/her year must be the same as input:                                          OK
+      +++ OK, passed 20 tests.
+    for all year, if we made a cs student , his/her year must be the same as input:                                          OK
+      +++ OK, passed 20 tests.
+    or all id, if we made a cs student, his/her id must be the same as input:                                                OK
+      +++ OK, passed 20 tests.
+    for all id, year, friends number, if we create a list of math student using these info, there should be no cool student: OK
+      +++ OK, passed 20 tests.
+    for a list with only math student and cs student without taking cs320, then there should be no cool student:             OK
+      +++ OK, passed 20 tests.
+    sc 320 students are cool:                                                                                                OK
+      +++ OK, passed 20 tests.
+    groupProject: pairs all have exactly 1 CS student:                                                                       OK
+      +++ OK, passed 20 tests.
+    groupProject: length is equal to the least of math or CS :                                                               OK
+      +++ OK, passed 20 tests.
+    for all list of student, after assigning to groupProjects, there shouldn't be any student not in the original list:      OK
+      +++ OK, passed 20 tests.
+    for all student1 and student2, student1.id < student2.id, the order of these two students should be student1 < student2: OK
+      +++ OK, passed 20 tests.
+
+4 out of 33 tests failed (0.01s)
+Test suite test: FAIL
+Test suite logged to: /Users/fengyinxuan/Desktop/just_stuff/college/s4/cs
+320/cs320-hw-HarryFengYinxuan/assignments/week3/dist-newstyle/build/x86_64-osx/ghc-8.6.3/week3-0.1.0.0/t/test/test/week3-0.1.0.0-test.log
+0 of 1 test suites (0 of 1 test cases) passed.

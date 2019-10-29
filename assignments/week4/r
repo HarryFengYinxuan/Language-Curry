@@ -1,0 +1,206 @@
+Build profile: -w ghc-8.6.3 -O1
+In order, the following will be built (use -v for more details):
+ - week4-0.1.0.0 (test:test) (first run)
+Preprocessing test suite 'test' for week4-0.1.0.0..
+Building test suite 'test' for week4-0.1.0.0..
+Running 1 test suites...
+Test suite test: RUNNING...
+all tests
+  Test For Map Problem
+    Test empty function
+      size of empty map should be zero:                                                                                                                    OK
+        +++ OK, passed 1 test.
+      empty map should not have any element:                                                                                                               OK
+    Test fromList function
+      fromList should behave like Data.Map.fromList (int-int pair version):                                                                                OK
+        +++ OK, passed 20 tests.
+      fromList should behave like Data.Map.fromList (int-bool pair version):                                                                               OK
+        +++ OK, passed 20 tests.
+      for all list, converting the list to map, the size of the map should equal of smaller to the size of the list:                                       OK
+        +++ OK, passed 20 tests.
+    Test insert function
+      insert should behave like Data.Map.insert (int-int pair version):                                                                                    OK
+        +++ OK, passed 20 tests.
+      insert should behave like Data.Map.insert (int-bool pair version):                                                                                   OK
+        +++ OK, passed 20 tests.
+      what have been inserted should be in the map:                                                                                                        OK
+        +++ OK, passed 20 tests.
+      given a key exists in the map, insert should change the value if the new value not equals to old value:                                              OK
+        +++ OK, passed 20 tests; 42 discarded.
+    Test toList function
+      toList should behave like Data.Map.toList (int-int pair version):                                                                                    OK
+        +++ OK, passed 20 tests.
+      toList should behave like Data.Map.toList (int-bool pair version):                                                                                   OK
+        +++ OK, passed 20 tests.
+    Test size function
+      size should behave like Data.Map.size (int-int pair version):                                                                                        OK
+        +++ OK, passed 20 tests.
+      size should behave like Data.Map.size (int-bool pair version):                                                                                       OK
+        +++ OK, passed 20 tests.
+    Test member function
+      member should behave like Data.Map.member (int-int pair version):                                                                                    OK
+        +++ OK, passed 20 tests.
+      member should behave like Data.Map.member (int-bool pair version):                                                                                   OK
+        +++ OK, passed 20 tests.
+      a specific test for member function: member should return false when i is not in the map:                                                            OK
+        +++ OK, passed 1 test.
+      another specific test for member function: member should return true when i is not in the map:                                                       OK
+        +++ OK, passed 1 test.
+    Test lookup function
+      lookup should behave like Data.Map.lookup (int-int pair version):                                                                                    OK
+        +++ OK, passed 20 tests.
+      lookup should behave like Data.Map.lookup (int-bool pair version):                                                                                   OK
+        +++ OK, passed 20 tests.
+      a specific test for lookup function: lookup should return Nothing when key is not in the map:                                                        OK
+        +++ OK, passed 1 test.
+      another specific test for lookup function: member should return true when key is in the map:                                                         OK
+        +++ OK, passed 1 test.
+    Test delete function
+      delete should behave like Data.Map.delete (int-int pair version):                                                                                    OK
+        +++ OK, passed 20 tests.
+      delete should behave like Data.Map.delete (int-bool pair version):                                                                                   OK
+        +++ OK, passed 20 tests.
+      a specific test for delete function: key is in the map:                                                                                              OK
+        +++ OK, passed 1 test.
+      another specific test for delete function: key is not in the map:                                                                                    OK
+        +++ OK, passed 1 test.
+    Test update function
+      update should behave like Data.Map.update (int-int pair version):                                                                                    OK
+        +++ OK, passed 20 tests.
+      a specific test for update function: key is in the map:                                                                                              OK
+        +++ OK, passed 1 test.
+      another specific test for update function: key is not in the map:                                                                                    OK
+        +++ OK, passed 1 test.
+    Test union function
+      union should behave like Data.Map.union (int-int pair version):                                                                                      OK
+        +++ OK, passed 20 tests.
+      union should behave like Data.Map.union (int-bool pair version):                                                                                     OK
+        +++ OK, passed 20 tests.
+      a specific test for union: should have some update:                                                                                                  OK
+        +++ OK, passed 1 test.
+    Test filter function
+      filter should behave like Data.Map.filter (int-int pair version):                                                                                    OK
+        +++ OK, passed 20 tests.
+      filter should behave like Data.Map.filter (int-bool pair version):                                                                                   OK
+        +++ OK, passed 20 tests.
+      a specific test for filter: should return empty:                                                                                                     OK
+        +++ OK, passed 1 test.
+      another specific test for filter: should return something:                                                                                           OK
+        +++ OK, passed 1 test.
+    Test equal function
+      same map (int-int pair version) should equal:                                                                                                        OK
+        +++ OK, passed 20 tests.
+      same map (int-bool pair version) should equal:                                                                                                       OK
+        +++ OK, passed 20 tests.
+      map equal should not relevant to the order of the list (HINT: MAP'S EQUIVALENCE IS NOT RELATED TO ITS STRUCTURE):                                    OK
+        +++ OK, passed 1 test.
+  Test For all the language Problem
+    Test For Lang0
+      eval should be the same:                                                                                                                             OK
+      plus should be equal to +:                                                                                                                           OK
+    Test For Lang1
+      eval should be the same:                                                                                                                             OK
+      plus should be equal to +:                                                                                                                           OK
+      div 0 should be equal to Nothing:                                                                                                                    OK
+      div num should be equal to /:                                                                                                                        OK
+      plus 1+(6/2)=4:                                                                                                                                      OK
+    Test For Lang2
+      eval should be the same:                                                                                                                             OK
+      plus should be equal to +:                                                                                                                           OK
+      plus more should be equal to +:                                                                                                                      OK
+      Separator print(1); print(2)   ==> ([1,2], 2):                                                                                                       OK
+      Separator ((1 + print (10)) + 2 ; print(3)) ==> ([10,3], 3):                                                                                         OK
+      Print should be print(print(print(1) + 2) +3 ) +4  ==> ([1,3,6], 10):                                                                                OK
+      Print should be print(print(1) + print(2)) ; 7   ==> ([1,2,3], 7):                                                                                   OK
+    Test For Lang3
+      eval should be the same:                                                                                                                             OK
+      plus should be equal to +:                                                                                                                           OK
+      Separator 1;(2;1+2) should be 3:                                                                                                                     OK
+      Assign x = (1;(2;1+2))+a ,a=2 shoule be 5:                                                                                                           OK
+      1+(Assign x = (1;(2;1+2))+a) ,a=2 shoule be 6:                                                                                                       OK
+      Assign: x=2; y=2; x=3, x should be 3:                                                                                                                OK
+      x = 1 + (x = 2), x should be 3:                                                                                                                      OK
+      Id Empty should be Nothing:                                                                                                                          OK
+      Id should be match the map:                                                                                                                          OK
+      Id not in scope should be nothing:                                                                                                                   OK
+    Test For Lang4
+      eval should be the same:                                                                                                                             OK
+      plus should be equal to +:                                                                                                                           OK
+      Let should be 'let var = 1+2 in var':                                                                                                                OK
+      Let should be 'let var = x+2 in (var+1)':                                                                                                            OK
+      Let should be 'let var = x+2 in (var+1)':                                                                                                            OK
+      Let should be 'let var = (let var = x+2 in var+2) in (var+1)':                                                                                       OK
+      Let should be 'x+(let var = x+2 in var+2)=,x=2':                                                                                                     OK
+      Let out of scope: x + let x=2 in x, should be nothing:                                                                                               OK
+      nested let: let x=2 in (let y=1 in x+y), should be 3:                                                                                                OK
+      let reassign: let x=2 in (let x = 3 in x), should be 3:                                                                                              OK
+      Id should show its value:                                                                                                                            OK
+      Id should show its value:                                                                                                                            OK
+      Id not in scope should be nothing:                                                                                                                   OK
+  Test For Higher Order Problem
+    For all Lists, the sum before and after addoneList should differ by exactly the length of the list:                                                    OK
+      +++ OK, passed 20 tests.
+    For all Lists, sum should act like Prelude's sum:                                                                                                      OK
+      +++ OK, passed 20 tests; 12 discarded.
+    For all Lists, product should act like Prelude's product:                                                                                              OK
+      +++ OK, passed 20 tests; 15 discarded.
+    Tests for maxList func
+      Empty list is 0:                                                                                                                                     OK
+      Negative list is 0:                                                                                                                                  OK
+      Negative list is 0:                                                                                                                                  OK
+      Positive list works:                                                                                                                                 OK
+      Positive list works:                                                                                                                                 OK
+      Positive list works:                                                                                                                                 OK
+      Positive list works:                                                                                                                                 OK
+    Tests for zipWith
+      For all Lists, zipWith should act like Prelude's zipWith:                                                                                            OK
+        +++ OK, passed 20 tests.
+      For all Lists, zipWith should act like Prelude's zipWith:                                                                                            OK
+        +++ OK, passed 20 tests.
+      For all Lists, zipWith should act like Prelude's zipWith:                                                                                            OK
+        +++ OK, passed 20 tests.
+    Tests for dot func
+      dot product should work:                                                                                                                             OK
+      dot product should work:                                                                                                                             OK
+      dot product should work:                                                                                                                             OK
+    Tests for listAdder func
+      listAdder should work:                                                                                                                               OK
+      listAdder should work:                                                                                                                               OK
+      listAdder should work:                                                                                                                               OK
+      listAdder should work:                                                                                                                               OK
+      listAdder should work:                                                                                                                               OK
+    Tests for listAdder func
+      listMaxer should work:                                                                                                                               OK
+      listMaxer should work:                                                                                                                               OK
+      listMaxer should work:                                                                                                                               OK
+      listMaxer should work:                                                                                                                               OK
+      listMaxer should work:                                                                                                                               OK
+    Tests for fullname func
+      fullNames should work:                                                                                                                               OK
+      fullNames should work:                                                                                                                               OK
+      fullNames should work:                                                                                                                               OK
+      fullNames should work:                                                                                                                               OK
+    Tests for addAllLists func
+      addAllLists should work:                                                                                                                             OK
+    Tests for Pet datatype
+      For all okCat, they are happy when temp >0:                                                                                                          OK
+        +++ OK, passed 20 tests; 39 discarded.
+      For all temp, the bad cat will never be happy:                                                                                                       OK
+        +++ OK, passed 20 tests.
+      For all temp, a dog should always be happy:                                                                                                          OK
+        +++ OK, passed 20 tests.
+      For all temp and thresh, we make a cat that is happy if the temp is under thresh, then either the cat is happy or temp is larger or equal to thresh: OK
+        +++ OK, passed 20 tests.
+      For all Cats, you should name them properly:                                                                                                         OK
+        +++ OK, passed 20 tests.
+      For all Dogs, you should name them properly:                                                                                                         OK
+        +++ OK, passed 20 tests.
+      list of empty pets shouldn't be happy:                                                                                                               OK
+      list of dogs should all be happy:                                                                                                                    OK
+      list of dogs and cats could be happy:                                                                                                                OK
+
+All 115 tests passed (0.02s)
+Test suite test: PASS
+Test suite logged to: /Users/fengyinxuan/Desktop/just_stuff/college/s4/cs
+320/cs320-hw-HarryFengYinxuan/assignments/week4/dist-newstyle/build/x86_64-osx/ghc-8.6.3/week4-0.1.0.0/t/test/test/week4-0.1.0.0-test.log
+1 of 1 test suites (1 of 1 test cases) passed.

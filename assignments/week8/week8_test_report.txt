@@ -1,0 +1,141 @@
+REPORT:
+
+OUT:
+all tests
+  Lang3 test
+    State test
+      For all initial state, ast1 and ast2, state of `Plus ast1 ast2` should be the same as `(eval ast1)` then `(eval ast2)`:                                                                                                                          OK (0.16s)
+        +++ OK, passed 100 tests.
+      For all initial state, ast1 and ast2, state of `Sub ast1 ast2` should be the same as `(eval ast1)` then `(eval ast2)`:                                                                                                                           OK (0.11s)
+        +++ OK, passed 100 tests.
+      For all initial state, ast1 and ast2, state of `Mult ast1 ast2` should be the same as `(eval ast1)` then `(eval ast2)`:                                                                                                                          OK (0.08s)
+        +++ OK, passed 100 tests.
+      For all initial state, ast1 and ast2, state of `Separator ast1 ast2` should be the same as `(eval ast1)` then `(eval ast2)`:                                                                                                                     OK (0.07s)
+        +++ OK, passed 100 tests.
+      For all variable name s, initial state and ast, `Assign s ast` should add {s: eval ast} to Map:                                                                                                                                                  OK (0.07s)
+        +++ OK, passed 100 tests.
+    Result test
+      For all integer i, evaluate LiteralInt i should be evaluate to i:                                                                                                                                                                                OK
+        +++ OK, passed 100 tests.
+      For all initial state and str, `Var str` should lookup the Map:                                                                                                                                                                                  OK
+        +++ OK, passed 100 tests.
+      For all initial state, ast1 and ast2, `Plus ast1 ast2` should be evaluate to `(eval ast1) + (eval ast2)`:                                                                                                                                        OK
+        +++ OK, passed 100 tests.
+      For all initial state, ast1 and ast2, `Sub ast1 ast2` should be evaluate to `(eval ast1) - (eval ast2)`:                                                                                                                                         OK
+        +++ OK, passed 100 tests.
+      For all initial state, ast1 and ast2, `Mult ast1 ast2` should be evaluate to `(eval ast1) * (eval ast2)`:                                                                                                                                        OK
+        +++ OK, passed 100 tests.
+      For all initial state, ast1 and ast2, `Separator ast1 ast2` should be evaluate to `(eval ast2)`:                                                                                                                                                 OK
+        +++ OK, passed 100 tests.
+      For all initial state and ast, `Assign s ast` should be the same as eval ast:                                                                                                                                                                    OK
+        +++ OK, passed 100 tests.
+  Lang4 test
+    Base case: for all integer i, evaluation of LiteralInt i should be i.:                                                                                                                                                                             OK
+      +++ OK, passed 100 tests.
+    For all ast1 & ast2, `Plus ast1 ast2` should evaluate to `(eval ast1) + (eval ast2)`:                                                                                                                                                              OK
+      +++ OK, passed 100 tests.
+    For all ast1 & ast2, `Sub ast1 ast2` should evaluate to `(eval ast1) - (eval ast2)`:                                                                                                                                                               OK
+      +++ OK, passed 100 tests.
+    For all ast1 & ast2, `Mult ast1 ast2` should evaluate to `(eval ast1) * (eval ast2)`:                                                                                                                                                              OK
+      +++ OK, passed 100 tests.
+    For all Let, it should evaluate the expression in the appropriate environment:                                                                                                                                                                     OK
+      +++ OK, passed 100 tests.
+  Reader test
+    left identity law for Reader Monads: forall res:: Integer, init:: Bool, f :: Integer -> Reader Bool Integer. (runReader (return res >>= f) init) == runReader (f res) init:                                                                        OK
+      +++ OK, passed 100 tests.
+    left identity law for Reader Monads: forall res:: Reader Bool Integer, init:: Bool. (runReader (res >>= return) init) == (runReader res init) :                                                                                                    OK
+      +++ OK, passed 100 tests.
+    associativity law for Reader Monads: forall res:: Reader Bool Integer, init:: Bool, f:: Integer -> Reader Bool Integer, f1:: Integer -> Reader Bool Integer. (runReader (res >>= f >>= f1) init) == (runReader (res >>= (\x -> f x >>= f1)) init): OK
+      +++ OK, passed 100 tests.
+  State test
+    left identity law for State Monads: forall res:: Integer, init:: Bool, f :: Integer -> State Bool Integer. (runState (return res >>= f) init) == runState (f res) init:                                                                            OK
+      +++ OK, passed 100 tests.
+    left identity law for State Monads: forall res:: State Bool Integer, init:: Bool. (runState (res >>= return) init) == (runState res init) :                                                                                                        OK
+      +++ OK, passed 100 tests.
+    associativity law for State Monads: forall res:: State Bool Integer, init:: Bool, f:: Integer -> State Bool Integer, f1:: Integer -> State Bool Integer. (runState (res >>= f >>= f1) init) == (runState (res >>= (\x -> f x >>= f1)) init):       OK
+      +++ OK, passed 100 tests.
+  Lang1 Parser test
+    Lang 1: showFullyParen should match parse:                                                                                                                                                                                                         OK (0.28s)
+      +++ OK, passed 100 tests.
+    Lang 1: showPretty should match parse:                                                                                                                                                                                                             OK (0.01s)
+      +++ OK, passed 100 tests.
+  Lang2 Parser test
+    Lang 2: showFullyParen should match parse:                                                                                                                                                                                                         OK
+      +++ OK, passed 100 tests.
+    Lang 2: showPretty should match parse:                                                                                                                                                                                                             OK
+      +++ OK, passed 100 tests.
+  Lang3 Parser test
+    Lang 3: showFullyParen should match parse:                                                                                                                                                                                                         OK
+      +++ OK, passed 100 tests.
+    Lang 3: showPretty should match parse:                                                                                                                                                                                                             OK
+      +++ OK, passed 100 tests.
+  Lang4 Parser test
+    Lang 4: showFullyParen should match parse:                                                                                                                                                                                                         OK
+      +++ OK, passed 100 tests.
+    Lang 4: showPretty should match parse:                                                                                                                                                                                                             OK
+      +++ OK, passed 100 tests.
+
+All 31 tests passed (0.90s)
+
+ERR:
+week8-0.1.0.0: unregistering (switching from /home/zui/Spring-2019-Instructors/gradescripts/hw7/cs320-hw-hanabatio/assignments/week8/ to /home/zui/Spring-2019-Instructors/gradescripts/hw7/cs320-hw-HarryFengYinxuan/assignments/week8/)
+week8-0.1.0.0: configure (lib + test)
+Configuring week8-0.1.0.0...
+week8-0.1.0.0: build (lib + test)
+Preprocessing library for week8-0.1.0.0..
+Building library for week8-0.1.0.0..
+[ 1 of 15] Compiling HelpShow         ( src/HelpShow.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/HelpShow.o )
+[ 2 of 15] Compiling Lang0            ( src/lang/Lang0.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang0.o )
+[ 3 of 15] Compiling Lang1            ( src/lang/Lang1.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang1.o )
+[ 4 of 15] Compiling ParserMonad      ( src/parser/ParserMonad.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/ParserMonad.o )
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw7/cs320-hw-HarryFengYinxuan/assignments/week8/src/parser/ParserMonad.hs:136:1: warning: [-Wtabs]
+    Tab character found here, and in 9 further locations.
+    Please use spaces instead.
+    |
+136 |                          
+    | ^^^^^^^^
+[ 5 of 15] Compiling Lang1Parser      ( src/parser/Lang1Parser.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang1Parser.o )
+[ 6 of 15] Compiling Lang0Parser      ( src/parser/Lang0Parser.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang0Parser.o )
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw7/cs320-hw-HarryFengYinxuan/assignments/week8/src/parser/Lang0Parser.hs:40:1: warning: [-Wtabs]
+    Tab character found here, and in 15 further locations.
+    Please use spaces instead.
+   |
+40 |          
+   | ^^^^^^^^
+[ 7 of 15] Compiling PrinterMonad     ( src/PrinterMonad.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/PrinterMonad.o )
+[ 8 of 15] Compiling Lang2            ( src/lang/Lang2.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang2.o )
+[ 9 of 15] Compiling Lang2Parser      ( src/parser/Lang2Parser.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang2Parser.o )
+[10 of 15] Compiling Reader           ( src/Reader.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Reader.o )
+[11 of 15] Compiling Lang4            ( src/lang/Lang4.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang4.o )
+[12 of 15] Compiling Lang4Parser      ( src/parser/Lang4Parser.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang4Parser.o )
+[13 of 15] Compiling State            ( src/State.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/State.o )
+[14 of 15] Compiling Lang3            ( src/lang/Lang3.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang3.o )
+[15 of 15] Compiling Lang3Parser      ( src/parser/Lang3Parser.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/Lang3Parser.o )
+Preprocessing test suite 'test' for week8-0.1.0.0..
+Building test suite 'test' for week8-0.1.0.0..
+[ 1 of 15] Compiling Lang1TestTypes   ( tests/Lang1TestTypes.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/Lang1TestTypes.o )
+[ 2 of 15] Compiling Lang2TestTypes   ( tests/Lang2TestTypes.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/Lang2TestTypes.o )
+[ 3 of 15] Compiling Lang3TestTypes   ( tests/Lang3TestTypes.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/Lang3TestTypes.o )
+[ 4 of 15] Compiling Lang3Test        ( tests/Lang3Test.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/Lang3Test.o )
+[ 5 of 15] Compiling Lang4TestTypes   ( tests/Lang4TestTypes.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/Lang4TestTypes.o )
+[ 6 of 15] Compiling Lang4Test        ( tests/Lang4Test.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/Lang4Test.o )
+[ 7 of 15] Compiling Parser1Test      ( tests/Parser1Test.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/Parser1Test.o )
+[ 8 of 15] Compiling Parser2Test      ( tests/Parser2Test.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/Parser2Test.o )
+[ 9 of 15] Compiling Parser3Test      ( tests/Parser3Test.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/Parser3Test.o )
+[10 of 15] Compiling Parser4Test      ( tests/Parser4Test.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/Parser4Test.o )
+[11 of 15] Compiling ReaderTestType   ( tests/ReaderTestType.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/ReaderTestType.o )
+[12 of 15] Compiling ReaderTest       ( tests/ReaderTest.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/ReaderTest.o )
+[13 of 15] Compiling StateTestType    ( tests/StateTestType.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/StateTestType.o )
+[14 of 15] Compiling StateTest        ( tests/StateTest.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/StateTest.o )
+[15 of 15] Compiling Main             ( tests/Main.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/Main.o )
+Linking .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test ...
+week8-0.1.0.0: copy/register
+Installing library in /home/zui/Spring-2019-Instructors/gradescripts/.stack-work/install/x86_64-linux/lts-13.18/8.6.4/lib/x86_64-linux-ghc-8.6.4/week8-0.1.0.0-7Nl9Mrmj3MiWG5N8s76IC
+Registering library for week8-0.1.0.0..
+week8-0.1.0.0: test (suite: test)
+
+
+week8-0.1.0.0: Test suite test passed
+Completed 2 action(s).

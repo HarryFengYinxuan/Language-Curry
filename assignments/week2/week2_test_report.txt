@@ -1,0 +1,831 @@
+REPORT:
+{'total': '764', 'failed': 0, 'tests': {3: ('      testing not True:                                                                   ', 'OK'), 4: ('      testing not False:                                                                  ', 'OK'), 6: ('      testing and True True:                                                              ', 'OK'), 7: ('      testing and True False:                                                             ', 'OK'), 8: ('      testing and False True:                                                             ', 'OK'), 9: ('      testing and False False:                                                            ', 'OK'), 11: ('      testing or True True:                                                               ', 'OK'), 12: ('      testing or True False:                                                              ', 'OK'), 13: ('      testing or False True:                                                              ', 'OK'), 14: ('      testing or False False:                                                             ', 'OK'), 16: ('      testing xor True True:                                                              ', 'OK'), 17: ('      testing xor True False:                                                             ', 'OK'), 18: ('      testing xor False True:                                                             ', 'OK'), 19: ('      testing xor False False:                                                            ', 'OK'), 22: ('      test zero:                                                                          ', 'OK'), 23: ('      test one:                                                                           ', 'OK'), 24: ('      test two:                                                                           ', 'OK'), 25: ('      test three:                                                                         ', 'OK'), 26: ('      test four:                                                                          ', 'OK'), 27: ('      test five:                                                                          ', 'OK'), 29: ('      testing add 0 0:                                                                    ', 'OK'), 30: ('      testing add 0 1:                                                                    ', 'OK'), 31: ('      testing add 0 2:                                                                    ', 'OK'), 32: ('      testing add 0 3:                                                                    ', 'OK'), 33: ('      testing add 0 4:                                                                    ', 'OK'), 34: ('      testing add 0 5:                                                                    ', 'OK'), 35: ('      testing add 1 0:                                                                    ', 'OK'), 36: ('      testing add 1 1:                                                                    ', 'OK'), 37: ('      testing add 1 2:                                                                    ', 'OK'), 38: ('      testing add 1 3:                                                                    ', 'OK'), 39: ('      testing add 1 4:                                                                    ', 'OK'), 40: ('      testing add 1 5:                                                                    ', 'OK'), 41: ('      testing add 2 0:                                                                    ', 'OK'), 42: ('      testing add 2 1:                                                                    ', 'OK'), 43: ('      testing add 2 2:                                                                    ', 'OK'), 44: ('      testing add 2 3:                                                                    ', 'OK'), 45: ('      testing add 2 4:                                                                    ', 'OK'), 46: ('      testing add 2 5:                                                                    ', 'OK'), 47: ('      testing add 3 0:                                                                    ', 'OK'), 48: ('      testing add 3 1:                                                                    ', 'OK'), 49: ('      testing add 3 2:                                                                    ', 'OK'), 50: ('      testing add 3 3:                                                                    ', 'OK'), 51: ('      testing add 3 4:                                                                    ', 'OK'), 52: ('      testing add 3 5:                                                                    ', 'OK'), 53: ('      testing add 4 0:                                                                    ', 'OK'), 54: ('      testing add 4 1:                                                                    ', 'OK'), 55: ('      testing add 4 2:                                                                    ', 'OK'), 56: ('      testing add 4 3:                                                                    ', 'OK'), 57: ('      testing add 4 4:                                                                    ', 'OK'), 58: ('      testing add 4 5:                                                                    ', 'OK'), 59: ('      testing add 5 0:                                                                    ', 'OK'), 60: ('      testing add 5 1:                                                                    ', 'OK'), 61: ('      testing add 5 2:                                                                    ', 'OK'), 62: ('      testing add 5 3:                                                                    ', 'OK'), 63: ('      testing add 5 4:                                                                    ', 'OK'), 64: ('      testing add 5 5:                                                                    ', 'OK'), 66: ('      testing mult 0 0:                                                                   ', 'OK'), 67: ('      testing mult 0 1:                                                                   ', 'OK'), 68: ('      testing mult 0 2:                                                                   ', 'OK'), 69: ('      testing mult 0 3:                                                                   ', 'OK'), 70: ('      testing mult 0 4:                                                                   ', 'OK'), 71: ('      testing mult 0 5:                                                                   ', 'OK'), 72: ('      testing mult 1 0:                                                                   ', 'OK'), 73: ('      testing mult 1 1:                                                                   ', 'OK'), 74: ('      testing mult 1 2:                                                                   ', 'OK'), 75: ('      testing mult 1 3:                                                                   ', 'OK'), 76: ('      testing mult 1 4:                                                                   ', 'OK'), 77: ('      testing mult 1 5:                                                                   ', 'OK'), 78: ('      testing mult 2 0:                                                                   ', 'OK'), 79: ('      testing mult 2 1:                                                                   ', 'OK'), 80: ('      testing mult 2 2:                                                                   ', 'OK'), 81: ('      testing mult 2 3:                                                                   ', 'OK'), 82: ('      testing mult 2 4:                                                                   ', 'OK'), 83: ('      testing mult 2 5:                                                                   ', 'OK'), 84: ('      testing mult 3 0:                                                                   ', 'OK'), 85: ('      testing mult 3 1:                                                                   ', 'OK'), 86: ('      testing mult 3 2:                                                                   ', 'OK'), 87: ('      testing mult 3 3:                                                                   ', 'OK'), 88: ('      testing mult 3 4:                                                                   ', 'OK'), 89: ('      testing mult 3 5:                                                                   ', 'OK'), 90: ('      testing mult 4 0:                                                                   ', 'OK'), 91: ('      testing mult 4 1:                                                                   ', 'OK'), 92: ('      testing mult 4 2:                                                                   ', 'OK'), 93: ('      testing mult 4 3:                                                                   ', 'OK'), 94: ('      testing mult 4 4:                                                                   ', 'OK'), 95: ('      testing mult 4 5:                                                                   ', 'OK'), 96: ('      testing mult 5 0:                                                                   ', 'OK'), 97: ('      testing mult 5 1:                                                                   ', 'OK'), 98: ('      testing mult 5 2:                                                                   ', 'OK'), 99: ('      testing mult 5 3:                                                                   ', 'OK'), 100: ('      testing mult 5 4:                                                                   ', 'OK'), 101: ('      testing mult 5 5:                                                                   ', 'OK'), 103: ('      testing eq 0 0:                                                                     ', 'OK'), 104: ('      testing eq 0 1:                                                                     ', 'OK'), 105: ('      testing eq 0 2:                                                                     ', 'OK'), 106: ('      testing eq 0 3:                                                                     ', 'OK'), 107: ('      testing eq 0 4:                                                                     ', 'OK'), 108: ('      testing eq 0 5:                                                                     ', 'OK'), 109: ('      testing eq 1 0:                                                                     ', 'OK'), 110: ('      testing eq 1 1:                                                                     ', 'OK'), 111: ('      testing eq 1 2:                                                                     ', 'OK'), 112: ('      testing eq 1 3:                                                                     ', 'OK'), 113: ('      testing eq 1 4:                                                                     ', 'OK'), 114: ('      testing eq 1 5:                                                                     ', 'OK'), 115: ('      testing eq 2 0:                                                                     ', 'OK'), 116: ('      testing eq 2 1:                                                                     ', 'OK'), 117: ('      testing eq 2 2:                                                                     ', 'OK'), 118: ('      testing eq 2 3:                                                                     ', 'OK'), 119: ('      testing eq 2 4:                                                                     ', 'OK'), 120: ('      testing eq 2 5:                                                                     ', 'OK'), 121: ('      testing eq 3 0:                                                                     ', 'OK'), 122: ('      testing eq 3 1:                                                                     ', 'OK'), 123: ('      testing eq 3 2:                                                                     ', 'OK'), 124: ('      testing eq 3 3:                                                                     ', 'OK'), 125: ('      testing eq 3 4:                                                                     ', 'OK'), 126: ('      testing eq 3 5:                                                                     ', 'OK'), 127: ('      testing eq 4 0:                                                                     ', 'OK'), 128: ('      testing eq 4 1:                                                                     ', 'OK'), 129: ('      testing eq 4 2:                                                                     ', 'OK'), 130: ('      testing eq 4 3:                                                                     ', 'OK'), 131: ('      testing eq 4 4:                                                                     ', 'OK'), 132: ('      testing eq 4 5:                                                                     ', 'OK'), 133: ('      testing eq 5 0:                                                                     ', 'OK'), 134: ('      testing eq 5 1:                                                                     ', 'OK'), 135: ('      testing eq 5 2:                                                                     ', 'OK'), 136: ('      testing eq 5 3:                                                                     ', 'OK'), 137: ('      testing eq 5 4:                                                                     ', 'OK'), 138: ('      testing eq 5 5:                                                                     ', 'OK'), 140: ('      testing ne 0 0:                                                                     ', 'OK'), 141: ('      testing ne 0 1:                                                                     ', 'OK'), 142: ('      testing ne 0 2:                                                                     ', 'OK'), 143: ('      testing ne 0 3:                                                                     ', 'OK'), 144: ('      testing ne 0 4:                                                                     ', 'OK'), 145: ('      testing ne 0 5:                                                                     ', 'OK'), 146: ('      testing ne 1 0:                                                                     ', 'OK'), 147: ('      testing ne 1 1:                                                                     ', 'OK'), 148: ('      testing ne 1 2:                                                                     ', 'OK'), 149: ('      testing ne 1 3:                                                                     ', 'OK'), 150: ('      testing ne 1 4:                                                                     ', 'OK'), 151: ('      testing ne 1 5:                                                                     ', 'OK'), 152: ('      testing ne 2 0:                                                                     ', 'OK'), 153: ('      testing ne 2 1:                                                                     ', 'OK'), 154: ('      testing ne 2 2:                                                                     ', 'OK'), 155: ('      testing ne 2 3:                                                                     ', 'OK'), 156: ('      testing ne 2 4:                                                                     ', 'OK'), 157: ('      testing ne 2 5:                                                                     ', 'OK'), 158: ('      testing ne 3 0:                                                                     ', 'OK'), 159: ('      testing ne 3 1:                                                                     ', 'OK'), 160: ('      testing ne 3 2:                                                                     ', 'OK'), 161: ('      testing ne 3 3:                                                                     ', 'OK'), 162: ('      testing ne 3 4:                                                                     ', 'OK'), 163: ('      testing ne 3 5:                                                                     ', 'OK'), 164: ('      testing ne 4 0:                                                                     ', 'OK'), 165: ('      testing ne 4 1:                                                                     ', 'OK'), 166: ('      testing ne 4 2:                                                                     ', 'OK'), 167: ('      testing ne 4 3:                                                                     ', 'OK'), 168: ('      testing ne 4 4:                                                                     ', 'OK'), 169: ('      testing ne 4 5:                                                                     ', 'OK'), 170: ('      testing ne 5 0:                                                                     ', 'OK'), 171: ('      testing ne 5 1:                                                                     ', 'OK'), 172: ('      testing ne 5 2:                                                                     ', 'OK'), 173: ('      testing ne 5 3:                                                                     ', 'OK'), 174: ('      testing ne 5 4:                                                                     ', 'OK'), 175: ('      testing ne 5 5:                                                                     ', 'OK'), 177: ('      testing lt 0 0:                                                                     ', 'OK'), 178: ('      testing lt 0 1:                                                                     ', 'OK'), 179: ('      testing lt 0 2:                                                                     ', 'OK'), 180: ('      testing lt 0 3:                                                                     ', 'OK'), 181: ('      testing lt 0 4:                                                                     ', 'OK'), 182: ('      testing lt 0 5:                                                                     ', 'OK'), 183: ('      testing lt 1 0:                                                                     ', 'OK'), 184: ('      testing lt 1 1:                                                                     ', 'OK'), 185: ('      testing lt 1 2:                                                                     ', 'OK'), 186: ('      testing lt 1 3:                                                                     ', 'OK'), 187: ('      testing lt 1 4:                                                                     ', 'OK'), 188: ('      testing lt 1 5:                                                                     ', 'OK'), 189: ('      testing lt 2 0:                                                                     ', 'OK'), 190: ('      testing lt 2 1:                                                                     ', 'OK'), 191: ('      testing lt 2 2:                                                                     ', 'OK'), 192: ('      testing lt 2 3:                                                                     ', 'OK'), 193: ('      testing lt 2 4:                                                                     ', 'OK'), 194: ('      testing lt 2 5:                                                                     ', 'OK'), 195: ('      testing lt 3 0:                                                                     ', 'OK'), 196: ('      testing lt 3 1:                                                                     ', 'OK'), 197: ('      testing lt 3 2:                                                                     ', 'OK'), 198: ('      testing lt 3 3:                                                                     ', 'OK'), 199: ('      testing lt 3 4:                                                                     ', 'OK'), 200: ('      testing lt 3 5:                                                                     ', 'OK'), 201: ('      testing lt 4 0:                                                                     ', 'OK'), 202: ('      testing lt 4 1:                                                                     ', 'OK'), 203: ('      testing lt 4 2:                                                                     ', 'OK'), 204: ('      testing lt 4 3:                                                                     ', 'OK'), 205: ('      testing lt 4 4:                                                                     ', 'OK'), 206: ('      testing lt 4 5:                                                                     ', 'OK'), 207: ('      testing lt 5 0:                                                                     ', 'OK'), 208: ('      testing lt 5 1:                                                                     ', 'OK'), 209: ('      testing lt 5 2:                                                                     ', 'OK'), 210: ('      testing lt 5 3:                                                                     ', 'OK'), 211: ('      testing lt 5 4:                                                                     ', 'OK'), 212: ('      testing lt 5 5:                                                                     ', 'OK'), 214: ('      testing gt 0 0:                                                                     ', 'OK'), 215: ('      testing gt 0 1:                                                                     ', 'OK'), 216: ('      testing gt 0 2:                                                                     ', 'OK'), 217: ('      testing gt 0 3:                                                                     ', 'OK'), 218: ('      testing gt 0 4:                                                                     ', 'OK'), 219: ('      testing gt 0 5:                                                                     ', 'OK'), 220: ('      testing gt 1 0:                                                                     ', 'OK'), 221: ('      testing gt 1 1:                                                                     ', 'OK'), 222: ('      testing gt 1 2:                                                                     ', 'OK'), 223: ('      testing gt 1 3:                                                                     ', 'OK'), 224: ('      testing gt 1 4:                                                                     ', 'OK'), 225: ('      testing gt 1 5:                                                                     ', 'OK'), 226: ('      testing gt 2 0:                                                                     ', 'OK'), 227: ('      testing gt 2 1:                                                                     ', 'OK'), 228: ('      testing gt 2 2:                                                                     ', 'OK'), 229: ('      testing gt 2 3:                                                                     ', 'OK'), 230: ('      testing gt 2 4:                                                                     ', 'OK'), 231: ('      testing gt 2 5:                                                                     ', 'OK'), 232: ('      testing gt 3 0:                                                                     ', 'OK'), 233: ('      testing gt 3 1:                                                                     ', 'OK'), 234: ('      testing gt 3 2:                                                                     ', 'OK'), 235: ('      testing gt 3 3:                                                                     ', 'OK'), 236: ('      testing gt 3 4:                                                                     ', 'OK'), 237: ('      testing gt 3 5:                                                                     ', 'OK'), 238: ('      testing gt 4 0:                                                                     ', 'OK'), 239: ('      testing gt 4 1:                                                                     ', 'OK'), 240: ('      testing gt 4 2:                                                                     ', 'OK'), 241: ('      testing gt 4 3:                                                                     ', 'OK'), 242: ('      testing gt 4 4:                                                                     ', 'OK'), 243: ('      testing gt 4 5:                                                                     ', 'OK'), 244: ('      testing gt 5 0:                                                                     ', 'OK'), 245: ('      testing gt 5 1:                                                                     ', 'OK'), 246: ('      testing gt 5 2:                                                                     ', 'OK'), 247: ('      testing gt 5 3:                                                                     ', 'OK'), 248: ('      testing gt 5 4:                                                                     ', 'OK'), 249: ('      testing gt 5 5:                                                                     ', 'OK'), 251: ('      testing le 0 0:                                                                     ', 'OK'), 252: ('      testing le 0 1:                                                                     ', 'OK'), 253: ('      testing le 0 2:                                                                     ', 'OK'), 254: ('      testing le 0 3:                                                                     ', 'OK'), 255: ('      testing le 0 4:                                                                     ', 'OK'), 256: ('      testing le 0 5:                                                                     ', 'OK'), 257: ('      testing le 1 0:                                                                     ', 'OK'), 258: ('      testing le 1 1:                                                                     ', 'OK'), 259: ('      testing le 1 2:                                                                     ', 'OK'), 260: ('      testing le 1 3:                                                                     ', 'OK'), 261: ('      testing le 1 4:                                                                     ', 'OK'), 262: ('      testing le 1 5:                                                                     ', 'OK'), 263: ('      testing le 2 0:                                                                     ', 'OK'), 264: ('      testing le 2 1:                                                                     ', 'OK'), 265: ('      testing le 2 2:                                                                     ', 'OK'), 266: ('      testing le 2 3:                                                                     ', 'OK'), 267: ('      testing le 2 4:                                                                     ', 'OK'), 268: ('      testing le 2 5:                                                                     ', 'OK'), 269: ('      testing le 3 0:                                                                     ', 'OK'), 270: ('      testing le 3 1:                                                                     ', 'OK'), 271: ('      testing le 3 2:                                                                     ', 'OK'), 272: ('      testing le 3 3:                                                                     ', 'OK'), 273: ('      testing le 3 4:                                                                     ', 'OK'), 274: ('      testing le 3 5:                                                                     ', 'OK'), 275: ('      testing le 4 0:                                                                     ', 'OK'), 276: ('      testing le 4 1:                                                                     ', 'OK'), 277: ('      testing le 4 2:                                                                     ', 'OK'), 278: ('      testing le 4 3:                                                                     ', 'OK'), 279: ('      testing le 4 4:                                                                     ', 'OK'), 280: ('      testing le 4 5:                                                                     ', 'OK'), 281: ('      testing le 5 0:                                                                     ', 'OK'), 282: ('      testing le 5 1:                                                                     ', 'OK'), 283: ('      testing le 5 2:                                                                     ', 'OK'), 284: ('      testing le 5 3:                                                                     ', 'OK'), 285: ('      testing le 5 4:                                                                     ', 'OK'), 286: ('      testing le 5 5:                                                                     ', 'OK'), 288: ('      testing ge 0 0:                                                                     ', 'OK'), 289: ('      testing ge 0 1:                                                                     ', 'OK'), 290: ('      testing ge 0 2:                                                                     ', 'OK'), 291: ('      testing ge 0 3:                                                                     ', 'OK'), 292: ('      testing ge 0 4:                                                                     ', 'OK'), 293: ('      testing ge 0 5:                                                                     ', 'OK'), 294: ('      testing ge 1 0:                                                                     ', 'OK'), 295: ('      testing ge 1 1:                                                                     ', 'OK'), 296: ('      testing ge 1 2:                                                                     ', 'OK'), 297: ('      testing ge 1 3:                                                                     ', 'OK'), 298: ('      testing ge 1 4:                                                                     ', 'OK'), 299: ('      testing ge 1 5:                                                                     ', 'OK'), 300: ('      testing ge 2 0:                                                                     ', 'OK'), 301: ('      testing ge 2 1:                                                                     ', 'OK'), 302: ('      testing ge 2 2:                                                                     ', 'OK'), 303: ('      testing ge 2 3:                                                                     ', 'OK'), 304: ('      testing ge 2 4:                                                                     ', 'OK'), 305: ('      testing ge 2 5:                                                                     ', 'OK'), 306: ('      testing ge 3 0:                                                                     ', 'OK'), 307: ('      testing ge 3 1:                                                                     ', 'OK'), 308: ('      testing ge 3 2:                                                                     ', 'OK'), 309: ('      testing ge 3 3:                                                                     ', 'OK'), 310: ('      testing ge 3 4:                                                                     ', 'OK'), 311: ('      testing ge 3 5:                                                                     ', 'OK'), 312: ('      testing ge 4 0:                                                                     ', 'OK'), 313: ('      testing ge 4 1:                                                                     ', 'OK'), 314: ('      testing ge 4 2:                                                                     ', 'OK'), 315: ('      testing ge 4 3:                                                                     ', 'OK'), 316: ('      testing ge 4 4:                                                                     ', 'OK'), 317: ('      testing ge 4 5:                                                                     ', 'OK'), 318: ('      testing ge 5 0:                                                                     ', 'OK'), 319: ('      testing ge 5 1:                                                                     ', 'OK'), 320: ('      testing ge 5 2:                                                                     ', 'OK'), 321: ('      testing ge 5 3:                                                                     ', 'OK'), 322: ('      testing ge 5 4:                                                                     ', 'OK'), 323: ('      testing ge 5 5:                                                                     ', 'OK'), 325: ('      testing isEven 0:                                                                   ', 'OK'), 326: ('      testing isEven 1:                                                                   ', 'OK'), 327: ('      testing isEven 2:                                                                   ', 'OK'), 328: ('      testing isEven 3:                                                                   ', 'OK'), 329: ('      testing isEven 4:                                                                   ', 'OK'), 330: ('      testing isEven 5:                                                                   ', 'OK'), 332: ('      testing max 0 0:                                                                    ', 'OK'), 333: ('      testing max 0 1:                                                                    ', 'OK'), 334: ('      testing max 0 2:                                                                    ', 'OK'), 335: ('      testing max 0 3:                                                                    ', 'OK'), 336: ('      testing max 0 4:                                                                    ', 'OK'), 337: ('      testing max 0 5:                                                                    ', 'OK'), 338: ('      testing max 1 0:                                                                    ', 'OK'), 339: ('      testing max 1 1:                                                                    ', 'OK'), 340: ('      testing max 1 2:                                                                    ', 'OK'), 341: ('      testing max 1 3:                                                                    ', 'OK'), 342: ('      testing max 1 4:                                                                    ', 'OK'), 343: ('      testing max 1 5:                                                                    ', 'OK'), 344: ('      testing max 2 0:                                                                    ', 'OK'), 345: ('      testing max 2 1:                                                                    ', 'OK'), 346: ('      testing max 2 2:                                                                    ', 'OK'), 347: ('      testing max 2 3:                                                                    ', 'OK'), 348: ('      testing max 2 4:                                                                    ', 'OK'), 349: ('      testing max 2 5:                                                                    ', 'OK'), 350: ('      testing max 3 0:                                                                    ', 'OK'), 351: ('      testing max 3 1:                                                                    ', 'OK'), 352: ('      testing max 3 2:                                                                    ', 'OK'), 353: ('      testing max 3 3:                                                                    ', 'OK'), 354: ('      testing max 3 4:                                                                    ', 'OK'), 355: ('      testing max 3 5:                                                                    ', 'OK'), 356: ('      testing max 4 0:                                                                    ', 'OK'), 357: ('      testing max 4 1:                                                                    ', 'OK'), 358: ('      testing max 4 2:                                                                    ', 'OK'), 359: ('      testing max 4 3:                                                                    ', 'OK'), 360: ('      testing max 4 4:                                                                    ', 'OK'), 361: ('      testing max 4 5:                                                                    ', 'OK'), 362: ('      testing max 5 0:                                                                    ', 'OK'), 363: ('      testing max 5 1:                                                                    ', 'OK'), 364: ('      testing max 5 2:                                                                    ', 'OK'), 365: ('      testing max 5 3:                                                                    ', 'OK'), 366: ('      testing max 5 4:                                                                    ', 'OK'), 367: ('      testing max 5 5:                                                                    ', 'OK'), 370: ('      test equality of the 0th day after favoriteDay and the 0th day after favoriteDay:   ', 'OK'), 371: ('      test equality of the 0th day after favoriteDay and the 1th day after favoriteDay:   ', 'OK'), 372: ('      test equality of the 0th day after favoriteDay and the 2th day after favoriteDay:   ', 'OK'), 373: ('      test equality of the 0th day after favoriteDay and the 3th day after favoriteDay:   ', 'OK'), 374: ('      test equality of the 0th day after favoriteDay and the 4th day after favoriteDay:   ', 'OK'), 375: ('      test equality of the 0th day after favoriteDay and the 5th day after favoriteDay:   ', 'OK'), 376: ('      test equality of the 0th day after favoriteDay and the 6th day after favoriteDay:   ', 'OK'), 377: ('      test equality of the 1th day after favoriteDay and the 0th day after favoriteDay:   ', 'OK'), 378: ('      test equality of the 1th day after favoriteDay and the 1th day after favoriteDay:   ', 'OK'), 379: ('      test equality of the 1th day after favoriteDay and the 2th day after favoriteDay:   ', 'OK'), 380: ('      test equality of the 1th day after favoriteDay and the 3th day after favoriteDay:   ', 'OK'), 381: ('      test equality of the 1th day after favoriteDay and the 4th day after favoriteDay:   ', 'OK'), 382: ('      test equality of the 1th day after favoriteDay and the 5th day after favoriteDay:   ', 'OK'), 383: ('      test equality of the 1th day after favoriteDay and the 6th day after favoriteDay:   ', 'OK'), 384: ('      test equality of the 2th day after favoriteDay and the 0th day after favoriteDay:   ', 'OK'), 385: ('      test equality of the 2th day after favoriteDay and the 1th day after favoriteDay:   ', 'OK'), 386: ('      test equality of the 2th day after favoriteDay and the 2th day after favoriteDay:   ', 'OK'), 387: ('      test equality of the 2th day after favoriteDay and the 3th day after favoriteDay:   ', 'OK'), 388: ('      test equality of the 2th day after favoriteDay and the 4th day after favoriteDay:   ', 'OK'), 389: ('      test equality of the 2th day after favoriteDay and the 5th day after favoriteDay:   ', 'OK'), 390: ('      test equality of the 2th day after favoriteDay and the 6th day after favoriteDay:   ', 'OK'), 391: ('      test equality of the 3th day after favoriteDay and the 0th day after favoriteDay:   ', 'OK'), 392: ('      test equality of the 3th day after favoriteDay and the 1th day after favoriteDay:   ', 'OK'), 393: ('      test equality of the 3th day after favoriteDay and the 2th day after favoriteDay:   ', 'OK'), 394: ('      test equality of the 3th day after favoriteDay and the 3th day after favoriteDay:   ', 'OK'), 395: ('      test equality of the 3th day after favoriteDay and the 4th day after favoriteDay:   ', 'OK'), 396: ('      test equality of the 3th day after favoriteDay and the 5th day after favoriteDay:   ', 'OK'), 397: ('      test equality of the 3th day after favoriteDay and the 6th day after favoriteDay:   ', 'OK'), 398: ('      test equality of the 4th day after favoriteDay and the 0th day after favoriteDay:   ', 'OK'), 399: ('      test equality of the 4th day after favoriteDay and the 1th day after favoriteDay:   ', 'OK'), 400: ('      test equality of the 4th day after favoriteDay and the 2th day after favoriteDay:   ', 'OK'), 401: ('      test equality of the 4th day after favoriteDay and the 3th day after favoriteDay:   ', 'OK'), 402: ('      test equality of the 4th day after favoriteDay and the 4th day after favoriteDay:   ', 'OK'), 403: ('      test equality of the 4th day after favoriteDay and the 5th day after favoriteDay:   ', 'OK'), 404: ('      test equality of the 4th day after favoriteDay and the 6th day after favoriteDay:   ', 'OK'), 405: ('      test equality of the 5th day after favoriteDay and the 0th day after favoriteDay:   ', 'OK'), 406: ('      test equality of the 5th day after favoriteDay and the 1th day after favoriteDay:   ', 'OK'), 407: ('      test equality of the 5th day after favoriteDay and the 2th day after favoriteDay:   ', 'OK'), 408: ('      test equality of the 5th day after favoriteDay and the 3th day after favoriteDay:   ', 'OK'), 409: ('      test equality of the 5th day after favoriteDay and the 4th day after favoriteDay:   ', 'OK'), 410: ('      test equality of the 5th day after favoriteDay and the 5th day after favoriteDay:   ', 'OK'), 411: ('      test equality of the 5th day after favoriteDay and the 6th day after favoriteDay:   ', 'OK'), 412: ('      test equality of the 6th day after favoriteDay and the 0th day after favoriteDay:   ', 'OK'), 413: ('      test equality of the 6th day after favoriteDay and the 1th day after favoriteDay:   ', 'OK'), 414: ('      test equality of the 6th day after favoriteDay and the 2th day after favoriteDay:   ', 'OK'), 415: ('      test equality of the 6th day after favoriteDay and the 3th day after favoriteDay:   ', 'OK'), 416: ('      test equality of the 6th day after favoriteDay and the 4th day after favoriteDay:   ', 'OK'), 417: ('      test equality of the 6th day after favoriteDay and the 5th day after favoriteDay:   ', 'OK'), 418: ('      test equality of the 6th day after favoriteDay and the 6th day after favoriteDay:   ', 'OK'), 420: ('      There should be 2 weekends for 0 days after all the weekends:                       ', 'OK'), 421: ('      There should be 1 weekends for 1 days after all the weekends:                       ', 'OK'), 422: ('      There should be 0 weekends for 2 days after all the weekends:                       ', 'OK'), 423: ('      There should be 0 weekends for 3 days after all the weekends:                       ', 'OK'), 424: ('      There should be 0 weekends for 4 days after all the weekends:                       ', 'OK'), 425: ('      There should be 0 weekends for 5 days after all the weekends:                       ', 'OK'), 426: ('      There should be 1 weekends for 6 days after all the weekends:                       ', 'OK'), 429: ('      test equality of the 0th month after party month and 0th month after party month:   ', 'OK'), 430: ('      test equality of the 0th month after party month and 1th month after party month:   ', 'OK'), 431: ('      test equality of the 0th month after party month and 2th month after party month:   ', 'OK'), 432: ('      test equality of the 0th month after party month and 3th month after party month:   ', 'OK'), 433: ('      test equality of the 0th month after party month and 4th month after party month:   ', 'OK'), 434: ('      test equality of the 0th month after party month and 5th month after party month:   ', 'OK'), 435: ('      test equality of the 0th month after party month and 6th month after party month:   ', 'OK'), 436: ('      test equality of the 0th month after party month and 7th month after party month:   ', 'OK'), 437: ('      test equality of the 0th month after party month and 8th month after party month:   ', 'OK'), 438: ('      test equality of the 0th month after party month and 9th month after party month:   ', 'OK'), 439: ('      test equality of the 0th month after party month and 10th month after party month:  ', 'OK'), 440: ('      test equality of the 0th month after party month and 11th month after party month:  ', 'OK'), 441: ('      test equality of the 1th month after party month and 0th month after party month:   ', 'OK'), 442: ('      test equality of the 1th month after party month and 1th month after party month:   ', 'OK'), 443: ('      test equality of the 1th month after party month and 2th month after party month:   ', 'OK'), 444: ('      test equality of the 1th month after party month and 3th month after party month:   ', 'OK'), 445: ('      test equality of the 1th month after party month and 4th month after party month:   ', 'OK'), 446: ('      test equality of the 1th month after party month and 5th month after party month:   ', 'OK'), 447: ('      test equality of the 1th month after party month and 6th month after party month:   ', 'OK'), 448: ('      test equality of the 1th month after party month and 7th month after party month:   ', 'OK'), 449: ('      test equality of the 1th month after party month and 8th month after party month:   ', 'OK'), 450: ('      test equality of the 1th month after party month and 9th month after party month:   ', 'OK'), 451: ('      test equality of the 1th month after party month and 10th month after party month:  ', 'OK'), 452: ('      test equality of the 1th month after party month and 11th month after party month:  ', 'OK'), 453: ('      test equality of the 2th month after party month and 0th month after party month:   ', 'OK'), 454: ('      test equality of the 2th month after party month and 1th month after party month:   ', 'OK'), 455: ('      test equality of the 2th month after party month and 2th month after party month:   ', 'OK'), 456: ('      test equality of the 2th month after party month and 3th month after party month:   ', 'OK'), 457: ('      test equality of the 2th month after party month and 4th month after party month:   ', 'OK'), 458: ('      test equality of the 2th month after party month and 5th month after party month:   ', 'OK'), 459: ('      test equality of the 2th month after party month and 6th month after party month:   ', 'OK'), 460: ('      test equality of the 2th month after party month and 7th month after party month:   ', 'OK'), 461: ('      test equality of the 2th month after party month and 8th month after party month:   ', 'OK'), 462: ('      test equality of the 2th month after party month and 9th month after party month:   ', 'OK'), 463: ('      test equality of the 2th month after party month and 10th month after party month:  ', 'OK'), 464: ('      test equality of the 2th month after party month and 11th month after party month:  ', 'OK'), 465: ('      test equality of the 3th month after party month and 0th month after party month:   ', 'OK'), 466: ('      test equality of the 3th month after party month and 1th month after party month:   ', 'OK'), 467: ('      test equality of the 3th month after party month and 2th month after party month:   ', 'OK'), 468: ('      test equality of the 3th month after party month and 3th month after party month:   ', 'OK'), 469: ('      test equality of the 3th month after party month and 4th month after party month:   ', 'OK'), 470: ('      test equality of the 3th month after party month and 5th month after party month:   ', 'OK'), 471: ('      test equality of the 3th month after party month and 6th month after party month:   ', 'OK'), 472: ('      test equality of the 3th month after party month and 7th month after party month:   ', 'OK'), 473: ('      test equality of the 3th month after party month and 8th month after party month:   ', 'OK'), 474: ('      test equality of the 3th month after party month and 9th month after party month:   ', 'OK'), 475: ('      test equality of the 3th month after party month and 10th month after party month:  ', 'OK'), 476: ('      test equality of the 3th month after party month and 11th month after party month:  ', 'OK'), 477: ('      test equality of the 4th month after party month and 0th month after party month:   ', 'OK'), 478: ('      test equality of the 4th month after party month and 1th month after party month:   ', 'OK'), 479: ('      test equality of the 4th month after party month and 2th month after party month:   ', 'OK'), 480: ('      test equality of the 4th month after party month and 3th month after party month:   ', 'OK'), 481: ('      test equality of the 4th month after party month and 4th month after party month:   ', 'OK'), 482: ('      test equality of the 4th month after party month and 5th month after party month:   ', 'OK'), 483: ('      test equality of the 4th month after party month and 6th month after party month:   ', 'OK'), 484: ('      test equality of the 4th month after party month and 7th month after party month:   ', 'OK'), 485: ('      test equality of the 4th month after party month and 8th month after party month:   ', 'OK'), 486: ('      test equality of the 4th month after party month and 9th month after party month:   ', 'OK'), 487: ('      test equality of the 4th month after party month and 10th month after party month:  ', 'OK'), 488: ('      test equality of the 4th month after party month and 11th month after party month:  ', 'OK'), 489: ('      test equality of the 5th month after party month and 0th month after party month:   ', 'OK'), 490: ('      test equality of the 5th month after party month and 1th month after party month:   ', 'OK'), 491: ('      test equality of the 5th month after party month and 2th month after party month:   ', 'OK'), 492: ('      test equality of the 5th month after party month and 3th month after party month:   ', 'OK'), 493: ('      test equality of the 5th month after party month and 4th month after party month:   ', 'OK'), 494: ('      test equality of the 5th month after party month and 5th month after party month:   ', 'OK'), 495: ('      test equality of the 5th month after party month and 6th month after party month:   ', 'OK'), 496: ('      test equality of the 5th month after party month and 7th month after party month:   ', 'OK'), 497: ('      test equality of the 5th month after party month and 8th month after party month:   ', 'OK'), 498: ('      test equality of the 5th month after party month and 9th month after party month:   ', 'OK'), 499: ('      test equality of the 5th month after party month and 10th month after party month:  ', 'OK'), 500: ('      test equality of the 5th month after party month and 11th month after party month:  ', 'OK'), 501: ('      test equality of the 6th month after party month and 0th month after party month:   ', 'OK'), 502: ('      test equality of the 6th month after party month and 1th month after party month:   ', 'OK'), 503: ('      test equality of the 6th month after party month and 2th month after party month:   ', 'OK'), 504: ('      test equality of the 6th month after party month and 3th month after party month:   ', 'OK'), 505: ('      test equality of the 6th month after party month and 4th month after party month:   ', 'OK'), 506: ('      test equality of the 6th month after party month and 5th month after party month:   ', 'OK'), 507: ('      test equality of the 6th month after party month and 6th month after party month:   ', 'OK'), 508: ('      test equality of the 6th month after party month and 7th month after party month:   ', 'OK'), 509: ('      test equality of the 6th month after party month and 8th month after party month:   ', 'OK'), 510: ('      test equality of the 6th month after party month and 9th month after party month:   ', 'OK'), 511: ('      test equality of the 6th month after party month and 10th month after party month:  ', 'OK'), 512: ('      test equality of the 6th month after party month and 11th month after party month:  ', 'OK'), 513: ('      test equality of the 7th month after party month and 0th month after party month:   ', 'OK'), 514: ('      test equality of the 7th month after party month and 1th month after party month:   ', 'OK'), 515: ('      test equality of the 7th month after party month and 2th month after party month:   ', 'OK'), 516: ('      test equality of the 7th month after party month and 3th month after party month:   ', 'OK'), 517: ('      test equality of the 7th month after party month and 4th month after party month:   ', 'OK'), 518: ('      test equality of the 7th month after party month and 5th month after party month:   ', 'OK'), 519: ('      test equality of the 7th month after party month and 6th month after party month:   ', 'OK'), 520: ('      test equality of the 7th month after party month and 7th month after party month:   ', 'OK'), 521: ('      test equality of the 7th month after party month and 8th month after party month:   ', 'OK'), 522: ('      test equality of the 7th month after party month and 9th month after party month:   ', 'OK'), 523: ('      test equality of the 7th month after party month and 10th month after party month:  ', 'OK'), 524: ('      test equality of the 7th month after party month and 11th month after party month:  ', 'OK'), 525: ('      test equality of the 8th month after party month and 0th month after party month:   ', 'OK'), 526: ('      test equality of the 8th month after party month and 1th month after party month:   ', 'OK'), 527: ('      test equality of the 8th month after party month and 2th month after party month:   ', 'OK'), 528: ('      test equality of the 8th month after party month and 3th month after party month:   ', 'OK'), 529: ('      test equality of the 8th month after party month and 4th month after party month:   ', 'OK'), 530: ('      test equality of the 8th month after party month and 5th month after party month:   ', 'OK'), 531: ('      test equality of the 8th month after party month and 6th month after party month:   ', 'OK'), 532: ('      test equality of the 8th month after party month and 7th month after party month:   ', 'OK'), 533: ('      test equality of the 8th month after party month and 8th month after party month:   ', 'OK'), 534: ('      test equality of the 8th month after party month and 9th month after party month:   ', 'OK'), 535: ('      test equality of the 8th month after party month and 10th month after party month:  ', 'OK'), 536: ('      test equality of the 8th month after party month and 11th month after party month:  ', 'OK'), 537: ('      test equality of the 9th month after party month and 0th month after party month:   ', 'OK'), 538: ('      test equality of the 9th month after party month and 1th month after party month:   ', 'OK'), 539: ('      test equality of the 9th month after party month and 2th month after party month:   ', 'OK'), 540: ('      test equality of the 9th month after party month and 3th month after party month:   ', 'OK'), 541: ('      test equality of the 9th month after party month and 4th month after party month:   ', 'OK'), 542: ('      test equality of the 9th month after party month and 5th month after party month:   ', 'OK'), 543: ('      test equality of the 9th month after party month and 6th month after party month:   ', 'OK'), 544: ('      test equality of the 9th month after party month and 7th month after party month:   ', 'OK'), 545: ('      test equality of the 9th month after party month and 8th month after party month:   ', 'OK'), 546: ('      test equality of the 9th month after party month and 9th month after party month:   ', 'OK'), 547: ('      test equality of the 9th month after party month and 10th month after party month:  ', 'OK'), 548: ('      test equality of the 9th month after party month and 11th month after party month:  ', 'OK'), 549: ('      test equality of the 10th month after party month and 0th month after party month:  ', 'OK'), 550: ('      test equality of the 10th month after party month and 1th month after party month:  ', 'OK'), 551: ('      test equality of the 10th month after party month and 2th month after party month:  ', 'OK'), 552: ('      test equality of the 10th month after party month and 3th month after party month:  ', 'OK'), 553: ('      test equality of the 10th month after party month and 4th month after party month:  ', 'OK'), 554: ('      test equality of the 10th month after party month and 5th month after party month:  ', 'OK'), 555: ('      test equality of the 10th month after party month and 6th month after party month:  ', 'OK'), 556: ('      test equality of the 10th month after party month and 7th month after party month:  ', 'OK'), 557: ('      test equality of the 10th month after party month and 8th month after party month:  ', 'OK'), 558: ('      test equality of the 10th month after party month and 9th month after party month:  ', 'OK'), 559: ('      test equality of the 10th month after party month and 10th month after party month: ', 'OK'), 560: ('      test equality of the 10th month after party month and 11th month after party month: ', 'OK'), 561: ('      test equality of the 11th month after party month and 0th month after party month:  ', 'OK'), 562: ('      test equality of the 11th month after party month and 1th month after party month:  ', 'OK'), 563: ('      test equality of the 11th month after party month and 2th month after party month:  ', 'OK'), 564: ('      test equality of the 11th month after party month and 3th month after party month:  ', 'OK'), 565: ('      test equality of the 11th month after party month and 4th month after party month:  ', 'OK'), 566: ('      test equality of the 11th month after party month and 5th month after party month:  ', 'OK'), 567: ('      test equality of the 11th month after party month and 6th month after party month:  ', 'OK'), 568: ('      test equality of the 11th month after party month and 7th month after party month:  ', 'OK'), 569: ('      test equality of the 11th month after party month and 8th month after party month:  ', 'OK'), 570: ('      test equality of the 11th month after party month and 9th month after party month:  ', 'OK'), 571: ('      test equality of the 11th month after party month and 10th month after party month: ', 'OK'), 572: ('      test equality of the 11th month after party month and 11th month after party month: ', 'OK'), 574: ('      12 months after Nov should still be Nov:                                            ', 'OK'), 575: ('      12 months after Dec should still be Dec:                                            ', 'OK'), 576: ('      12 months after Jan should still be Jan:                                            ', 'OK'), 577: ('      12 months after Feb should still be Feb:                                            ', 'OK'), 578: ('      12 months after Mar should still be Mar:                                            ', 'OK'), 579: ('      12 months after Apr should still be Apr:                                            ', 'OK'), 580: ('      12 months after May should still be May:                                            ', 'OK'), 581: ('      12 months after Jun should still be Jun:                                            ', 'OK'), 582: ('      12 months after July should still be July:                                          ', 'OK'), 583: ('      12 months after Aug should still be Aug:                                            ', 'OK'), 584: ('      12 months after Sep should still be Sep:                                            ', 'OK'), 585: ('      12 months after Oct should still be Oct:                                            ', 'OK'), 588: ('      packing with 0 and 0 then unpack:                                                   ', 'OK'), 589: ('      packing with 0 and 1 then unpack:                                                   ', 'OK'), 590: ('      packing with 0 and 2 then unpack:                                                   ', 'OK'), 591: ('      packing with 1 and 0 then unpack:                                                   ', 'OK'), 592: ('      packing with 1 and 1 then unpack:                                                   ', 'OK'), 593: ('      packing with 1 and 2 then unpack:                                                   ', 'OK'), 594: ('      packing with 2 and 0 then unpack:                                                   ', 'OK'), 595: ('      packing with 2 and 1 then unpack:                                                   ', 'OK'), 596: ('      packing with 2 and 2 then unpack:                                                   ', 'OK'), 598: ('      unpacking (0, 0) then unpack:                                                       ', 'OK'), 599: ('      unpacking (0, 1) then unpack:                                                       ', 'OK'), 600: ('      unpacking (0, 2) then unpack:                                                       ', 'OK'), 601: ('      unpacking (1, 0) then unpack:                                                       ', 'OK'), 602: ('      unpacking (1, 1) then unpack:                                                       ', 'OK'), 603: ('      unpacking (1, 2) then unpack:                                                       ', 'OK'), 604: ('      unpacking (2, 0) then unpack:                                                       ', 'OK'), 605: ('      unpacking (2, 1) then unpack:                                                       ', 'OK'), 606: ('      unpacking (2, 2) then unpack:                                                       ', 'OK'), 608: ('      testing manhattanDistance between (0,0) and (0,0):                                  ', 'OK'), 609: ('      testing manhattanDistance between (0,0) and (0,1):                                  ', 'OK'), 610: ('      testing manhattanDistance between (0,0) and (0,2):                                  ', 'OK'), 611: ('      testing manhattanDistance between (0,1) and (0,0):                                  ', 'OK'), 612: ('      testing manhattanDistance between (0,1) and (0,1):                                  ', 'OK'), 613: ('      testing manhattanDistance between (0,1) and (0,2):                                  ', 'OK'), 614: ('      testing manhattanDistance between (0,2) and (0,0):                                  ', 'OK'), 615: ('      testing manhattanDistance between (0,2) and (0,1):                                  ', 'OK'), 616: ('      testing manhattanDistance between (0,2) and (0,2):                                  ', 'OK'), 617: ('      testing manhattanDistance between (0,0) and (1,0):                                  ', 'OK'), 618: ('      testing manhattanDistance between (0,0) and (1,1):                                  ', 'OK'), 619: ('      testing manhattanDistance between (0,0) and (1,2):                                  ', 'OK'), 620: ('      testing manhattanDistance between (0,1) and (1,0):                                  ', 'OK'), 621: ('      testing manhattanDistance between (0,1) and (1,1):                                  ', 'OK'), 622: ('      testing manhattanDistance between (0,1) and (1,2):                                  ', 'OK'), 623: ('      testing manhattanDistance between (0,2) and (1,0):                                  ', 'OK'), 624: ('      testing manhattanDistance between (0,2) and (1,1):                                  ', 'OK'), 625: ('      testing manhattanDistance between (0,2) and (1,2):                                  ', 'OK'), 626: ('      testing manhattanDistance between (0,0) and (2,0):                                  ', 'OK'), 627: ('      testing manhattanDistance between (0,0) and (2,1):                                  ', 'OK'), 628: ('      testing manhattanDistance between (0,0) and (2,2):                                  ', 'OK'), 629: ('      testing manhattanDistance between (0,1) and (2,0):                                  ', 'OK'), 630: ('      testing manhattanDistance between (0,1) and (2,1):                                  ', 'OK'), 631: ('      testing manhattanDistance between (0,1) and (2,2):                                  ', 'OK'), 632: ('      testing manhattanDistance between (0,2) and (2,0):                                  ', 'OK'), 633: ('      testing manhattanDistance between (0,2) and (2,1):                                  ', 'OK'), 634: ('      testing manhattanDistance between (0,2) and (2,2):                                  ', 'OK'), 635: ('      testing manhattanDistance between (1,0) and (0,0):                                  ', 'OK'), 636: ('      testing manhattanDistance between (1,0) and (0,1):                                  ', 'OK'), 637: ('      testing manhattanDistance between (1,0) and (0,2):                                  ', 'OK'), 638: ('      testing manhattanDistance between (1,1) and (0,0):                                  ', 'OK'), 639: ('      testing manhattanDistance between (1,1) and (0,1):                                  ', 'OK'), 640: ('      testing manhattanDistance between (1,1) and (0,2):                                  ', 'OK'), 641: ('      testing manhattanDistance between (1,2) and (0,0):                                  ', 'OK'), 642: ('      testing manhattanDistance between (1,2) and (0,1):                                  ', 'OK'), 643: ('      testing manhattanDistance between (1,2) and (0,2):                                  ', 'OK'), 644: ('      testing manhattanDistance between (1,0) and (1,0):                                  ', 'OK'), 645: ('      testing manhattanDistance between (1,0) and (1,1):                                  ', 'OK'), 646: ('      testing manhattanDistance between (1,0) and (1,2):                                  ', 'OK'), 647: ('      testing manhattanDistance between (1,1) and (1,0):                                  ', 'OK'), 648: ('      testing manhattanDistance between (1,1) and (1,1):                                  ', 'OK'), 649: ('      testing manhattanDistance between (1,1) and (1,2):                                  ', 'OK'), 650: ('      testing manhattanDistance between (1,2) and (1,0):                                  ', 'OK'), 651: ('      testing manhattanDistance between (1,2) and (1,1):                                  ', 'OK'), 652: ('      testing manhattanDistance between (1,2) and (1,2):                                  ', 'OK'), 653: ('      testing manhattanDistance between (1,0) and (2,0):                                  ', 'OK'), 654: ('      testing manhattanDistance between (1,0) and (2,1):                                  ', 'OK'), 655: ('      testing manhattanDistance between (1,0) and (2,2):                                  ', 'OK'), 656: ('      testing manhattanDistance between (1,1) and (2,0):                                  ', 'OK'), 657: ('      testing manhattanDistance between (1,1) and (2,1):                                  ', 'OK'), 658: ('      testing manhattanDistance between (1,1) and (2,2):                                  ', 'OK'), 659: ('      testing manhattanDistance between (1,2) and (2,0):                                  ', 'OK'), 660: ('      testing manhattanDistance between (1,2) and (2,1):                                  ', 'OK'), 661: ('      testing manhattanDistance between (1,2) and (2,2):                                  ', 'OK'), 662: ('      testing manhattanDistance between (2,0) and (0,0):                                  ', 'OK'), 663: ('      testing manhattanDistance between (2,0) and (0,1):                                  ', 'OK'), 664: ('      testing manhattanDistance between (2,0) and (0,2):                                  ', 'OK'), 665: ('      testing manhattanDistance between (2,1) and (0,0):                                  ', 'OK'), 666: ('      testing manhattanDistance between (2,1) and (0,1):                                  ', 'OK'), 667: ('      testing manhattanDistance between (2,1) and (0,2):                                  ', 'OK'), 668: ('      testing manhattanDistance between (2,2) and (0,0):                                  ', 'OK'), 669: ('      testing manhattanDistance between (2,2) and (0,1):                                  ', 'OK'), 670: ('      testing manhattanDistance between (2,2) and (0,2):                                  ', 'OK'), 671: ('      testing manhattanDistance between (2,0) and (1,0):                                  ', 'OK'), 672: ('      testing manhattanDistance between (2,0) and (1,1):                                  ', 'OK'), 673: ('      testing manhattanDistance between (2,0) and (1,2):                                  ', 'OK'), 674: ('      testing manhattanDistance between (2,1) and (1,0):                                  ', 'OK'), 675: ('      testing manhattanDistance between (2,1) and (1,1):                                  ', 'OK'), 676: ('      testing manhattanDistance between (2,1) and (1,2):                                  ', 'OK'), 677: ('      testing manhattanDistance between (2,2) and (1,0):                                  ', 'OK'), 678: ('      testing manhattanDistance between (2,2) and (1,1):                                  ', 'OK'), 679: ('      testing manhattanDistance between (2,2) and (1,2):                                  ', 'OK'), 680: ('      testing manhattanDistance between (2,0) and (2,0):                                  ', 'OK'), 681: ('      testing manhattanDistance between (2,0) and (2,1):                                  ', 'OK'), 682: ('      testing manhattanDistance between (2,0) and (2,2):                                  ', 'OK'), 683: ('      testing manhattanDistance between (2,1) and (2,0):                                  ', 'OK'), 684: ('      testing manhattanDistance between (2,1) and (2,1):                                  ', 'OK'), 685: ('      testing manhattanDistance between (2,1) and (2,2):                                  ', 'OK'), 686: ('      testing manhattanDistance between (2,2) and (2,0):                                  ', 'OK'), 687: ('      testing manhattanDistance between (2,2) and (2,1):                                  ', 'OK'), 688: ('      testing manhattanDistance between (2,2) and (2,2):                                  ', 'OK'), 690: ('    check ans1 is 1:                                                                      ', 'OK'), 691: ('    check ansTrue is True:                                                                ', 'OK'), 694: ('      testing lengthOfListNat []:                                                         ', 'OK'), 695: ('      testing lengthOfListNat [1,2]:                                                      ', 'OK'), 696: ('      testing lengthOfListNat [3,1,4]:                                                    ', 'OK'), 697: ('      testing lengthOfListNat [0,5,6]:                                                    ', 'OK'), 698: ('      testing lengthOfListNat [1]:                                                        ', 'OK'), 699: ('      testing lengthOfListNat [1,2,3,4,5,6,7]:                                            ', 'OK'), 701: ('      testing sum of []:                                                                  ', 'OK'), 702: ('      testing sum of [1,2]:                                                               ', 'OK'), 703: ('      testing sum of [3,1,4]:                                                             ', 'OK'), 704: ('      testing sum of [0,5,6]:                                                             ', 'OK'), 705: ('      testing sum of [1]:                                                                 ', 'OK'), 706: ('      testing sum of [1,2,3,4,5,6,7]:                                                     ', 'OK'), 708: ('      testing equality of [] and []:                                                      ', 'OK'), 709: ('      testing equality of [] and [1,2]:                                                   ', 'OK'), 710: ('      testing equality of [] and [3,1,4]:                                                 ', 'OK'), 711: ('      testing equality of [] and [0,5,6]:                                                 ', 'OK'), 712: ('      testing equality of [] and [1]:                                                     ', 'OK'), 713: ('      testing equality of [] and [1,2,3,4,5,6,7]:                                         ', 'OK'), 714: ('      testing equality of [1,2] and []:                                                   ', 'OK'), 715: ('      testing equality of [1,2] and [1,2]:                                                ', 'OK'), 716: ('      testing equality of [1,2] and [3,1,4]:                                              ', 'OK'), 717: ('      testing equality of [1,2] and [0,5,6]:                                              ', 'OK'), 718: ('      testing equality of [1,2] and [1]:                                                  ', 'OK'), 719: ('      testing equality of [1,2] and [1,2,3,4,5,6,7]:                                      ', 'OK'), 720: ('      testing equality of [3,1,4] and []:                                                 ', 'OK'), 721: ('      testing equality of [3,1,4] and [1,2]:                                              ', 'OK'), 722: ('      testing equality of [3,1,4] and [3,1,4]:                                            ', 'OK'), 723: ('      testing equality of [3,1,4] and [0,5,6]:                                            ', 'OK'), 724: ('      testing equality of [3,1,4] and [1]:                                                ', 'OK'), 725: ('      testing equality of [3,1,4] and [1,2,3,4,5,6,7]:                                    ', 'OK'), 726: ('      testing equality of [0,5,6] and []:                                                 ', 'OK'), 727: ('      testing equality of [0,5,6] and [1,2]:                                              ', 'OK'), 728: ('      testing equality of [0,5,6] and [3,1,4]:                                            ', 'OK'), 729: ('      testing equality of [0,5,6] and [0,5,6]:                                            ', 'OK'), 730: ('      testing equality of [0,5,6] and [1]:                                                ', 'OK'), 731: ('      testing equality of [0,5,6] and [1,2,3,4,5,6,7]:                                    ', 'OK'), 732: ('      testing equality of [1] and []:                                                     ', 'OK'), 733: ('      testing equality of [1] and [1,2]:                                                  ', 'OK'), 734: ('      testing equality of [1] and [3,1,4]:                                                ', 'OK'), 735: ('      testing equality of [1] and [0,5,6]:                                                ', 'OK'), 736: ('      testing equality of [1] and [1]:                                                    ', 'OK'), 737: ('      testing equality of [1] and [1,2,3,4,5,6,7]:                                        ', 'OK'), 738: ('      testing equality of [1,2,3,4,5,6,7] and []:                                         ', 'OK'), 739: ('      testing equality of [1,2,3,4,5,6,7] and [1,2]:                                      ', 'OK'), 740: ('      testing equality of [1,2,3,4,5,6,7] and [3,1,4]:                                    ', 'OK'), 741: ('      testing equality of [1,2,3,4,5,6,7] and [0,5,6]:                                    ', 'OK'), 742: ('      testing equality of [1,2,3,4,5,6,7] and [1]:                                        ', 'OK'), 743: ('      testing equality of [1,2,3,4,5,6,7] and [1,2,3,4,5,6,7]:                            ', 'OK'), 745: ('      testing member 0 with list []:                                                      ', 'OK'), 746: ('      testing member 0 with list [1,2]:                                                   ', 'OK'), 747: ('      testing member 0 with list [3,1,4]:                                                 ', 'OK'), 748: ('      testing member 0 with list [0,5,6]:                                                 ', 'OK'), 749: ('      testing member 0 with list [1]:                                                     ', 'OK'), 750: ('      testing member 0 with list [1,2,3,4,5,6,7]:                                         ', 'OK'), 751: ('      testing member 1 with list []:                                                      ', 'OK'), 752: ('      testing member 1 with list [1,2]:                                                   ', 'OK'), 753: ('      testing member 1 with list [3,1,4]:                                                 ', 'OK'), 754: ('      testing member 1 with list [0,5,6]:                                                 ', 'OK'), 755: ('      testing member 1 with list [1]:                                                     ', 'OK'), 756: ('      testing member 1 with list [1,2,3,4,5,6,7]:                                         ', 'OK'), 757: ('      testing member 4 with list []:                                                      ', 'OK'), 758: ('      testing member 4 with list [1,2]:                                                   ', 'OK'), 759: ('      testing member 4 with list [3,1,4]:                                                 ', 'OK'), 760: ('      testing member 4 with list [0,5,6]:                                                 ', 'OK'), 761: ('      testing member 4 with list [1]:                                                     ', 'OK'), 762: ('      testing member 4 with list [1,2,3,4,5,6,7]:                                         ', 'OK'), 765: ('      testing length for list []:                                                         ', 'OK'), 766: ('      testing length for list [1,2]:                                                      ', 'OK'), 767: ('      testing length for list [3,1,4]:                                                    ', 'OK'), 768: ('      testing length for list [0,5,6]:                                                    ', 'OK'), 769: ('      testing length for list [1]:                                                        ', 'OK'), 770: ('      testing length for list [1,2,3,4,5,6,7]:                                            ', 'OK'), 772: ('      testing length for list []:                                                         ', 'OK'), 773: ('      testing length for list [True]:                                                     ', 'OK'), 774: ('      testing length for list [False]:                                                    ', 'OK'), 775: ('      testing length for list [True,False]:                                               ', 'OK'), 776: ('      testing length for list [True,True,False,False]:                                    ', 'OK'), 779: ('      empty tree should have size 0:                                                      ', 'OK'), 780: ('      testing size of a non-empty nat tree:                                               ', 'OK'), 781: ('      testing size of a non-empty nat tree:                                               ', 'OK'), 782: ('      testing size of a non-empty nat tree:                                               ', 'OK'), 783: ('      testing size of a non-empty bool tree:                                              ', 'OK'), 784: ('      testing size of a non-empty bool tree:                                              ', 'OK'), 786: ('      empty tree should have height 0:                                                    ', 'OK'), 787: ('      testing height of a non-empty nat tree:                                             ', 'OK'), 788: ('      testing height of a non-empty nat tree:                                             ', 'OK'), 789: ('      testing height of a non-empty nat tree:                                             ', 'OK'), 790: ('      testing height of a non-empty bool tree:                                            ', 'OK'), 791: ('      testing height of a non-empty bool tree:                                            ', 'OK'), 793: ('      in order traverse empty tree should return []:                                      ', 'OK'), 794: ('      testing inorder of a non-empty nat tree:                                            ', 'OK'), 795: ('      testing inorder of a non-empty nat tree:                                            ', 'OK'), 796: ('      testing inorder of a non-empty nat tree:                                            ', 'OK'), 797: ('      testing inorder of a non-empty bool tree:                                           ', 'OK'), 798: ('      testing inorder of a non-empty bool tree:                                           ', 'OK'), 800: ('      preorder traverse empty tree should return []:                                      ', 'OK'), 801: ('      testing preorder of a non-empty nat tree:                                           ', 'OK'), 802: ('      testing preorder of a non-empty nat tree:                                           ', 'OK'), 803: ('      testing preorder of a non-empty nat tree:                                           ', 'OK'), 804: ('      testing preorder of a non-empty bool tree:                                          ', 'OK'), 805: ('      testing preorder of a non-empty bool tree:                                          ', 'OK')}}
+OUT:
+allTests
+  test for all the boolean functions
+    test not function
+      testing not True:                                                                   OK
+      testing not False:                                                                  OK
+    test and function
+      testing and True True:                                                              OK
+      testing and True False:                                                             OK
+      testing and False True:                                                             OK
+      testing and False False:                                                            OK
+    test or function
+      testing or True True:                                                               OK
+      testing or True False:                                                              OK
+      testing or False True:                                                              OK
+      testing or False False:                                                             OK
+    test xor function
+      testing xor True True:                                                              OK
+      testing xor True False:                                                             OK
+      testing xor False True:                                                             OK
+      testing xor False False:                                                            OK
+  test for all nat function
+    test basic nat definition
+      test zero:                                                                          OK
+      test one:                                                                           OK
+      test two:                                                                           OK
+      test three:                                                                         OK
+      test four:                                                                          OK
+      test five:                                                                          OK
+    test add function
+      testing add 0 0:                                                                    OK
+      testing add 0 1:                                                                    OK
+      testing add 0 2:                                                                    OK
+      testing add 0 3:                                                                    OK
+      testing add 0 4:                                                                    OK
+      testing add 0 5:                                                                    OK
+      testing add 1 0:                                                                    OK
+      testing add 1 1:                                                                    OK
+      testing add 1 2:                                                                    OK
+      testing add 1 3:                                                                    OK
+      testing add 1 4:                                                                    OK
+      testing add 1 5:                                                                    OK
+      testing add 2 0:                                                                    OK
+      testing add 2 1:                                                                    OK
+      testing add 2 2:                                                                    OK
+      testing add 2 3:                                                                    OK
+      testing add 2 4:                                                                    OK
+      testing add 2 5:                                                                    OK
+      testing add 3 0:                                                                    OK
+      testing add 3 1:                                                                    OK
+      testing add 3 2:                                                                    OK
+      testing add 3 3:                                                                    OK
+      testing add 3 4:                                                                    OK
+      testing add 3 5:                                                                    OK
+      testing add 4 0:                                                                    OK
+      testing add 4 1:                                                                    OK
+      testing add 4 2:                                                                    OK
+      testing add 4 3:                                                                    OK
+      testing add 4 4:                                                                    OK
+      testing add 4 5:                                                                    OK
+      testing add 5 0:                                                                    OK
+      testing add 5 1:                                                                    OK
+      testing add 5 2:                                                                    OK
+      testing add 5 3:                                                                    OK
+      testing add 5 4:                                                                    OK
+      testing add 5 5:                                                                    OK
+    test mult function
+      testing mult 0 0:                                                                   OK
+      testing mult 0 1:                                                                   OK
+      testing mult 0 2:                                                                   OK
+      testing mult 0 3:                                                                   OK
+      testing mult 0 4:                                                                   OK
+      testing mult 0 5:                                                                   OK
+      testing mult 1 0:                                                                   OK
+      testing mult 1 1:                                                                   OK
+      testing mult 1 2:                                                                   OK
+      testing mult 1 3:                                                                   OK
+      testing mult 1 4:                                                                   OK
+      testing mult 1 5:                                                                   OK
+      testing mult 2 0:                                                                   OK
+      testing mult 2 1:                                                                   OK
+      testing mult 2 2:                                                                   OK
+      testing mult 2 3:                                                                   OK
+      testing mult 2 4:                                                                   OK
+      testing mult 2 5:                                                                   OK
+      testing mult 3 0:                                                                   OK
+      testing mult 3 1:                                                                   OK
+      testing mult 3 2:                                                                   OK
+      testing mult 3 3:                                                                   OK
+      testing mult 3 4:                                                                   OK
+      testing mult 3 5:                                                                   OK
+      testing mult 4 0:                                                                   OK
+      testing mult 4 1:                                                                   OK
+      testing mult 4 2:                                                                   OK
+      testing mult 4 3:                                                                   OK
+      testing mult 4 4:                                                                   OK
+      testing mult 4 5:                                                                   OK
+      testing mult 5 0:                                                                   OK
+      testing mult 5 1:                                                                   OK
+      testing mult 5 2:                                                                   OK
+      testing mult 5 3:                                                                   OK
+      testing mult 5 4:                                                                   OK
+      testing mult 5 5:                                                                   OK
+    test eq function
+      testing eq 0 0:                                                                     OK
+      testing eq 0 1:                                                                     OK
+      testing eq 0 2:                                                                     OK
+      testing eq 0 3:                                                                     OK
+      testing eq 0 4:                                                                     OK
+      testing eq 0 5:                                                                     OK
+      testing eq 1 0:                                                                     OK
+      testing eq 1 1:                                                                     OK
+      testing eq 1 2:                                                                     OK
+      testing eq 1 3:                                                                     OK
+      testing eq 1 4:                                                                     OK
+      testing eq 1 5:                                                                     OK
+      testing eq 2 0:                                                                     OK
+      testing eq 2 1:                                                                     OK
+      testing eq 2 2:                                                                     OK
+      testing eq 2 3:                                                                     OK
+      testing eq 2 4:                                                                     OK
+      testing eq 2 5:                                                                     OK
+      testing eq 3 0:                                                                     OK
+      testing eq 3 1:                                                                     OK
+      testing eq 3 2:                                                                     OK
+      testing eq 3 3:                                                                     OK
+      testing eq 3 4:                                                                     OK
+      testing eq 3 5:                                                                     OK
+      testing eq 4 0:                                                                     OK
+      testing eq 4 1:                                                                     OK
+      testing eq 4 2:                                                                     OK
+      testing eq 4 3:                                                                     OK
+      testing eq 4 4:                                                                     OK
+      testing eq 4 5:                                                                     OK
+      testing eq 5 0:                                                                     OK
+      testing eq 5 1:                                                                     OK
+      testing eq 5 2:                                                                     OK
+      testing eq 5 3:                                                                     OK
+      testing eq 5 4:                                                                     OK
+      testing eq 5 5:                                                                     OK
+    test ne function
+      testing ne 0 0:                                                                     OK
+      testing ne 0 1:                                                                     OK
+      testing ne 0 2:                                                                     OK
+      testing ne 0 3:                                                                     OK
+      testing ne 0 4:                                                                     OK
+      testing ne 0 5:                                                                     OK
+      testing ne 1 0:                                                                     OK
+      testing ne 1 1:                                                                     OK
+      testing ne 1 2:                                                                     OK
+      testing ne 1 3:                                                                     OK
+      testing ne 1 4:                                                                     OK
+      testing ne 1 5:                                                                     OK
+      testing ne 2 0:                                                                     OK
+      testing ne 2 1:                                                                     OK
+      testing ne 2 2:                                                                     OK
+      testing ne 2 3:                                                                     OK
+      testing ne 2 4:                                                                     OK
+      testing ne 2 5:                                                                     OK
+      testing ne 3 0:                                                                     OK
+      testing ne 3 1:                                                                     OK
+      testing ne 3 2:                                                                     OK
+      testing ne 3 3:                                                                     OK
+      testing ne 3 4:                                                                     OK
+      testing ne 3 5:                                                                     OK
+      testing ne 4 0:                                                                     OK
+      testing ne 4 1:                                                                     OK
+      testing ne 4 2:                                                                     OK
+      testing ne 4 3:                                                                     OK
+      testing ne 4 4:                                                                     OK
+      testing ne 4 5:                                                                     OK
+      testing ne 5 0:                                                                     OK
+      testing ne 5 1:                                                                     OK
+      testing ne 5 2:                                                                     OK
+      testing ne 5 3:                                                                     OK
+      testing ne 5 4:                                                                     OK
+      testing ne 5 5:                                                                     OK
+    test lt function
+      testing lt 0 0:                                                                     OK
+      testing lt 0 1:                                                                     OK
+      testing lt 0 2:                                                                     OK
+      testing lt 0 3:                                                                     OK
+      testing lt 0 4:                                                                     OK
+      testing lt 0 5:                                                                     OK
+      testing lt 1 0:                                                                     OK
+      testing lt 1 1:                                                                     OK
+      testing lt 1 2:                                                                     OK
+      testing lt 1 3:                                                                     OK
+      testing lt 1 4:                                                                     OK
+      testing lt 1 5:                                                                     OK
+      testing lt 2 0:                                                                     OK
+      testing lt 2 1:                                                                     OK
+      testing lt 2 2:                                                                     OK
+      testing lt 2 3:                                                                     OK
+      testing lt 2 4:                                                                     OK
+      testing lt 2 5:                                                                     OK
+      testing lt 3 0:                                                                     OK
+      testing lt 3 1:                                                                     OK
+      testing lt 3 2:                                                                     OK
+      testing lt 3 3:                                                                     OK
+      testing lt 3 4:                                                                     OK
+      testing lt 3 5:                                                                     OK
+      testing lt 4 0:                                                                     OK
+      testing lt 4 1:                                                                     OK
+      testing lt 4 2:                                                                     OK
+      testing lt 4 3:                                                                     OK
+      testing lt 4 4:                                                                     OK
+      testing lt 4 5:                                                                     OK
+      testing lt 5 0:                                                                     OK
+      testing lt 5 1:                                                                     OK
+      testing lt 5 2:                                                                     OK
+      testing lt 5 3:                                                                     OK
+      testing lt 5 4:                                                                     OK
+      testing lt 5 5:                                                                     OK
+    test gt function
+      testing gt 0 0:                                                                     OK
+      testing gt 0 1:                                                                     OK
+      testing gt 0 2:                                                                     OK
+      testing gt 0 3:                                                                     OK
+      testing gt 0 4:                                                                     OK
+      testing gt 0 5:                                                                     OK
+      testing gt 1 0:                                                                     OK
+      testing gt 1 1:                                                                     OK
+      testing gt 1 2:                                                                     OK
+      testing gt 1 3:                                                                     OK
+      testing gt 1 4:                                                                     OK
+      testing gt 1 5:                                                                     OK
+      testing gt 2 0:                                                                     OK
+      testing gt 2 1:                                                                     OK
+      testing gt 2 2:                                                                     OK
+      testing gt 2 3:                                                                     OK
+      testing gt 2 4:                                                                     OK
+      testing gt 2 5:                                                                     OK
+      testing gt 3 0:                                                                     OK
+      testing gt 3 1:                                                                     OK
+      testing gt 3 2:                                                                     OK
+      testing gt 3 3:                                                                     OK
+      testing gt 3 4:                                                                     OK
+      testing gt 3 5:                                                                     OK
+      testing gt 4 0:                                                                     OK
+      testing gt 4 1:                                                                     OK
+      testing gt 4 2:                                                                     OK
+      testing gt 4 3:                                                                     OK
+      testing gt 4 4:                                                                     OK
+      testing gt 4 5:                                                                     OK
+      testing gt 5 0:                                                                     OK
+      testing gt 5 1:                                                                     OK
+      testing gt 5 2:                                                                     OK
+      testing gt 5 3:                                                                     OK
+      testing gt 5 4:                                                                     OK
+      testing gt 5 5:                                                                     OK
+    test le function
+      testing le 0 0:                                                                     OK
+      testing le 0 1:                                                                     OK
+      testing le 0 2:                                                                     OK
+      testing le 0 3:                                                                     OK
+      testing le 0 4:                                                                     OK
+      testing le 0 5:                                                                     OK
+      testing le 1 0:                                                                     OK
+      testing le 1 1:                                                                     OK
+      testing le 1 2:                                                                     OK
+      testing le 1 3:                                                                     OK
+      testing le 1 4:                                                                     OK
+      testing le 1 5:                                                                     OK
+      testing le 2 0:                                                                     OK
+      testing le 2 1:                                                                     OK
+      testing le 2 2:                                                                     OK
+      testing le 2 3:                                                                     OK
+      testing le 2 4:                                                                     OK
+      testing le 2 5:                                                                     OK
+      testing le 3 0:                                                                     OK
+      testing le 3 1:                                                                     OK
+      testing le 3 2:                                                                     OK
+      testing le 3 3:                                                                     OK
+      testing le 3 4:                                                                     OK
+      testing le 3 5:                                                                     OK
+      testing le 4 0:                                                                     OK
+      testing le 4 1:                                                                     OK
+      testing le 4 2:                                                                     OK
+      testing le 4 3:                                                                     OK
+      testing le 4 4:                                                                     OK
+      testing le 4 5:                                                                     OK
+      testing le 5 0:                                                                     OK
+      testing le 5 1:                                                                     OK
+      testing le 5 2:                                                                     OK
+      testing le 5 3:                                                                     OK
+      testing le 5 4:                                                                     OK
+      testing le 5 5:                                                                     OK
+    test ge function
+      testing ge 0 0:                                                                     OK
+      testing ge 0 1:                                                                     OK
+      testing ge 0 2:                                                                     OK
+      testing ge 0 3:                                                                     OK
+      testing ge 0 4:                                                                     OK
+      testing ge 0 5:                                                                     OK
+      testing ge 1 0:                                                                     OK
+      testing ge 1 1:                                                                     OK
+      testing ge 1 2:                                                                     OK
+      testing ge 1 3:                                                                     OK
+      testing ge 1 4:                                                                     OK
+      testing ge 1 5:                                                                     OK
+      testing ge 2 0:                                                                     OK
+      testing ge 2 1:                                                                     OK
+      testing ge 2 2:                                                                     OK
+      testing ge 2 3:                                                                     OK
+      testing ge 2 4:                                                                     OK
+      testing ge 2 5:                                                                     OK
+      testing ge 3 0:                                                                     OK
+      testing ge 3 1:                                                                     OK
+      testing ge 3 2:                                                                     OK
+      testing ge 3 3:                                                                     OK
+      testing ge 3 4:                                                                     OK
+      testing ge 3 5:                                                                     OK
+      testing ge 4 0:                                                                     OK
+      testing ge 4 1:                                                                     OK
+      testing ge 4 2:                                                                     OK
+      testing ge 4 3:                                                                     OK
+      testing ge 4 4:                                                                     OK
+      testing ge 4 5:                                                                     OK
+      testing ge 5 0:                                                                     OK
+      testing ge 5 1:                                                                     OK
+      testing ge 5 2:                                                                     OK
+      testing ge 5 3:                                                                     OK
+      testing ge 5 4:                                                                     OK
+      testing ge 5 5:                                                                     OK
+    test isEven function
+      testing isEven 0:                                                                   OK
+      testing isEven 1:                                                                   OK
+      testing isEven 2:                                                                   OK
+      testing isEven 3:                                                                   OK
+      testing isEven 4:                                                                   OK
+      testing isEven 5:                                                                   OK
+    test ge function
+      testing max 0 0:                                                                    OK
+      testing max 0 1:                                                                    OK
+      testing max 0 2:                                                                    OK
+      testing max 0 3:                                                                    OK
+      testing max 0 4:                                                                    OK
+      testing max 0 5:                                                                    OK
+      testing max 1 0:                                                                    OK
+      testing max 1 1:                                                                    OK
+      testing max 1 2:                                                                    OK
+      testing max 1 3:                                                                    OK
+      testing max 1 4:                                                                    OK
+      testing max 1 5:                                                                    OK
+      testing max 2 0:                                                                    OK
+      testing max 2 1:                                                                    OK
+      testing max 2 2:                                                                    OK
+      testing max 2 3:                                                                    OK
+      testing max 2 4:                                                                    OK
+      testing max 2 5:                                                                    OK
+      testing max 3 0:                                                                    OK
+      testing max 3 1:                                                                    OK
+      testing max 3 2:                                                                    OK
+      testing max 3 3:                                                                    OK
+      testing max 3 4:                                                                    OK
+      testing max 3 5:                                                                    OK
+      testing max 4 0:                                                                    OK
+      testing max 4 1:                                                                    OK
+      testing max 4 2:                                                                    OK
+      testing max 4 3:                                                                    OK
+      testing max 4 4:                                                                    OK
+      testing max 4 5:                                                                    OK
+      testing max 5 0:                                                                    OK
+      testing max 5 1:                                                                    OK
+      testing max 5 2:                                                                    OK
+      testing max 5 3:                                                                    OK
+      testing max 5 4:                                                                    OK
+      testing max 5 5:                                                                    OK
+  testing all the function of DayOfWeek
+    test the equality of days
+      test equality of the 0th day after favoriteDay and the 0th day after favoriteDay:   OK
+      test equality of the 0th day after favoriteDay and the 1th day after favoriteDay:   OK
+      test equality of the 0th day after favoriteDay and the 2th day after favoriteDay:   OK
+      test equality of the 0th day after favoriteDay and the 3th day after favoriteDay:   OK
+      test equality of the 0th day after favoriteDay and the 4th day after favoriteDay:   OK
+      test equality of the 0th day after favoriteDay and the 5th day after favoriteDay:   OK
+      test equality of the 0th day after favoriteDay and the 6th day after favoriteDay:   OK
+      test equality of the 1th day after favoriteDay and the 0th day after favoriteDay:   OK
+      test equality of the 1th day after favoriteDay and the 1th day after favoriteDay:   OK
+      test equality of the 1th day after favoriteDay and the 2th day after favoriteDay:   OK
+      test equality of the 1th day after favoriteDay and the 3th day after favoriteDay:   OK
+      test equality of the 1th day after favoriteDay and the 4th day after favoriteDay:   OK
+      test equality of the 1th day after favoriteDay and the 5th day after favoriteDay:   OK
+      test equality of the 1th day after favoriteDay and the 6th day after favoriteDay:   OK
+      test equality of the 2th day after favoriteDay and the 0th day after favoriteDay:   OK
+      test equality of the 2th day after favoriteDay and the 1th day after favoriteDay:   OK
+      test equality of the 2th day after favoriteDay and the 2th day after favoriteDay:   OK
+      test equality of the 2th day after favoriteDay and the 3th day after favoriteDay:   OK
+      test equality of the 2th day after favoriteDay and the 4th day after favoriteDay:   OK
+      test equality of the 2th day after favoriteDay and the 5th day after favoriteDay:   OK
+      test equality of the 2th day after favoriteDay and the 6th day after favoriteDay:   OK
+      test equality of the 3th day after favoriteDay and the 0th day after favoriteDay:   OK
+      test equality of the 3th day after favoriteDay and the 1th day after favoriteDay:   OK
+      test equality of the 3th day after favoriteDay and the 2th day after favoriteDay:   OK
+      test equality of the 3th day after favoriteDay and the 3th day after favoriteDay:   OK
+      test equality of the 3th day after favoriteDay and the 4th day after favoriteDay:   OK
+      test equality of the 3th day after favoriteDay and the 5th day after favoriteDay:   OK
+      test equality of the 3th day after favoriteDay and the 6th day after favoriteDay:   OK
+      test equality of the 4th day after favoriteDay and the 0th day after favoriteDay:   OK
+      test equality of the 4th day after favoriteDay and the 1th day after favoriteDay:   OK
+      test equality of the 4th day after favoriteDay and the 2th day after favoriteDay:   OK
+      test equality of the 4th day after favoriteDay and the 3th day after favoriteDay:   OK
+      test equality of the 4th day after favoriteDay and the 4th day after favoriteDay:   OK
+      test equality of the 4th day after favoriteDay and the 5th day after favoriteDay:   OK
+      test equality of the 4th day after favoriteDay and the 6th day after favoriteDay:   OK
+      test equality of the 5th day after favoriteDay and the 0th day after favoriteDay:   OK
+      test equality of the 5th day after favoriteDay and the 1th day after favoriteDay:   OK
+      test equality of the 5th day after favoriteDay and the 2th day after favoriteDay:   OK
+      test equality of the 5th day after favoriteDay and the 3th day after favoriteDay:   OK
+      test equality of the 5th day after favoriteDay and the 4th day after favoriteDay:   OK
+      test equality of the 5th day after favoriteDay and the 5th day after favoriteDay:   OK
+      test equality of the 5th day after favoriteDay and the 6th day after favoriteDay:   OK
+      test equality of the 6th day after favoriteDay and the 0th day after favoriteDay:   OK
+      test equality of the 6th day after favoriteDay and the 1th day after favoriteDay:   OK
+      test equality of the 6th day after favoriteDay and the 2th day after favoriteDay:   OK
+      test equality of the 6th day after favoriteDay and the 3th day after favoriteDay:   OK
+      test equality of the 6th day after favoriteDay and the 4th day after favoriteDay:   OK
+      test equality of the 6th day after favoriteDay and the 5th day after favoriteDay:   OK
+      test equality of the 6th day after favoriteDay and the 6th day after favoriteDay:   OK
+    test for weekends
+      There should be 2 weekends for 0 days after all the weekends:                       OK
+      There should be 1 weekends for 1 days after all the weekends:                       OK
+      There should be 0 weekends for 2 days after all the weekends:                       OK
+      There should be 0 weekends for 3 days after all the weekends:                       OK
+      There should be 0 weekends for 4 days after all the weekends:                       OK
+      There should be 0 weekends for 5 days after all the weekends:                       OK
+      There should be 1 weekends for 6 days after all the weekends:                       OK
+  Test all the function on Month
+    test the equality of months
+      test equality of the 0th month after party month and 0th month after party month:   OK
+      test equality of the 0th month after party month and 1th month after party month:   OK
+      test equality of the 0th month after party month and 2th month after party month:   OK
+      test equality of the 0th month after party month and 3th month after party month:   OK
+      test equality of the 0th month after party month and 4th month after party month:   OK
+      test equality of the 0th month after party month and 5th month after party month:   OK
+      test equality of the 0th month after party month and 6th month after party month:   OK
+      test equality of the 0th month after party month and 7th month after party month:   OK
+      test equality of the 0th month after party month and 8th month after party month:   OK
+      test equality of the 0th month after party month and 9th month after party month:   OK
+      test equality of the 0th month after party month and 10th month after party month:  OK
+      test equality of the 0th month after party month and 11th month after party month:  OK
+      test equality of the 1th month after party month and 0th month after party month:   OK
+      test equality of the 1th month after party month and 1th month after party month:   OK
+      test equality of the 1th month after party month and 2th month after party month:   OK
+      test equality of the 1th month after party month and 3th month after party month:   OK
+      test equality of the 1th month after party month and 4th month after party month:   OK
+      test equality of the 1th month after party month and 5th month after party month:   OK
+      test equality of the 1th month after party month and 6th month after party month:   OK
+      test equality of the 1th month after party month and 7th month after party month:   OK
+      test equality of the 1th month after party month and 8th month after party month:   OK
+      test equality of the 1th month after party month and 9th month after party month:   OK
+      test equality of the 1th month after party month and 10th month after party month:  OK
+      test equality of the 1th month after party month and 11th month after party month:  OK
+      test equality of the 2th month after party month and 0th month after party month:   OK
+      test equality of the 2th month after party month and 1th month after party month:   OK
+      test equality of the 2th month after party month and 2th month after party month:   OK
+      test equality of the 2th month after party month and 3th month after party month:   OK
+      test equality of the 2th month after party month and 4th month after party month:   OK
+      test equality of the 2th month after party month and 5th month after party month:   OK
+      test equality of the 2th month after party month and 6th month after party month:   OK
+      test equality of the 2th month after party month and 7th month after party month:   OK
+      test equality of the 2th month after party month and 8th month after party month:   OK
+      test equality of the 2th month after party month and 9th month after party month:   OK
+      test equality of the 2th month after party month and 10th month after party month:  OK
+      test equality of the 2th month after party month and 11th month after party month:  OK
+      test equality of the 3th month after party month and 0th month after party month:   OK
+      test equality of the 3th month after party month and 1th month after party month:   OK
+      test equality of the 3th month after party month and 2th month after party month:   OK
+      test equality of the 3th month after party month and 3th month after party month:   OK
+      test equality of the 3th month after party month and 4th month after party month:   OK
+      test equality of the 3th month after party month and 5th month after party month:   OK
+      test equality of the 3th month after party month and 6th month after party month:   OK
+      test equality of the 3th month after party month and 7th month after party month:   OK
+      test equality of the 3th month after party month and 8th month after party month:   OK
+      test equality of the 3th month after party month and 9th month after party month:   OK
+      test equality of the 3th month after party month and 10th month after party month:  OK
+      test equality of the 3th month after party month and 11th month after party month:  OK
+      test equality of the 4th month after party month and 0th month after party month:   OK
+      test equality of the 4th month after party month and 1th month after party month:   OK
+      test equality of the 4th month after party month and 2th month after party month:   OK
+      test equality of the 4th month after party month and 3th month after party month:   OK
+      test equality of the 4th month after party month and 4th month after party month:   OK
+      test equality of the 4th month after party month and 5th month after party month:   OK
+      test equality of the 4th month after party month and 6th month after party month:   OK
+      test equality of the 4th month after party month and 7th month after party month:   OK
+      test equality of the 4th month after party month and 8th month after party month:   OK
+      test equality of the 4th month after party month and 9th month after party month:   OK
+      test equality of the 4th month after party month and 10th month after party month:  OK
+      test equality of the 4th month after party month and 11th month after party month:  OK
+      test equality of the 5th month after party month and 0th month after party month:   OK
+      test equality of the 5th month after party month and 1th month after party month:   OK
+      test equality of the 5th month after party month and 2th month after party month:   OK
+      test equality of the 5th month after party month and 3th month after party month:   OK
+      test equality of the 5th month after party month and 4th month after party month:   OK
+      test equality of the 5th month after party month and 5th month after party month:   OK
+      test equality of the 5th month after party month and 6th month after party month:   OK
+      test equality of the 5th month after party month and 7th month after party month:   OK
+      test equality of the 5th month after party month and 8th month after party month:   OK
+      test equality of the 5th month after party month and 9th month after party month:   OK
+      test equality of the 5th month after party month and 10th month after party month:  OK
+      test equality of the 5th month after party month and 11th month after party month:  OK
+      test equality of the 6th month after party month and 0th month after party month:   OK
+      test equality of the 6th month after party month and 1th month after party month:   OK
+      test equality of the 6th month after party month and 2th month after party month:   OK
+      test equality of the 6th month after party month and 3th month after party month:   OK
+      test equality of the 6th month after party month and 4th month after party month:   OK
+      test equality of the 6th month after party month and 5th month after party month:   OK
+      test equality of the 6th month after party month and 6th month after party month:   OK
+      test equality of the 6th month after party month and 7th month after party month:   OK
+      test equality of the 6th month after party month and 8th month after party month:   OK
+      test equality of the 6th month after party month and 9th month after party month:   OK
+      test equality of the 6th month after party month and 10th month after party month:  OK
+      test equality of the 6th month after party month and 11th month after party month:  OK
+      test equality of the 7th month after party month and 0th month after party month:   OK
+      test equality of the 7th month after party month and 1th month after party month:   OK
+      test equality of the 7th month after party month and 2th month after party month:   OK
+      test equality of the 7th month after party month and 3th month after party month:   OK
+      test equality of the 7th month after party month and 4th month after party month:   OK
+      test equality of the 7th month after party month and 5th month after party month:   OK
+      test equality of the 7th month after party month and 6th month after party month:   OK
+      test equality of the 7th month after party month and 7th month after party month:   OK
+      test equality of the 7th month after party month and 8th month after party month:   OK
+      test equality of the 7th month after party month and 9th month after party month:   OK
+      test equality of the 7th month after party month and 10th month after party month:  OK
+      test equality of the 7th month after party month and 11th month after party month:  OK
+      test equality of the 8th month after party month and 0th month after party month:   OK
+      test equality of the 8th month after party month and 1th month after party month:   OK
+      test equality of the 8th month after party month and 2th month after party month:   OK
+      test equality of the 8th month after party month and 3th month after party month:   OK
+      test equality of the 8th month after party month and 4th month after party month:   OK
+      test equality of the 8th month after party month and 5th month after party month:   OK
+      test equality of the 8th month after party month and 6th month after party month:   OK
+      test equality of the 8th month after party month and 7th month after party month:   OK
+      test equality of the 8th month after party month and 8th month after party month:   OK
+      test equality of the 8th month after party month and 9th month after party month:   OK
+      test equality of the 8th month after party month and 10th month after party month:  OK
+      test equality of the 8th month after party month and 11th month after party month:  OK
+      test equality of the 9th month after party month and 0th month after party month:   OK
+      test equality of the 9th month after party month and 1th month after party month:   OK
+      test equality of the 9th month after party month and 2th month after party month:   OK
+      test equality of the 9th month after party month and 3th month after party month:   OK
+      test equality of the 9th month after party month and 4th month after party month:   OK
+      test equality of the 9th month after party month and 5th month after party month:   OK
+      test equality of the 9th month after party month and 6th month after party month:   OK
+      test equality of the 9th month after party month and 7th month after party month:   OK
+      test equality of the 9th month after party month and 8th month after party month:   OK
+      test equality of the 9th month after party month and 9th month after party month:   OK
+      test equality of the 9th month after party month and 10th month after party month:  OK
+      test equality of the 9th month after party month and 11th month after party month:  OK
+      test equality of the 10th month after party month and 0th month after party month:  OK
+      test equality of the 10th month after party month and 1th month after party month:  OK
+      test equality of the 10th month after party month and 2th month after party month:  OK
+      test equality of the 10th month after party month and 3th month after party month:  OK
+      test equality of the 10th month after party month and 4th month after party month:  OK
+      test equality of the 10th month after party month and 5th month after party month:  OK
+      test equality of the 10th month after party month and 6th month after party month:  OK
+      test equality of the 10th month after party month and 7th month after party month:  OK
+      test equality of the 10th month after party month and 8th month after party month:  OK
+      test equality of the 10th month after party month and 9th month after party month:  OK
+      test equality of the 10th month after party month and 10th month after party month: OK
+      test equality of the 10th month after party month and 11th month after party month: OK
+      test equality of the 11th month after party month and 0th month after party month:  OK
+      test equality of the 11th month after party month and 1th month after party month:  OK
+      test equality of the 11th month after party month and 2th month after party month:  OK
+      test equality of the 11th month after party month and 3th month after party month:  OK
+      test equality of the 11th month after party month and 4th month after party month:  OK
+      test equality of the 11th month after party month and 5th month after party month:  OK
+      test equality of the 11th month after party month and 6th month after party month:  OK
+      test equality of the 11th month after party month and 7th month after party month:  OK
+      test equality of the 11th month after party month and 8th month after party month:  OK
+      test equality of the 11th month after party month and 9th month after party month:  OK
+      test equality of the 11th month after party month and 10th month after party month: OK
+      test equality of the 11th month after party month and 11th month after party month: OK
+    test after 12 month the it should be the original month
+      12 months after Nov should still be Nov:                                            OK
+      12 months after Dec should still be Dec:                                            OK
+      12 months after Jan should still be Jan:                                            OK
+      12 months after Feb should still be Feb:                                            OK
+      12 months after Mar should still be Mar:                                            OK
+      12 months after Apr should still be Apr:                                            OK
+      12 months after May should still be May:                                            OK
+      12 months after Jun should still be Jun:                                            OK
+      12 months after July should still be July:                                          OK
+      12 months after Aug should still be Aug:                                            OK
+      12 months after Sep should still be Sep:                                            OK
+      12 months after Oct should still be Oct:                                            OK
+  test all the function on Points
+    test packing and then unpack
+      packing with 0 and 0 then unpack:                                                   OK
+      packing with 0 and 1 then unpack:                                                   OK
+      packing with 0 and 2 then unpack:                                                   OK
+      packing with 1 and 0 then unpack:                                                   OK
+      packing with 1 and 1 then unpack:                                                   OK
+      packing with 1 and 2 then unpack:                                                   OK
+      packing with 2 and 0 then unpack:                                                   OK
+      packing with 2 and 1 then unpack:                                                   OK
+      packing with 2 and 2 then unpack:                                                   OK
+    test unpack and then pack
+      unpacking (0, 0) then unpack:                                                       OK
+      unpacking (0, 1) then unpack:                                                       OK
+      unpacking (0, 2) then unpack:                                                       OK
+      unpacking (1, 0) then unpack:                                                       OK
+      unpacking (1, 1) then unpack:                                                       OK
+      unpacking (1, 2) then unpack:                                                       OK
+      unpacking (2, 0) then unpack:                                                       OK
+      unpacking (2, 1) then unpack:                                                       OK
+      unpacking (2, 2) then unpack:                                                       OK
+    test for manhattan distance
+      testing manhattanDistance between (0,0) and (0,0):                                  OK
+      testing manhattanDistance between (0,0) and (0,1):                                  OK
+      testing manhattanDistance between (0,0) and (0,2):                                  OK
+      testing manhattanDistance between (0,1) and (0,0):                                  OK
+      testing manhattanDistance between (0,1) and (0,1):                                  OK
+      testing manhattanDistance between (0,1) and (0,2):                                  OK
+      testing manhattanDistance between (0,2) and (0,0):                                  OK
+      testing manhattanDistance between (0,2) and (0,1):                                  OK
+      testing manhattanDistance between (0,2) and (0,2):                                  OK
+      testing manhattanDistance between (0,0) and (1,0):                                  OK
+      testing manhattanDistance between (0,0) and (1,1):                                  OK
+      testing manhattanDistance between (0,0) and (1,2):                                  OK
+      testing manhattanDistance between (0,1) and (1,0):                                  OK
+      testing manhattanDistance between (0,1) and (1,1):                                  OK
+      testing manhattanDistance between (0,1) and (1,2):                                  OK
+      testing manhattanDistance between (0,2) and (1,0):                                  OK
+      testing manhattanDistance between (0,2) and (1,1):                                  OK
+      testing manhattanDistance between (0,2) and (1,2):                                  OK
+      testing manhattanDistance between (0,0) and (2,0):                                  OK
+      testing manhattanDistance between (0,0) and (2,1):                                  OK
+      testing manhattanDistance between (0,0) and (2,2):                                  OK
+      testing manhattanDistance between (0,1) and (2,0):                                  OK
+      testing manhattanDistance between (0,1) and (2,1):                                  OK
+      testing manhattanDistance between (0,1) and (2,2):                                  OK
+      testing manhattanDistance between (0,2) and (2,0):                                  OK
+      testing manhattanDistance between (0,2) and (2,1):                                  OK
+      testing manhattanDistance between (0,2) and (2,2):                                  OK
+      testing manhattanDistance between (1,0) and (0,0):                                  OK
+      testing manhattanDistance between (1,0) and (0,1):                                  OK
+      testing manhattanDistance between (1,0) and (0,2):                                  OK
+      testing manhattanDistance between (1,1) and (0,0):                                  OK
+      testing manhattanDistance between (1,1) and (0,1):                                  OK
+      testing manhattanDistance between (1,1) and (0,2):                                  OK
+      testing manhattanDistance between (1,2) and (0,0):                                  OK
+      testing manhattanDistance between (1,2) and (0,1):                                  OK
+      testing manhattanDistance between (1,2) and (0,2):                                  OK
+      testing manhattanDistance between (1,0) and (1,0):                                  OK
+      testing manhattanDistance between (1,0) and (1,1):                                  OK
+      testing manhattanDistance between (1,0) and (1,2):                                  OK
+      testing manhattanDistance between (1,1) and (1,0):                                  OK
+      testing manhattanDistance between (1,1) and (1,1):                                  OK
+      testing manhattanDistance between (1,1) and (1,2):                                  OK
+      testing manhattanDistance between (1,2) and (1,0):                                  OK
+      testing manhattanDistance between (1,2) and (1,1):                                  OK
+      testing manhattanDistance between (1,2) and (1,2):                                  OK
+      testing manhattanDistance between (1,0) and (2,0):                                  OK
+      testing manhattanDistance between (1,0) and (2,1):                                  OK
+      testing manhattanDistance between (1,0) and (2,2):                                  OK
+      testing manhattanDistance between (1,1) and (2,0):                                  OK
+      testing manhattanDistance between (1,1) and (2,1):                                  OK
+      testing manhattanDistance between (1,1) and (2,2):                                  OK
+      testing manhattanDistance between (1,2) and (2,0):                                  OK
+      testing manhattanDistance between (1,2) and (2,1):                                  OK
+      testing manhattanDistance between (1,2) and (2,2):                                  OK
+      testing manhattanDistance between (2,0) and (0,0):                                  OK
+      testing manhattanDistance between (2,0) and (0,1):                                  OK
+      testing manhattanDistance between (2,0) and (0,2):                                  OK
+      testing manhattanDistance between (2,1) and (0,0):                                  OK
+      testing manhattanDistance between (2,1) and (0,1):                                  OK
+      testing manhattanDistance between (2,1) and (0,2):                                  OK
+      testing manhattanDistance between (2,2) and (0,0):                                  OK
+      testing manhattanDistance between (2,2) and (0,1):                                  OK
+      testing manhattanDistance between (2,2) and (0,2):                                  OK
+      testing manhattanDistance between (2,0) and (1,0):                                  OK
+      testing manhattanDistance between (2,0) and (1,1):                                  OK
+      testing manhattanDistance between (2,0) and (1,2):                                  OK
+      testing manhattanDistance between (2,1) and (1,0):                                  OK
+      testing manhattanDistance between (2,1) and (1,1):                                  OK
+      testing manhattanDistance between (2,1) and (1,2):                                  OK
+      testing manhattanDistance between (2,2) and (1,0):                                  OK
+      testing manhattanDistance between (2,2) and (1,1):                                  OK
+      testing manhattanDistance between (2,2) and (1,2):                                  OK
+      testing manhattanDistance between (2,0) and (2,0):                                  OK
+      testing manhattanDistance between (2,0) and (2,1):                                  OK
+      testing manhattanDistance between (2,0) and (2,2):                                  OK
+      testing manhattanDistance between (2,1) and (2,0):                                  OK
+      testing manhattanDistance between (2,1) and (2,1):                                  OK
+      testing manhattanDistance between (2,1) and (2,2):                                  OK
+      testing manhattanDistance between (2,2) and (2,0):                                  OK
+      testing manhattanDistance between (2,2) and (2,1):                                  OK
+      testing manhattanDistance between (2,2) and (2,2):                                  OK
+  test for short answer
+    check ans1 is 1:                                                                      OK
+    check ansTrue is True:                                                                OK
+  test all the functions defined on ListNat
+    test lengthOfListNat function
+      testing lengthOfListNat []:                                                         OK
+      testing lengthOfListNat [1,2]:                                                      OK
+      testing lengthOfListNat [3,1,4]:                                                    OK
+      testing lengthOfListNat [0,5,6]:                                                    OK
+      testing lengthOfListNat [1]:                                                        OK
+      testing lengthOfListNat [1,2,3,4,5,6,7]:                                            OK
+    test sum function
+      testing sum of []:                                                                  OK
+      testing sum of [1,2]:                                                               OK
+      testing sum of [3,1,4]:                                                             OK
+      testing sum of [0,5,6]:                                                             OK
+      testing sum of [1]:                                                                 OK
+      testing sum of [1,2,3,4,5,6,7]:                                                     OK
+    test eqList function
+      testing equality of [] and []:                                                      OK
+      testing equality of [] and [1,2]:                                                   OK
+      testing equality of [] and [3,1,4]:                                                 OK
+      testing equality of [] and [0,5,6]:                                                 OK
+      testing equality of [] and [1]:                                                     OK
+      testing equality of [] and [1,2,3,4,5,6,7]:                                         OK
+      testing equality of [1,2] and []:                                                   OK
+      testing equality of [1,2] and [1,2]:                                                OK
+      testing equality of [1,2] and [3,1,4]:                                              OK
+      testing equality of [1,2] and [0,5,6]:                                              OK
+      testing equality of [1,2] and [1]:                                                  OK
+      testing equality of [1,2] and [1,2,3,4,5,6,7]:                                      OK
+      testing equality of [3,1,4] and []:                                                 OK
+      testing equality of [3,1,4] and [1,2]:                                              OK
+      testing equality of [3,1,4] and [3,1,4]:                                            OK
+      testing equality of [3,1,4] and [0,5,6]:                                            OK
+      testing equality of [3,1,4] and [1]:                                                OK
+      testing equality of [3,1,4] and [1,2,3,4,5,6,7]:                                    OK
+      testing equality of [0,5,6] and []:                                                 OK
+      testing equality of [0,5,6] and [1,2]:                                              OK
+      testing equality of [0,5,6] and [3,1,4]:                                            OK
+      testing equality of [0,5,6] and [0,5,6]:                                            OK
+      testing equality of [0,5,6] and [1]:                                                OK
+      testing equality of [0,5,6] and [1,2,3,4,5,6,7]:                                    OK
+      testing equality of [1] and []:                                                     OK
+      testing equality of [1] and [1,2]:                                                  OK
+      testing equality of [1] and [3,1,4]:                                                OK
+      testing equality of [1] and [0,5,6]:                                                OK
+      testing equality of [1] and [1]:                                                    OK
+      testing equality of [1] and [1,2,3,4,5,6,7]:                                        OK
+      testing equality of [1,2,3,4,5,6,7] and []:                                         OK
+      testing equality of [1,2,3,4,5,6,7] and [1,2]:                                      OK
+      testing equality of [1,2,3,4,5,6,7] and [3,1,4]:                                    OK
+      testing equality of [1,2,3,4,5,6,7] and [0,5,6]:                                    OK
+      testing equality of [1,2,3,4,5,6,7] and [1]:                                        OK
+      testing equality of [1,2,3,4,5,6,7] and [1,2,3,4,5,6,7]:                            OK
+    test eqList function
+      testing member 0 with list []:                                                      OK
+      testing member 0 with list [1,2]:                                                   OK
+      testing member 0 with list [3,1,4]:                                                 OK
+      testing member 0 with list [0,5,6]:                                                 OK
+      testing member 0 with list [1]:                                                     OK
+      testing member 0 with list [1,2,3,4,5,6,7]:                                         OK
+      testing member 1 with list []:                                                      OK
+      testing member 1 with list [1,2]:                                                   OK
+      testing member 1 with list [3,1,4]:                                                 OK
+      testing member 1 with list [0,5,6]:                                                 OK
+      testing member 1 with list [1]:                                                     OK
+      testing member 1 with list [1,2,3,4,5,6,7]:                                         OK
+      testing member 4 with list []:                                                      OK
+      testing member 4 with list [1,2]:                                                   OK
+      testing member 4 with list [3,1,4]:                                                 OK
+      testing member 4 with list [0,5,6]:                                                 OK
+      testing member 4 with list [1]:                                                     OK
+      testing member 4 with list [1,2,3,4,5,6,7]:                                         OK
+  all the function on list
+    test length function for List Nat
+      testing length for list []:                                                         OK
+      testing length for list [1,2]:                                                      OK
+      testing length for list [3,1,4]:                                                    OK
+      testing length for list [0,5,6]:                                                    OK
+      testing length for list [1]:                                                        OK
+      testing length for list [1,2,3,4,5,6,7]:                                            OK
+    test length function for List Bool
+      testing length for list []:                                                         OK
+      testing length for list [True]:                                                     OK
+      testing length for list [False]:                                                    OK
+      testing length for list [True,False]:                                               OK
+      testing length for list [True,True,False,False]:                                    OK
+  test for Tree type
+    testing the size function
+      empty tree should have size 0:                                                      OK
+      testing size of a non-empty nat tree:                                               OK
+      testing size of a non-empty nat tree:                                               OK
+      testing size of a non-empty nat tree:                                               OK
+      testing size of a non-empty bool tree:                                              OK
+      testing size of a non-empty bool tree:                                              OK
+    testing the height function
+      empty tree should have height 0:                                                    OK
+      testing height of a non-empty nat tree:                                             OK
+      testing height of a non-empty nat tree:                                             OK
+      testing height of a non-empty nat tree:                                             OK
+      testing height of a non-empty bool tree:                                            OK
+      testing height of a non-empty bool tree:                                            OK
+    testing the inorder function
+      in order traverse empty tree should return []:                                      OK
+      testing inorder of a non-empty nat tree:                                            OK
+      testing inorder of a non-empty nat tree:                                            OK
+      testing inorder of a non-empty nat tree:                                            OK
+      testing inorder of a non-empty bool tree:                                           OK
+      testing inorder of a non-empty bool tree:                                           OK
+    testing the preorder function
+      preorder traverse empty tree should return []:                                      OK
+      testing preorder of a non-empty nat tree:                                           OK
+      testing preorder of a non-empty nat tree:                                           OK
+      testing preorder of a non-empty nat tree:                                           OK
+      testing preorder of a non-empty bool tree:                                          OK
+      testing preorder of a non-empty bool tree:                                          OK
+
+All 764 tests passed (0.03s)
+
+ERR:
+week2-0.1.0.0: unregistering (switching from /home/zui/Spring-2019-Instructors/gradescripts/hw1/cs320-hw-hanabatio/assignments/week2/ to /home/zui/Spring-2019-Instructors/gradescripts/hw1/cs320-hw-HarryFengYinxuan/assignments/week2/)
+week2-0.1.0.0: configure (lib + test)
+Configuring week2-0.1.0.0...
+week2-0.1.0.0: build (lib + test)
+Preprocessing library for week2-0.1.0.0..
+Building library for week2-0.1.0.0..
+Preprocessing test suite 'test' for week2-0.1.0.0..
+Building test suite 'test' for week2-0.1.0.0..
+[1 of 1] Compiling Main             ( tests/Main.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/Main.o )
+Linking .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test ...
+week2-0.1.0.0: copy/register
+Installing library in /home/zui/Spring-2019-Instructors/gradescripts/.stack-work/install/x86_64-linux/lts-13.9/8.6.3/lib/x86_64-linux-ghc-8.6.3/week2-0.1.0.0-EJoHnGIyXzWBGyNuhxWMLj
+Registering library for week2-0.1.0.0..
+week2-0.1.0.0: test (suite: test)
+
+
+week2-0.1.0.0: Test suite test passed
+Completed 2 action(s).

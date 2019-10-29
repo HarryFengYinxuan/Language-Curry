@@ -1,0 +1,112 @@
+REPORT:
+
+OUT:
+all tests
+  tests for Integer function
+    tests for fib function
+      forall n, fib n + fib (n+1) = fib (n+2):                                                                               OK
+        +++ OK, passed 20 tests; 16 discarded.
+    tests for gcd function
+      forall m n larger than 0, gcd of m n divids both n and m:                                                              OK
+        +++ OK, passed 20 tests; 127 discarded.
+      forall m n larger than 0, gcd of m n is :                                                                              OK
+        +++ OK, passed 20 tests; 75 discarded.
+  tests for Lists and List operations
+    Tests for empty function
+      Empty list is empty:                                                                                                   OK
+      For all Lists, it is not empty if it is not Nil:                                                                       OK
+        +++ OK, passed 20 tests; 11 discarded.
+    For all lists, append should equal Prelude's append:                                                                     OK
+      +++ OK, passed 20 tests.
+    For all lists, addToEnd should be equivilant to (x:xs)++[b]:                                                             OK
+      +++ OK, passed 20 tests.
+    For all lists, concat should equal Prelude's concat:                                                                     OK
+      +++ OK, passed 20 tests.
+    For all lists, reverse should equal Prelude's reverse:                                                                   OK
+      +++ OK, passed 20 tests.
+    For all lists, Take should equal Prelude's Take:                                                                         OK
+      +++ OK, passed 20 tests; 15 discarded.
+    For all lists, Map should equal Prelude's Map:                                                                           OK
+      +++ OK, passed 20 tests.
+  tests for compare data
+    standard int ord:                                                                                                        OK
+      +++ OK, passed 20 tests.
+    standard bool ord:                                                                                                       OK
+      +++ OK, passed 20 tests.
+    insert works, when sorting is considered greatest to least:                                                              OK
+      +++ OK, passed 20 tests.
+    sort works, when sorting is considered greatest to least:                                                                OK
+      +++ OK, passed 20 tests.
+  tests for Set functions
+    Empty set should have size 0:                                                                                            OK
+      +++ OK, passed 1 test.
+    The size of the singleton list should be one:                                                                            OK
+      +++ OK, passed 20 tests.
+    The elem of a singleton list m should be the same as the one being inserted n:                                           OK
+      +++ OK, passed 20 tests.
+    for all list, converting the list to set, the size of the set should smaller or equal to the size of the list:           OK
+      +++ OK, passed 20 tests.
+    for all list l and integer i, we insert element of index i into the set created by l, the set should not change:         OK
+      +++ OK, passed 20 tests; 19 discarded.
+    for all sets s, the size of the set should be the same as the size of the set in the built in Data.Set module:           OK
+      +++ OK, passed 20 tests.
+  tests for Student functions
+    for all id, year, whether takes cs320 or not, if we make a cs student, he/she shoube be a cs student:                    OK
+      +++ OK, passed 20 tests.
+    for all id, if we made a cs student, his/her id must be the same as input:                                               OK
+      +++ OK, passed 20 tests.
+    for all year, if we made a cs student , his/her year must be the same as input:                                          OK
+      +++ OK, passed 20 tests.
+    for all year, if we made a cs student , his/her year must be the same as input:                                          OK
+      +++ OK, passed 20 tests.
+    or all id, if we made a cs student, his/her id must be the same as input:                                                OK
+      +++ OK, passed 20 tests.
+    for all id, year, friends number, if we create a list of math student using these info, there should be no cool student: OK
+      +++ OK, passed 20 tests.
+    for a list with only math student and cs student without taking cs320, then there should be no cool student:             OK
+      +++ OK, passed 20 tests.
+    sc 320 students are cool:                                                                                                OK
+      +++ OK, passed 20 tests.
+    groupProject: pairs all have exactly 1 CS student:                                                                       OK
+      +++ OK, passed 20 tests.
+    groupProject: length is equal to the least of math or CS :                                                               OK
+      +++ OK, passed 20 tests.
+    for all list of student, after assigning to groupProjects, there shouldn't be any student not in the original list:      OK
+      +++ OK, passed 20 tests.
+    for all student1 and student2, student1.id < student2.id, the order of these two students should be student1 < student2: OK
+      +++ OK, passed 20 tests.
+
+All 33 tests passed (0.01s)
+
+ERR:
+week3-0.1.0.0: unregistering (switching from /home/zui/Spring-2019-Instructors/gradescripts/hw3_2/cs320-hw-hanabatio/assignments/week3/ to /home/zui/Spring-2019-Instructors/gradescripts/hw3_2/cs320-hw-HarryFengYinxuan/assignments/week3/)
+week3-0.1.0.0: configure (lib + test)
+Configuring week3-0.1.0.0...
+week3-0.1.0.0: build (lib + test)
+Preprocessing library for week3-0.1.0.0..
+Building library for week3-0.1.0.0..
+Preprocessing test suite 'test' for week3-0.1.0.0..
+Building test suite 'test' for week3-0.1.0.0..
+[1 of 7] Compiling IntTests         ( tests/IntTests.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/IntTests.o )
+[2 of 7] Compiling TestBase         ( tests/TestBase.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/TestBase.o )
+[3 of 7] Compiling StudentTests     ( tests/StudentTests.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/StudentTests.o )
+
+/home/zui/Spring-2019-Instructors/gradescripts/hw3_2/cs320-hw-HarryFengYinxuan/assignments/week3/tests/StudentTests.hs:44:1: warning: [-Wtabs]
+    Tab character found here, and in 16 further locations.
+    Please use spaces instead.
+   |
+44 |                                         
+   | ^^^^^^^^
+[4 of 7] Compiling SetTests         ( tests/SetTests.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/SetTests.o )
+[5 of 7] Compiling OrderingTests    ( tests/OrderingTests.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/OrderingTests.o )
+[6 of 7] Compiling ListTests        ( tests/ListTests.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/ListTests.o )
+[7 of 7] Compiling Main             ( tests/Main.hs, .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test-tmp/Main.o )
+Linking .stack-work/dist/x86_64-linux/Cabal-2.4.0.1/build/test/test ...
+week3-0.1.0.0: copy/register
+Installing library in /home/zui/Spring-2019-Instructors/gradescripts/.stack-work/install/x86_64-linux/lts-13.9/8.6.3/lib/x86_64-linux-ghc-8.6.3/week3-0.1.0.0-H5WViIpHFJYL7JMdlxytKw
+Registering library for week3-0.1.0.0..
+week3-0.1.0.0: test (suite: test)
+
+
+week3-0.1.0.0: Test suite test passed
+Completed 2 action(s).
