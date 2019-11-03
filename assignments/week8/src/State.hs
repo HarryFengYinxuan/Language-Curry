@@ -14,9 +14,7 @@ runState (State st) = st
 
 instance Functor (State s) where
   -- fmap :: (a -> b) -> State s a -> State s b
-  fmap f (State st) = State $ \s -> let (a, s') = (st s) in
-                        let b = (f a) in
-                        (b, s')
+  fmap f (State st) =  undefined
 
 --ignore this for now
 instance Applicative (State s) where
@@ -25,12 +23,10 @@ instance Applicative (State s) where
 
 instance Monad (State s) where
   --return :: a -> State s a
-  return a = State (\x -> (a, x))
-
+  return a = undefined
+  
   --(>>=) :: State s a -> (a -> State s b) -> State s b
-  (State st) >>= f = State $ \s -> let (a, s') = (st s) in
-                           let (State st') = (f a) in
-                           st' s'
+  (State st) >>= f = undefined
 
 
 
@@ -42,3 +38,6 @@ put s = State $ \ _ ->  ((), s)
 
 get :: State s s
 get = State $ \ s ->  (s, s)
+
+
+

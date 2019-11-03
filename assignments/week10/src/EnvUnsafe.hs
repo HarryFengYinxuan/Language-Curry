@@ -24,9 +24,7 @@ getEnv = EnvUnsafe $ \ env -> Ok env
 
 instance Functor (EnvUnsafe e) where
   -- fmap :: (a -> b) -> EnvUnsafe a -> EnvUnsafe b
-  fmap f (EnvUnsafe eu) = EnvUnsafe $ \e -> case (runEnvUnsafe (EnvUnsafe eu) e) of
-                                            Ok a -> Ok (f a)
-                                            Error s -> Error s
+  fmap f (EnvUnsafe eu) = undefined
   -- make sure your implementation follows the functor laws
 
 --ignore this for now
@@ -36,12 +34,10 @@ instance Applicative (EnvUnsafe e) where
 
 instance Monad (EnvUnsafe e) where
   --return :: a -> EnvUnsafe a
-  return a = EnvUnsafe $ \e -> Ok a
+  return a = undefined
 
   --(>>=) :: EnvUnsafe a -> (a -> EnvUnsafe b) -> EnvUnsafe b
-  (EnvUnsafe eu) >>= f = EnvUnsafe $ \e -> case (runEnvUnsafe (EnvUnsafe eu) e) of
-                                           Ok a -> runEnvUnsafe (f a) e
-                                           Error s -> Error s
+  (EnvUnsafe eu) >>= f = undefined
 
   -- make sure your implementation follows the Monad laws
 

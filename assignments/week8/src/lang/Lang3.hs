@@ -10,29 +10,6 @@ import HelpShow
 import State
 
 
--- We went over this functionality in some labs
-setVar :: String -> Integer -> State EvalState ()
-setVar v i =
-  do s <- get
-     put (Map.insert v i s)
-
--- same as
---State (\ s -> ((), Map.insert v i s))
-
-getVar :: String -> State EvalState Integer
-getVar v =
-  do s <- get
-     case (Map.lookup v s) of
-       Just i  -> return i
-       Nothing -> return 0  -- since for this problem we may return 0 if the var is not set
-
--- some examples
-ex = Assign "x" (LiteralInt 2 `Plus` LiteralInt 2)
-       `Separator` (Var "x" `Mult` LiteralInt 5 )
-
--- run your monad like this
-ex' = runState (eval ex) Map.empty
-
 data Ast =
       LiteralInt Integer
     | Var String
@@ -50,31 +27,8 @@ type EvalState = Map String Integer
 -- you may return 0 for variable that are not defined
 
 eval :: Ast -> State EvalState Integer
-eval (LiteralInt i) = State $ \s -> (i, s)
-eval (Var v) = getVar v
-eval (Plus l r) = State $ \s -> let (State st) = (eval l) in
-                                let (ln, s2) = (st s) in
-                                let (State st2) = (eval r) in
-                                let (rn, s3) = (st2 s2) in
-                                (ln+rn, s3)
-eval (Assign v ast) = State $ \s -> let (State st) = (eval ast) in
-                                    let (n, s2) = (st s) in
-                                    (n, Map.insert v n s2)
-eval (Separator exp1 exp2) = State $ \s -> let (State st) = (eval exp1) in
-                                           let (n1, s2) = (st s) in
-                                           let (State st2) = (eval exp2) in
-                                           let (n2, s3) = (st2 s2) in
-                                           (n2, s3)
-eval (Sub exp1 exp2) = State $ \s -> let (State st) = (eval exp1) in
-                                     let (n1, s2) = (st s) in
-                                     let (State st2) = (eval exp2) in
-                                     let (n2, s3) = (st2 s2) in
-                                     (n1-n2, s3)
-eval (Mult exp1 exp2) = State $ \s -> let (State st) = (eval exp1) in
-                                      let (n1, s2) = (st s) in
-                                      let (State st2) = (eval exp2) in
-                                      let (n2, s3) = (st2 s2) in
-                                      (n1*n2, s3)
+eval = undefined
+
 
 
 -- show the fully parenthesized syntax

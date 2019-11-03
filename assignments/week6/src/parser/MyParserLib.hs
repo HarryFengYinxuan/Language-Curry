@@ -26,9 +26,6 @@ literal (h:t) (hi:ti) = if h == hi
                               Just (s,rest) -> Just (h:s,rest) -- bug
                         else Nothing
 
--- literal "abc" "abc" = Just("abc", "")
--- literal "abcd" "abc" = Nothing
--- literal "abcd" "abcde" = Just("abcd", "e")
 
 simpleParser = (literal "abc") +++ (literal "def")
 
@@ -43,19 +40,19 @@ simpleParser = (literal "abc") +++ (literal "def")
 
 -- parse natural numbers, like "123", or "000230000"
 natParser :: Parser Integer
-natParser ""    = Nothing
-natParser (h:t) = if isDigit h
+natParser ""    = Nothing    
+natParser (h:t) = if isDigit h    
                   then natParserHelper 0 (h:t)
                   else Nothing
   where
     -- accumulate a number while parsing
-    natParserHelper :: Integer -> Parser Integer
-    natParserHelper n ""    = Just (n, "")
-    natParserHelper n (h:t) = if isDigit h
-                              then let next = (read [h] :: Integer)
-                                   in natParserHelper (n*10 + next) t
+    natParserHelper :: Integer -> Parser Integer    
+    natParserHelper n ""    = Just (n, "")    
+    natParserHelper n (h:t) = if isDigit h    
+                              then let next = (read [h] :: Integer)    
+                                   in natParserHelper (n*10 + next) t    
                               else Just (n, h:t)
-
+                       
 posFloatParser' = natParser +++ (literal ".") +++ natParser
 
 -- *MyParserLib> posFloatParser' "1234.5678 and then some stufff"
@@ -110,7 +107,7 @@ intParser = ((literal "-" +++ natParser) <||> natParser)
 
 
 
-floatParser =  (intParser +++ (literal ".") +++ natParser)
+floatParser =  (intParser +++ (literal ".") +++ natParser) 
   `mapParser` (\ ((whole, _), fract) -> (fromIntegral whole) + (fromIntegral fract)/(10 ^^ (numDigits fract) ))
 
 floatOrInt  = floatParser <||> intParser
@@ -130,7 +127,7 @@ rep pa input = case pa input of
   Just (a, input1) -> case rep pa input1 of
     Nothing -> Nothing
     Just (als, input2) -> Just (a:als, input2)
-
+    
 
 numbers' = rep (floatOrInt +++ literal ",")
 

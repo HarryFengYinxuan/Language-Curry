@@ -1,6 +1,6 @@
 module Lang2 where
 
--- We will make a very simple extension to the example AST by adding a separator this will
+-- We will make a very simple extension to the example AST by adding a separator this will 
 -- join two abstract syntax trees; both will be evaluated, but only the value of the second
 -- will be returned.
 
@@ -13,22 +13,14 @@ data Ast =
   | Separator Ast Ast
   | Print Ast
 
-
+  
 -- eval print(1); print(2)   ==> ([1,2], 2)
 -- eval ((1 + print (10)) + 2 ; print(3)) ==> ([10,3], 3)
 -- eval print(print(print(1) + 2) +3 ) +4  ==> ([1,3,6], 10)
 -- eval print(print(1) + print(2)) ; 7   ==> ([1,2,3], 7)
 
 eval :: Ast -> ([Integer], Integer)
-eval (LiteralInt i) = ([], i)
-eval (Plus a b) = case (eval a) of
-                  (printList, ret)-> case (eval b) of
-                    (printList2, ret2) -> (printList++printList2, ret+ret2)
-eval (Print exp) = case (eval exp) of
-                    (printList, ret) -> (printList++[ret], ret)
-eval (Separator exp1 exp2) =  case (eval exp1) of
-                              (printList, ret) -> case (eval exp2) of
-                                (printList2, ret2) -> (printList++printList2, ret2)
+eval = undefined
 
 
 -- show the fully parenthesized syntax

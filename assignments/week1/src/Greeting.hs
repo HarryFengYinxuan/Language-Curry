@@ -2,7 +2,7 @@ module Greeting where
 
 
 -- how do you greet someone?
-greeting = "undefined"
+greeting = undefined
 
 -- finish the identity function
-ident x = x
+ident x = undefined

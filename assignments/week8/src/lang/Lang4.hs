@@ -15,29 +15,15 @@ data Ast =
     | Sub Ast Ast
     | Mult Ast Ast
   deriving Show
-
+  
 type Env = Map String Integer
 
 -- for simplicity do not we will not separately encode failure at the type level,
 -- you may return 0 for variable that are not defined
 
 eval :: Ast -> Reader Env Integer
-eval (LiteralInt n) = Reader $ \e -> n
-eval (Var v) = Reader $ \e -> case (Map.lookup v e) of
-                              Nothing -> 0
-                              Just i -> i
-eval (Plus exp1 exp2) = Reader $ \e -> let n1 = runReader (eval exp1) e in
-                                       let n2 = runReader (eval exp2) e in
-                                       n1+n2
-eval (Let str exp1 exp2) = Reader $ \e -> let n1 = runReader (eval exp1) e in
-                                          let n2 = runReader (eval exp2) (Map.insert str n1 e) in
-                                          n2
-eval (Sub exp1 exp2) = Reader $ \e -> let n1 = runReader (eval exp1) e in
-                                      let n2 = runReader (eval exp2) e in
-                                      n1-n2
-eval (Mult exp1 exp2) =  Reader $ \e -> let n1 = runReader (eval exp1) e in
-                                        let n2 = runReader (eval exp2) e in
-                                        n1*n2
+eval = undefined
+
 
 eval' :: Ast -> Env -> Integer -- functions have are already defined with the Reader Monad
 eval' = undefined -- Ungraded practice problem

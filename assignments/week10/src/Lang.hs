@@ -47,13 +47,8 @@ instance Show Val where
 stdLib = Map.fromList
   [("tail", Fun $ \ v -> case v of Ls (_:ls) -> Ok $ Ls ls
                                    _         -> Error "can only call tail on a non empty list"),
-   ("head", Fun $ \ v -> case v of
-                         Ls [] -> Error "can only call head on a non empty list"
-                         Ls list -> Ok $ head list
-                         _ -> Error "not a list"),
-   ("len", Fun $ \ v -> case v of
-                        Ls list -> Ok $ head list
-                        _ -> Error "not a list")]
+   ("head", undefined),
+   ("len", undefined)]
 
 -- helper function that runs with a standard library of functions: head, tail ...
 run :: Ast -> Unsafe Val
@@ -63,82 +58,12 @@ run a = runEnvUnsafe (eval a) stdLib
 
 type Env = Map String Val
 
-evalBool :: Ast -> EnvUnsafe Env Bool
-evalBool a = do x <- eval a
-                case x of
-                  B b -> return b
-                  _ -> err "not a bool"
-
-evalInt :: Ast -> EnvUnsafe Env Integer
-evalInt a =  do x <- eval a
-                case x of
-                  I b -> return b
-                  _ -> err "not a int"
-
-evalList :: Ast -> EnvUnsafe Env [Val]
-evalList (Cons a b) = do ar <- eval a
-                         br <- evalList b
-                         return (ar:br)
-evalList (Nil) = return []
-evalList _ =     err "not a list"
-
-evalFun :: Ast -> EnvUnsafe Env (Val -> Unsafe Val)
-evalFun a =  do x <- eval a
-                case x of
-                  Fun b -> return b
-                  _ -> err "not a func"
 
 eval :: Ast -> EnvUnsafe Env Val
-eval (ValBool b) = return $ B b
-eval (And a b) =  do ar <- evalBool a
-                     br <- evalBool b
-                     return $ B $ ar && br
-eval (Or a b) =  do ar <- evalBool a
-                    br <- evalBool b
-                    return $ B $ ar || br
-eval (Not a) = do ar <- evalBool a
-                  return $ B $ not ar
+eval = undefined
 
-eval (ValInt i) = return $ I i
-eval (Plus a b) =  do ar <- evalInt a
-                      br <- evalInt b
-                      return $ I $ ar + br
-eval (Minus a b) =  do ar <- evalInt a
-                       br <- evalInt b
-                       return $ I $ ar - br
-eval (Mult a b) =  do ar <- evalInt a
-                      br <- evalInt b
-                      return $ I $ ar * br
-eval (Div a b) =  do ar <- evalInt a
-                     br <- evalInt b
-                     case (br==0) of
-                      True -> err "can't divided by zero"
-                      False -> return $ I $ ar `div` br
-eval (Nil) = return $ Ls []
-eval (Cons a b) = do list <- evalList (Cons a b)
-                     return $ Ls $ list
-eval (If a b c) = do ar <- evalBool a
-                     br <- eval b
-                     cr <- eval c
-                     case (ar) of
-                      True -> eval b
-                      False -> eval c
-eval (Let s a b) = do ar <- eval a
-                      env <- getEnv
-                      case runEnvUnsafe (eval b) (Map.insert s ar env) of
-                        Ok a -> return a
-                        Error e -> err e
-eval (Var v) = do env <- getEnv
-                  case (Map.lookup v env) of
-                    Just a -> return a
-                    Nothing -> err "No such var"
-eval (Lam s a) = do env <- getEnv
-                    return $ Fun $ \ v -> runEnvUnsafe (eval a) $ Map.insert s v env
-eval (App a b) = do f <- evalFun a
-                    br <- eval b
-                    case (f br) of
-                      Ok r -> return r
-                      Error e -> err e
+
+
 
 -- This is helpful for testing and debugging
 showFullyParen :: Ast -> String
@@ -189,3 +114,5 @@ showPretty (Mult l r) i = parenthesize 12 i $ (showPretty l 12) ++ " * " ++ (sho
 showPretty (Div l r) i = parenthesize 12 i $ (showPretty l 12) ++ " / " ++ (showPretty r 13)
 
 showPretty (Not l ) i = parenthesize 14 i $  " ! " ++ (showPretty l 14)
+
+

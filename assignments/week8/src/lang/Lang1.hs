@@ -11,26 +11,10 @@ data Ast =
   | Mult Ast Ast
   deriving Show
 
+
 eval :: Ast -> Maybe Integer
-eval (LiteralInt a) = Just a
-eval (Plus a b) = do x <- eval(a)
-                     y <- eval(b)
-                     z <- return $ x+y
-                     return z
-eval (Div a b) = case ((eval b) == (Just 0)) of
-                    (False) -> (do x <- eval(a)
-                                   y <- eval(b)
-                                   z <- return $ x `div` y
-                                   return z)
-                    True -> Nothing
-eval (Sub a b) =  do x <- eval(a)
-                     y <- eval(b)
-                     z <- return $ x-y
-                     return z
-eval (Mult a b) = do x <- eval(a)
-                     y <- eval(b)
-                     z <- return $ x*y
-                     return z
+eval = undefined -- This is an optional ungraded part
+
 
 -- show the fully parenthesized syntax
 showFullyParen :: Ast -> String

@@ -14,15 +14,9 @@ import Parser2Test (parser2Test)
 import Parser3Test (parser3Test)
 import Parser4Test (parser4Test)
 
-<<<<<<< HEAD
-main =
-  do setEnv "TASTY_TIMEOUT" "60s"
-     setEnv "TASTY_QUICKCHECK_TESTS" "100"
-=======
 main = 
   do setEnv "TASTY_TIMEOUT" "60s"
      setEnv "TASTY_QUICKCHECK_TESTS" "100" 
->>>>>>> a2b1b0eff82118f832cd1ea2e086c82290d67075
      setEnv "TASTY_QUICKCHECK_MAX_SIZE" "100"
      defaultMain allTests
      unsetEnv "TASTY_TIMEOUT"

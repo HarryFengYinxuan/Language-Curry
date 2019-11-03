@@ -1,4 +1,4 @@
-module Reader where
+module Reader where 
 
 import Control.Monad(ap)
 
@@ -19,7 +19,7 @@ ask = Reader $ \ env -> env
 
 instance Functor (Reader e) where
   -- fmap :: (a -> b) -> Reader e a -> Reader e b
-  fmap f (Reader g) = Reader (\env -> (f (g env)))
+  fmap f (Reader g) = undefined
   -- make sure your implementation follows the functor laws
 
 --ignore this for now
@@ -29,12 +29,12 @@ instance Applicative (Reader e) where
 
 instance Monad (Reader e) where
   --return :: a -> Reader e a
-  return a = Reader (\x->a)
+  return a = undefined
 
   --(>>=) :: Reader a -> (a -> Reader e b) -> Reader e b
-  (Reader g) >>= f = Reader $ \e -> runReader (f (runReader (Reader g) e)) e
+  (Reader g) >>= f = undefined
 
   -- make sure your implementation follows the Monad laws
 
--- technical note:
+-- technical note: 
 -- this is modled after the Reader Monad in http://hackage.haskell.org/package/mtl-2.2.2/docs/Control-Monad-Reader.html

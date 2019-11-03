@@ -10,8 +10,7 @@ data Ast =
 -- ex: eval ((1 + 3) + 2)  ==> 6
 
 eval :: Ast -> Integer
-eval (LiteralInt i) = i
-eval (Plus a b) = (eval a)+(eval b)
+eval = undefined
 
 
 -- show the fully parenthesized syntax

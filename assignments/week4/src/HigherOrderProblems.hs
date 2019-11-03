@@ -7,72 +7,61 @@ import Data.List hiding (zipWith, sum)
 import Data.Function
 
 -- add 1 to each element in a list
-addoneList :: [Integer] -> [Integer]
-addoneList [] = []
-addoneList (x:xs) = (x+1):(addoneList xs)
+addoneList :: [Integer] -> [Integer] 
+addoneList = undefined
 
--- add 1 to each element in a Map
+-- add 1 to each element in a Map 
 -- (you will need to finish the Map part of the HW first, hint: use fmap)
 addoneMap :: Ord k => Map k Integer -> Map k Integer
-addoneMap a = fmap (\x-> x+1) a
+addoneMap = undefined
 
--- keep only the elements of the list greater than 2
+-- keep only the elements of the list greater than 2 
 keepGreaterThan2List :: [Integer] -> [Integer]
-keepGreaterThan2List a = filter (\x -> x>2) a
+keepGreaterThan2List = undefined
 
 -- keep only the elements of the Map greater than 2
 -- (you will need to finish the Map part of the HW first)
 keepGreaterThan2Map :: Ord k => Map k Integer -> Map k Integer
-keepGreaterThan2Map a = Map.filter (\x -> x>2) a
+keepGreaterThan2Map = undefined
 
 
 -- define sum with foldr
 sum :: [Integer] -> Integer
-sum xs = foldr (+) 0 xs
+sum xs = foldr undefined undefined xs
 
 -- define product with foldr
 product :: [Integer] -> Integer
-product xs = foldr (*) 1 xs
+product xs = foldr undefined undefined xs
 
 
 -- Write maxList, which returns the largest element
 -- in a list of positive numbers; it should return 0
--- for the a list with no positive numbers.
--- Hint: try using the built-in function max.
-
+-- for the a list with no positive numbers. 
+-- Hint: try using the built-in function max. 
 maxList :: (Ord a, Num a) => [a] -> a
-maxList lst = foldr max 0 lst
+maxList lst = foldr undefined undefined lst
 
 
--- zipWith generalises zip by zipping with the function given as the first argument,
--- instead of a tupling function. For example, zipWith (+) is applied to two
+-- zipWith generalises zip by zipping with the function given as the first argument, 
+-- instead of a tupling function. For example, zipWith (+) is applied to two 
 -- lists to produce the list of corresponding sums.
-fTuple :: (a -> b -> c) -> (a, b) -> c
-fTuple f (a, b) = f a b
-
-zhelper :: (a -> b -> c) -> [(a, b)] -> [c]
-zhelper f [] = []
-zhelper f (x:xs) = [fTuple f x] ++ (zhelper f xs)
-
 zipWith :: (a -> b -> c) -> [a] -> [b] -> [c]
-zipWith f a b = zhelper f (zip a b)
+zipWith = undefined
 
 -- dot product from linear algebra (on integers only)
 -- Hint: try using zipWith and sum
 dot :: [Integer] -> [Integer] -> Integer
-dot v1 v2 = sum (zipWith (*) v1 v2)
+dot xs ys = undefined
 
 -- combines two lists by adding their corresponding elements using zipWith
 -- Ex: listAdder [1,2,3] [2,3,4] => [3,5,7]
 listAdder :: [Integer] -> [Integer] -> [Integer]
-listAdder xs ys = zipWith (+) xs ys
+listAdder  = undefined
 
 -- Find the maximum of each pair of integers in two lists using zipWith
 -- Ex:  listMaxer [2,4] [4,1] => [4,4]
 listMaxer :: [Integer] -> [Integer] -> [Integer]
-listMaxer a [] = []
-listMaxer [] a = []
-listMaxer (x:xs) (y:ys) = [maxList [x, y]]++(listMaxer xs ys)
+listMaxer xs ys = undefined
 
 -- We have first names and last names, how to
 -- put them together with a space in the middle?
@@ -84,7 +73,7 @@ lastNames = ["Zhang", "Lemay", "Snyder"]
 -- Ex: fullNames firstNames lastNames => ["Cheng Zhang", ....]
 
 fullNames :: [String] -> [String] -> [String]
-fullNames fns lns = zipWith (\x y->x++" "++y) fns lns
+fullNames fns lns = undefined
 
 
 -- This function extends the idea of listAdder to an arbitrary number
@@ -94,10 +83,7 @@ fullNames fns lns = zipWith (\x y->x++" "++y) fns lns
 
 -- Ex:  addAllLists [ [2,3,4], [4,5,3], [1,1,1], [3,5, 0]] =>  [10, 14,8]
 addAllLists :: [[Integer]] -> [Integer]
-addAllLists [] = []
-addAllLists [a]= a
--- addAllLists (x1:x2:xs) = listAdder (listAdder x1 x2) (addAllLists xs)
-addAllLists (x1:x2) = (listAdder x1 (addAllLists x2))
+addAllLists = undefined
 
 
 -- define a data type for pets, all pets have names (String)
@@ -105,61 +91,51 @@ addAllLists (x1:x2) = (listAdder x1 (addAllLists x2))
 -- Dogs are always happy
 -- Hint: you may need to store a function in the constructor!
 -- if you store a function in the constructor you cannot "deriving Show"
-
-data Pet = Cat String (Integer -> Bool) | Dog String Bool
+data Pet -- = ...
 
 -- define a cat that is happy when the temperature is > 0
 okCat :: Pet
-okCat = Cat "happy cat" (\x->x>0)
+okCat = undefined
 
 -- define a cat that is never happy
 badCat :: Pet
-badCat = Cat "bad cat" (\x->False)
+badCat = undefined
 
 -- make a cat from a name and the function that tells how it will be happy
 mkCat :: String -> (Integer -> Bool) -> Pet
-mkCat name func = Cat name func
+mkCat = undefined
 
--- make a dog from a name.
+-- make a dog from a name. 
 mkDog :: String -> Pet
-mkDog name = Dog name True
+mkDog = undefined
 
 -- some functions to help out the graders
 name :: Pet -> String
-name (Cat name func) = name
-name (Dog name happy) = name
+name = undefined
 
 isCat :: Pet -> Bool
-isCat (Cat _ _) = True
-isCat (Dog _ _) = False
+isCat = undefined
 
 isDog :: Pet -> Bool
-isDog a = not (isCat a)
+isDog = undefined
 
 -- is a pet happy given the current temperature (Integer)
 isHappy :: Pet -> Integer -> Bool
-isHappy (Cat name func) temp = func temp
-isHappy (Dog _ _) temp = True
+isHappy = undefined
 
 -- How many of your pets are happy?
 -- takes in a list of your pets and the current temperature
 -- Hint: try to do this in a higher-order way:
 --       use map, filter, and length,
---       OR two maps and sum,
+--       OR two maps and sum, 
 --       OR foldr!
-happyIsOne :: Integer -> Pet -> Integer
-happyIsOne temp p = case (isHappy p temp) of
-                      True -> 1
-                      False -> 0
-
 countHappy :: [Pet] -> Integer -> Integer
-countHappy [] temp = 0
-countHappy plist temp = sum (map (happyIsOne temp) plist)
+countHappy = undefined
 
 
 -- Higher order programming works well for data exploration
 
--- record of: year, team name, Won, Lost, Ties
+-- record of: year, team name, Won, Lost, Ties 
 data FootBallStat = FootBallStat Integer String Integer Integer Integer deriving Show
 
 footballExampleStats :: [FootBallStat]
@@ -167,24 +143,23 @@ footballExampleStats = [FootBallStat 1960 "Patriots" 5 9 0, FootBallStat 1961 "P
 
 -- hint: the following functions are easy if you use map, filter, and pattern matching in a lambda
 
-yearAndTeamWithTotalGames  :: [FootBallStat] -> [(Integer, String, Integer)]
-yearAndTeamWithTotalGames [] = []
-yearAndTeamWithTotalGames a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team, won+lost+ties)) a
+yearAndTeamWithTotalGames  :: [FootBallStat] -> [(Integer, String, Integer)] 
+yearAndTeamWithTotalGames = undefined
 
-yearAndTeamWithMoreThan1Tie  :: [FootBallStat] -> [(Integer, String)]
-yearAndTeamWithMoreThan1Tie a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team)) (filter (\x -> let (FootBallStat year team won lost ties) = x in ties > 1) a)
+yearAndTeamWithMoreThan1Tie  :: [FootBallStat] -> [(Integer, String)] 
+yearAndTeamWithMoreThan1Tie = undefined
 
-yearAndTeamWithlessThan3Wins  :: [FootBallStat] -> [(Integer, String)]
-yearAndTeamWithlessThan3Wins a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team)) (filter (\x -> let (FootBallStat year team won lost ties) = x in won < 3) a)
+yearAndTeamWithlessThan3Wins  :: [FootBallStat] -> [(Integer, String)] 
+yearAndTeamWithlessThan3Wins = undefined
 
-yearsAndTeamWithMoreWinsThanLosses :: [FootBallStat] -> [(Integer, String)]
-yearsAndTeamWithMoreWinsThanLosses a = map (\x->let (FootBallStat year team won lost ties) = x in (year, team)) (filter (\x -> let (FootBallStat year team won lost ties) = x in won > lost) a)
+yearsAndTeamWithMoreWinsThanLosses :: [FootBallStat] -> [(Integer, String)] 
+yearsAndTeamWithMoreWinsThanLosses = undefined
 
 
 -- ungraded bonus:
 
 wins :: FootBallStat -> Integer
-wins = \x->let (FootBallStat year team won lost ties) = x in won
+wins = undefined
 
 -- find the record with the most wins each decade
 -- Hint you may use (maximumBy (compare `on` wins)) to find the best win record in a list
